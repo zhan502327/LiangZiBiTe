@@ -1,0 +1,6 @@
+framework module Pods_LiangZiBiTe {
+  umbrella header "Pods-LiangZiBiTe-umbrella.h"
+
+  export *
+  module * { export * }
+}
