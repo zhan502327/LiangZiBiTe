@@ -9,6 +9,8 @@
 #import "AppDelegate+UI.h"
 #import "IQKeyboardManager.h"
 #import "TabBarViewController.h"
+#import "LoginViewController.h"
+#import "BaseNavViewController.h"
 
 
 #define kStoreAppId @"1425551373"
@@ -44,19 +46,19 @@
     TabBarViewController *rootTabBarVC = [[TabBarViewController alloc] init];
     self.window.rootViewController = rootTabBarVC;
     
-//    if ([App_UserManager isLogin] && [[App_UserManager getIdentifystatus] isEqualToNumber:@(1)] && [[App_UserManager getShopstatus] isEqualToNumber:@(1)]) {
+//    if ([App_UserManager isLogined]) {
 //
 //        TabBarViewController *rootTabBarVC = [[TabBarViewController alloc] init];
 //        self.window.rootViewController = rootTabBarVC;
 //
 //    }else{
-//        DBLoginViewController *vc = [[DBLoginViewController alloc] init];
+//        LoginViewController *vc = [[LoginViewController alloc] init];
 //
 //        BaseNavViewController *childController = [[BaseNavViewController alloc] initWithRootViewController:vc];
 //
 //        self.window.rootViewController = childController;
 //    }
-//
+
     
     
 }

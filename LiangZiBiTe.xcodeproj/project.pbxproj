@@ -7,6 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D258F2A2132A47D00943AD1 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F292132A47D00943AD1 /* TestViewController.m */; };
+		4D258F402133838500943AD1 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F332133838500943AD1 /* RegisterViewController.m */; };
+		4D258F412133838500943AD1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F342133838500943AD1 /* RegisterViewController.xib */; };
+		4D258F422133838500943AD1 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F372133838500943AD1 /* UserManager.m */; };
+		4D258F432133838500943AD1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F382133838500943AD1 /* LoginViewController.m */; };
+		4D258F442133838500943AD1 /* UserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F392133838500943AD1 /* UserInfoModel.m */; };
+		4D258F452133838500943AD1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F3C2133838500943AD1 /* LoginViewController.xib */; };
+		4D258F462133838500943AD1 /* UserInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F3F2133838500943AD1 /* UserInfoResponse.m */; };
+		4D258F5D2137914500943AD1 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F5C2137914500943AD1 /* UIImage+Color.m */; };
+		4D258F722137E05B00943AD1 /* SettingNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F662137E05B00943AD1 /* SettingNormalCell.xib */; };
+		4D258F732137E05B00943AD1 /* SettingNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F672137E05B00943AD1 /* SettingNormalCell.m */; };
+		4D258F742137E05B00943AD1 /* SettingResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F682137E05B00943AD1 /* SettingResponse.m */; };
+		4D258F752137E05B00943AD1 /* SettingInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F692137E05B00943AD1 /* SettingInfoModel.m */; };
+		4D258F762137E05B00943AD1 /* SettingHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F6B2137E05B00943AD1 /* SettingHeaderCell.xib */; };
+		4D258F772137E05B00943AD1 /* SettingHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F6C2137E05B00943AD1 /* SettingHeaderCell.m */; };
+		4D258F782137E05B00943AD1 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F6E2137E05B00943AD1 /* SettingViewController.xib */; };
+		4D258F792137E05B00943AD1 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F702137E05B00943AD1 /* SettingViewController.m */; };
+		4D258F7F2137E17700943AD1 /* ConfigNicknameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F7B2137E17700943AD1 /* ConfigNicknameViewController.xib */; };
+		4D258F802137E17700943AD1 /* ConfigNicknameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F7D2137E17700943AD1 /* ConfigNicknameViewController.m */; };
+		4D258F892137E1CC00943AD1 /* MyQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F832137E1CC00943AD1 /* MyQRCodeViewController.xib */; };
+		4D258F8A2137E1CC00943AD1 /* QRCodeResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F852137E1CC00943AD1 /* QRCodeResponse.m */; };
+		4D258F8B2137E1CC00943AD1 /* MyQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F862137E1CC00943AD1 /* MyQRCodeViewController.m */; };
+		4D258F8C2137E1CC00943AD1 /* QRCodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F872137E1CC00943AD1 /* QRCodeModel.m */; };
+		4D258F9A2137E1F400943AD1 /* AddAddressTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F8E2137E1F400943AD1 /* AddAddressTextFieldCell.xib */; };
+		4D258F9B2137E1F400943AD1 /* AddAddressTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F8F2137E1F400943AD1 /* AddAddressTextFieldCell.m */; };
+		4D258F9C2137E1F400943AD1 /* AddAddressDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F902137E1F400943AD1 /* AddAddressDefaultCell.xib */; };
+		4D258F9D2137E1F400943AD1 /* AddAddressDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F922137E1F400943AD1 /* AddAddressDefaultCell.m */; };
+		4D258F9E2137E1F400943AD1 /* AddAddressLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F932137E1F400943AD1 /* AddAddressLabelCell.m */; };
+		4D258F9F2137E1F400943AD1 /* AddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258F952137E1F400943AD1 /* AddAddressViewController.m */; };
+		4D258FA02137E1F400943AD1 /* AddAddressLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F972137E1F400943AD1 /* AddAddressLabelCell.xib */; };
+		4D258FA12137E1F400943AD1 /* AddAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258F992137E1F400943AD1 /* AddAddressViewController.xib */; };
+		4D258FAD2137E22800943AD1 /* AddressListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FA32137E22800943AD1 /* AddressListModel.m */; };
+		4D258FAE2137E22800943AD1 /* AddressManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FA42137E22800943AD1 /* AddressManagerViewController.m */; };
+		4D258FAF2137E22800943AD1 /* AddressManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FA52137E22800943AD1 /* AddressManagerCell.m */; };
+		4D258FB02137E22800943AD1 /* AddressManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258FA72137E22800943AD1 /* AddressManagerViewController.xib */; };
+		4D258FB12137E22800943AD1 /* AddressManagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D258FA82137E22800943AD1 /* AddressManagerCell.xib */; };
+		4D258FB22137E22800943AD1 /* AddressListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FAC2137E22800943AD1 /* AddressListResponse.m */; };
+		4D258FB92137E2AF00943AD1 /* HttpsRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FB72137E2AF00943AD1 /* HttpsRequestTool.m */; };
+		4D258FBA2137E2AF00943AD1 /* HttpsRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FB82137E2AF00943AD1 /* HttpsRequestManager.m */; };
 		4D893492213026E4004B7518 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D893491213026E4004B7518 /* AppDelegate.m */; };
 		4D89349A213026E5004B7518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D893499213026E5004B7518 /* Assets.xcassets */; };
 		4D8934A0213026E5004B7518 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89349F213026E5004B7518 /* main.m */; };
@@ -66,8 +105,6 @@
 		4D89356A21302A03004B7518 /* CompanyChooseResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89352B21302A03004B7518 /* CompanyChooseResultCell.m */; };
 		4D89356B21302A03004B7518 /* ChooseCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D89352E21302A03004B7518 /* ChooseCityViewController.xib */; };
 		4D89356C21302A03004B7518 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89353021302A03004B7518 /* Utility.m */; };
-		4D89356D21302A03004B7518 /* HttpsRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89353521302A03004B7518 /* HttpsRequestTool.m */; };
-		4D89356E21302A03004B7518 /* HttpsRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89353621302A03004B7518 /* HttpsRequestManager.m */; };
 		4D89356F21302A03004B7518 /* CustomImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89353821302A03004B7518 /* CustomImagePickerViewController.m */; };
 		4D893574213031B9004B7518 /* AppDelegate+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D893572213031B9004B7518 /* AppDelegate+UI.m */; };
 		4D89357E21303A43004B7518 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89357C21303A43004B7518 /* MineViewController.m */; };
@@ -77,6 +114,71 @@
 
 /* Begin PBXFileReference section */
 		14D9BE924EED9C6F7301A9C8 /* Pods-LiangZiBiTe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiangZiBiTe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiangZiBiTe/Pods-LiangZiBiTe.debug.xcconfig"; sourceTree = "<group>"; };
+		4D258F282132A47D00943AD1 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		4D258F292132A47D00943AD1 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4D258F332133838500943AD1 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		4D258F342133838500943AD1 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		4D258F352133838500943AD1 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		4D258F372133838500943AD1 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		4D258F382133838500943AD1 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4D258F392133838500943AD1 /* UserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoModel.m; sourceTree = "<group>"; };
+		4D258F3A2133838500943AD1 /* UserInfoResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoResponse.h; sourceTree = "<group>"; };
+		4D258F3B2133838500943AD1 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		4D258F3C2133838500943AD1 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		4D258F3D2133838500943AD1 /* UserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoModel.h; sourceTree = "<group>"; };
+		4D258F3E2133838500943AD1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4D258F3F2133838500943AD1 /* UserInfoResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoResponse.m; sourceTree = "<group>"; };
+		4D258F5B2137914500943AD1 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		4D258F5C2137914500943AD1 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		4D258F652137E05B00943AD1 /* SettingHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingHeaderCell.h; sourceTree = "<group>"; };
+		4D258F662137E05B00943AD1 /* SettingNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingNormalCell.xib; sourceTree = "<group>"; };
+		4D258F672137E05B00943AD1 /* SettingNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingNormalCell.m; sourceTree = "<group>"; };
+		4D258F682137E05B00943AD1 /* SettingResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingResponse.m; sourceTree = "<group>"; };
+		4D258F692137E05B00943AD1 /* SettingInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingInfoModel.m; sourceTree = "<group>"; };
+		4D258F6A2137E05B00943AD1 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		4D258F6B2137E05B00943AD1 /* SettingHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingHeaderCell.xib; sourceTree = "<group>"; };
+		4D258F6C2137E05B00943AD1 /* SettingHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingHeaderCell.m; sourceTree = "<group>"; };
+		4D258F6D2137E05B00943AD1 /* SettingResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingResponse.h; sourceTree = "<group>"; };
+		4D258F6E2137E05B00943AD1 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		4D258F6F2137E05B00943AD1 /* SettingNormalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingNormalCell.h; sourceTree = "<group>"; };
+		4D258F702137E05B00943AD1 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		4D258F712137E05B00943AD1 /* SettingInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingInfoModel.h; sourceTree = "<group>"; };
+		4D258F7B2137E17700943AD1 /* ConfigNicknameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigNicknameViewController.xib; sourceTree = "<group>"; };
+		4D258F7C2137E17700943AD1 /* ConfigNicknameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigNicknameViewController.h; sourceTree = "<group>"; };
+		4D258F7D2137E17700943AD1 /* ConfigNicknameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigNicknameViewController.m; sourceTree = "<group>"; };
+		4D258F822137E1CC00943AD1 /* MyQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQRCodeViewController.h; sourceTree = "<group>"; };
+		4D258F832137E1CC00943AD1 /* MyQRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQRCodeViewController.xib; sourceTree = "<group>"; };
+		4D258F842137E1CC00943AD1 /* QRCodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeModel.h; sourceTree = "<group>"; };
+		4D258F852137E1CC00943AD1 /* QRCodeResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeResponse.m; sourceTree = "<group>"; };
+		4D258F862137E1CC00943AD1 /* MyQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQRCodeViewController.m; sourceTree = "<group>"; };
+		4D258F872137E1CC00943AD1 /* QRCodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeModel.m; sourceTree = "<group>"; };
+		4D258F882137E1CC00943AD1 /* QRCodeResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeResponse.h; sourceTree = "<group>"; };
+		4D258F8E2137E1F400943AD1 /* AddAddressTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAddressTextFieldCell.xib; sourceTree = "<group>"; };
+		4D258F8F2137E1F400943AD1 /* AddAddressTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressTextFieldCell.m; sourceTree = "<group>"; };
+		4D258F902137E1F400943AD1 /* AddAddressDefaultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAddressDefaultCell.xib; sourceTree = "<group>"; };
+		4D258F912137E1F400943AD1 /* AddAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressViewController.h; sourceTree = "<group>"; };
+		4D258F922137E1F400943AD1 /* AddAddressDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressDefaultCell.m; sourceTree = "<group>"; };
+		4D258F932137E1F400943AD1 /* AddAddressLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressLabelCell.m; sourceTree = "<group>"; };
+		4D258F942137E1F400943AD1 /* AddAddressTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressTextFieldCell.h; sourceTree = "<group>"; };
+		4D258F952137E1F400943AD1 /* AddAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAddressViewController.m; sourceTree = "<group>"; };
+		4D258F962137E1F400943AD1 /* AddAddressLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressLabelCell.h; sourceTree = "<group>"; };
+		4D258F972137E1F400943AD1 /* AddAddressLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAddressLabelCell.xib; sourceTree = "<group>"; };
+		4D258F982137E1F400943AD1 /* AddAddressDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAddressDefaultCell.h; sourceTree = "<group>"; };
+		4D258F992137E1F400943AD1 /* AddAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAddressViewController.xib; sourceTree = "<group>"; };
+		4D258FA32137E22800943AD1 /* AddressListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListModel.m; sourceTree = "<group>"; };
+		4D258FA42137E22800943AD1 /* AddressManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressManagerViewController.m; sourceTree = "<group>"; };
+		4D258FA52137E22800943AD1 /* AddressManagerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressManagerCell.m; sourceTree = "<group>"; };
+		4D258FA62137E22800943AD1 /* AddressListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListResponse.h; sourceTree = "<group>"; };
+		4D258FA72137E22800943AD1 /* AddressManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressManagerViewController.xib; sourceTree = "<group>"; };
+		4D258FA82137E22800943AD1 /* AddressManagerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressManagerCell.xib; sourceTree = "<group>"; };
+		4D258FA92137E22800943AD1 /* AddressListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListModel.h; sourceTree = "<group>"; };
+		4D258FAA2137E22800943AD1 /* AddressManagerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressManagerCell.h; sourceTree = "<group>"; };
+		4D258FAB2137E22800943AD1 /* AddressManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressManagerViewController.h; sourceTree = "<group>"; };
+		4D258FAC2137E22800943AD1 /* AddressListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListResponse.m; sourceTree = "<group>"; };
+		4D258FB52137E2AF00943AD1 /* HttpsRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsRequestTool.h; sourceTree = "<group>"; };
+		4D258FB62137E2AF00943AD1 /* HttpsRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsRequestManager.h; sourceTree = "<group>"; };
+		4D258FB72137E2AF00943AD1 /* HttpsRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsRequestTool.m; sourceTree = "<group>"; };
+		4D258FB82137E2AF00943AD1 /* HttpsRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsRequestManager.m; sourceTree = "<group>"; };
 		4D89348D213026E4004B7518 /* LiangZiBiTe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiangZiBiTe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D893490213026E4004B7518 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4D893491213026E4004B7518 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -191,10 +293,6 @@
 		4D89352E21302A03004B7518 /* ChooseCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCityViewController.xib; sourceTree = "<group>"; };
 		4D89353021302A03004B7518 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		4D89353121302A03004B7518 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
-		4D89353321302A03004B7518 /* HttpsRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsRequestTool.h; sourceTree = "<group>"; };
-		4D89353421302A03004B7518 /* HttpsRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsRequestManager.h; sourceTree = "<group>"; };
-		4D89353521302A03004B7518 /* HttpsRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsRequestTool.m; sourceTree = "<group>"; };
-		4D89353621302A03004B7518 /* HttpsRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsRequestManager.m; sourceTree = "<group>"; };
 		4D89353821302A03004B7518 /* CustomImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImagePickerViewController.m; sourceTree = "<group>"; };
 		4D89353921302A03004B7518 /* CustomImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImagePickerViewController.h; sourceTree = "<group>"; };
 		4D89357021302FB4004B7518 /* LiangZiBiTe.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiangZiBiTe.pch; sourceTree = "<group>"; };
@@ -219,6 +317,173 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D258F272132A47200943AD1 /* one */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F282132A47D00943AD1 /* TestViewController.h */,
+				4D258F292132A47D00943AD1 /* TestViewController.m */,
+			);
+			path = one;
+			sourceTree = "<group>";
+		};
+		4D258F312133838500943AD1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F362133838500943AD1 /* Login */,
+				4D258F322133838500943AD1 /* Register */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4D258F322133838500943AD1 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F352133838500943AD1 /* RegisterViewController.h */,
+				4D258F332133838500943AD1 /* RegisterViewController.m */,
+				4D258F342133838500943AD1 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		4D258F362133838500943AD1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F3E2133838500943AD1 /* LoginViewController.h */,
+				4D258F382133838500943AD1 /* LoginViewController.m */,
+				4D258F3C2133838500943AD1 /* LoginViewController.xib */,
+				4D258F3B2133838500943AD1 /* UserManager.h */,
+				4D258F372133838500943AD1 /* UserManager.m */,
+				4D258F3A2133838500943AD1 /* UserInfoResponse.h */,
+				4D258F3F2133838500943AD1 /* UserInfoResponse.m */,
+				4D258F3D2133838500943AD1 /* UserInfoModel.h */,
+				4D258F392133838500943AD1 /* UserInfoModel.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4D258F5A2137913000943AD1 /* UIImageColor */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F5B2137914500943AD1 /* UIImage+Color.h */,
+				4D258F5C2137914500943AD1 /* UIImage+Color.m */,
+			);
+			path = UIImageColor;
+			sourceTree = "<group>";
+		};
+		4D258F642137E05B00943AD1 /* PersonInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F7E2137E17700943AD1 /* Setting */,
+				4D258FA22137E22800943AD1 /* AddressList */,
+				4D258F8D2137E1F400943AD1 /* AddAddress */,
+				4D258F7A2137E17700943AD1 /* ConfigNickname */,
+				4D258F812137E1CC00943AD1 /* MyCode */,
+			);
+			path = PersonInfo;
+			sourceTree = "<group>";
+		};
+		4D258F7A2137E17700943AD1 /* ConfigNickname */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F7C2137E17700943AD1 /* ConfigNicknameViewController.h */,
+				4D258F7D2137E17700943AD1 /* ConfigNicknameViewController.m */,
+				4D258F7B2137E17700943AD1 /* ConfigNicknameViewController.xib */,
+			);
+			path = ConfigNickname;
+			sourceTree = "<group>";
+		};
+		4D258F7E2137E17700943AD1 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F6A2137E05B00943AD1 /* SettingViewController.h */,
+				4D258F702137E05B00943AD1 /* SettingViewController.m */,
+				4D258F6E2137E05B00943AD1 /* SettingViewController.xib */,
+				4D258F652137E05B00943AD1 /* SettingHeaderCell.h */,
+				4D258F6C2137E05B00943AD1 /* SettingHeaderCell.m */,
+				4D258F6B2137E05B00943AD1 /* SettingHeaderCell.xib */,
+				4D258F6F2137E05B00943AD1 /* SettingNormalCell.h */,
+				4D258F672137E05B00943AD1 /* SettingNormalCell.m */,
+				4D258F662137E05B00943AD1 /* SettingNormalCell.xib */,
+				4D258F6D2137E05B00943AD1 /* SettingResponse.h */,
+				4D258F682137E05B00943AD1 /* SettingResponse.m */,
+				4D258F712137E05B00943AD1 /* SettingInfoModel.h */,
+				4D258F692137E05B00943AD1 /* SettingInfoModel.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		4D258F812137E1CC00943AD1 /* MyCode */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F822137E1CC00943AD1 /* MyQRCodeViewController.h */,
+				4D258F862137E1CC00943AD1 /* MyQRCodeViewController.m */,
+				4D258F832137E1CC00943AD1 /* MyQRCodeViewController.xib */,
+				4D258F882137E1CC00943AD1 /* QRCodeResponse.h */,
+				4D258F852137E1CC00943AD1 /* QRCodeResponse.m */,
+				4D258F842137E1CC00943AD1 /* QRCodeModel.h */,
+				4D258F872137E1CC00943AD1 /* QRCodeModel.m */,
+			);
+			path = MyCode;
+			sourceTree = "<group>";
+		};
+		4D258F8D2137E1F400943AD1 /* AddAddress */ = {
+			isa = PBXGroup;
+			children = (
+				4D258F8E2137E1F400943AD1 /* AddAddressTextFieldCell.xib */,
+				4D258F8F2137E1F400943AD1 /* AddAddressTextFieldCell.m */,
+				4D258F902137E1F400943AD1 /* AddAddressDefaultCell.xib */,
+				4D258F912137E1F400943AD1 /* AddAddressViewController.h */,
+				4D258F922137E1F400943AD1 /* AddAddressDefaultCell.m */,
+				4D258F932137E1F400943AD1 /* AddAddressLabelCell.m */,
+				4D258F942137E1F400943AD1 /* AddAddressTextFieldCell.h */,
+				4D258F952137E1F400943AD1 /* AddAddressViewController.m */,
+				4D258F962137E1F400943AD1 /* AddAddressLabelCell.h */,
+				4D258F972137E1F400943AD1 /* AddAddressLabelCell.xib */,
+				4D258F982137E1F400943AD1 /* AddAddressDefaultCell.h */,
+				4D258F992137E1F400943AD1 /* AddAddressViewController.xib */,
+			);
+			path = AddAddress;
+			sourceTree = "<group>";
+		};
+		4D258FA22137E22800943AD1 /* AddressList */ = {
+			isa = PBXGroup;
+			children = (
+				4D258FA32137E22800943AD1 /* AddressListModel.m */,
+				4D258FA42137E22800943AD1 /* AddressManagerViewController.m */,
+				4D258FA52137E22800943AD1 /* AddressManagerCell.m */,
+				4D258FA62137E22800943AD1 /* AddressListResponse.h */,
+				4D258FA72137E22800943AD1 /* AddressManagerViewController.xib */,
+				4D258FA82137E22800943AD1 /* AddressManagerCell.xib */,
+				4D258FA92137E22800943AD1 /* AddressListModel.h */,
+				4D258FAA2137E22800943AD1 /* AddressManagerCell.h */,
+				4D258FAB2137E22800943AD1 /* AddressManagerViewController.h */,
+				4D258FAC2137E22800943AD1 /* AddressListResponse.m */,
+			);
+			path = AddressList;
+			sourceTree = "<group>";
+		};
+		4D258FB32137E26600943AD1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4D893490213026E4004B7518 /* AppDelegate.h */,
+				4D893491213026E4004B7518 /* AppDelegate.m */,
+				4D893573213031B9004B7518 /* AppDelegate+UI.h */,
+				4D893572213031B9004B7518 /* AppDelegate+UI.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4D258FB42137E2AF00943AD1 /* HttpsRequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				4D258FB52137E2AF00943AD1 /* HttpsRequestTool.h */,
+				4D258FB62137E2AF00943AD1 /* HttpsRequestManager.h */,
+				4D258FB72137E2AF00943AD1 /* HttpsRequestTool.m */,
+				4D258FB82137E2AF00943AD1 /* HttpsRequestManager.m */,
+			);
+			path = HttpsRequestManager;
+			sourceTree = "<group>";
+		};
 		4D893484213026E4004B7518 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +505,7 @@
 		4D89348F213026E4004B7518 /* LiangZiBiTe */ = {
 			isa = PBXGroup;
 			children = (
+				4D258FB32137E26600943AD1 /* AppDelegate */,
 				4D8935712130312E004B7518 /* Items */,
 				4D8934BB21302A03004B7518 /* Libs */,
 				4D89351A21302A03004B7518 /* Tools */,
@@ -256,6 +522,7 @@
 		4D8934A721302915004B7518 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				4D258F5A2137913000943AD1 /* UIImageColor */,
 				4D8934B32130297C004B7518 /* BarButtonItem */,
 				4D8934B62130297D004B7518 /* XIBBorderColor */,
 			);
@@ -265,10 +532,6 @@
 		4D8934A821302916004B7518 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4D893490213026E4004B7518 /* AppDelegate.h */,
-				4D893491213026E4004B7518 /* AppDelegate.m */,
-				4D893573213031B9004B7518 /* AppDelegate+UI.h */,
-				4D893572213031B9004B7518 /* AppDelegate+UI.m */,
 				4D8934AD21302916004B7518 /* BaseViewController.h */,
 				4D8934AA21302916004B7518 /* BaseViewController.m */,
 				4D8934AC21302916004B7518 /* BaseNavViewController.h */,
@@ -499,11 +762,11 @@
 		4D89351A21302A03004B7518 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				4D258FB42137E2AF00943AD1 /* HttpsRequestManager */,
 				4D89351B21302A03004B7518 /* SVProgressHUDManager */,
 				4D89351F21302A03004B7518 /* BaseResponseManager */,
 				4D89352421302A03004B7518 /* ChooseArea */,
 				4D89352F21302A03004B7518 /* UtilityManager */,
-				4D89353221302A03004B7518 /* HttpsRequestManager */,
 				4D89353721302A03004B7518 /* CustomSystemImagePickerVontroller */,
 			);
 			path = Tools;
@@ -555,17 +818,6 @@
 			path = UtilityManager;
 			sourceTree = "<group>";
 		};
-		4D89353221302A03004B7518 /* HttpsRequestManager */ = {
-			isa = PBXGroup;
-			children = (
-				4D89353421302A03004B7518 /* HttpsRequestManager.h */,
-				4D89353621302A03004B7518 /* HttpsRequestManager.m */,
-				4D89353321302A03004B7518 /* HttpsRequestTool.h */,
-				4D89353521302A03004B7518 /* HttpsRequestTool.m */,
-			);
-			path = HttpsRequestManager;
-			sourceTree = "<group>";
-		};
 		4D89353721302A03004B7518 /* CustomSystemImagePickerVontroller */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,23 +830,18 @@
 		4D8935712130312E004B7518 /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				4D89357521303989004B7518 /* Login */,
+				4D258F312133838500943AD1 /* Login */,
 				4D89357621303989004B7518 /* Mine */,
 			);
 			path = Items;
 			sourceTree = "<group>";
 		};
-		4D89357521303989004B7518 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		4D89357621303989004B7518 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				4D258F272132A47200943AD1 /* one */,
 				4D893577213039A6004B7518 /* Mine */,
+				4D258F642137E05B00943AD1 /* PersonInfo */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -686,12 +933,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D258F7F2137E17700943AD1 /* ConfigNicknameViewController.xib in Resources */,
+				4D258FB12137E22800943AD1 /* AddressManagerCell.xib in Resources */,
+				4D258F452133838500943AD1 /* LoginViewController.xib in Resources */,
 				4D89353E21302A03004B7518 /* EmptyView.xib in Resources */,
 				4D89355121302A03004B7518 /* ScanResultViewController.xib in Resources */,
+				4D258F9A2137E1F400943AD1 /* AddAddressTextFieldCell.xib in Resources */,
+				4D258F892137E1CC00943AD1 /* MyQRCodeViewController.xib in Resources */,
+				4D258F412133838500943AD1 /* RegisterViewController.xib in Resources */,
+				4D258FA02137E1F400943AD1 /* AddAddressLabelCell.xib in Resources */,
 				4D89356B21302A03004B7518 /* ChooseCityViewController.xib in Resources */,
+				4D258F9C2137E1F400943AD1 /* AddAddressDefaultCell.xib in Resources */,
 				4D89349A213026E5004B7518 /* Assets.xcassets in Resources */,
+				4D258FA12137E1F400943AD1 /* AddAddressViewController.xib in Resources */,
+				4D258FB02137E22800943AD1 /* AddressManagerViewController.xib in Resources */,
+				4D258F782137E05B00943AD1 /* SettingViewController.xib in Resources */,
 				4D89356821302A03004B7518 /* CompanyChooseResultCell.xib in Resources */,
 				4D89357F21303A43004B7518 /* MineViewController.xib in Resources */,
+				4D258F762137E05B00943AD1 /* SettingHeaderCell.xib in Resources */,
+				4D258F722137E05B00943AD1 /* SettingNormalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,11 +972,13 @@
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/PGDatePicker/PGDatePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/PGPickerView/PGPickerView.framework",
+				"${BUILT_PRODUCTS_DIR}/PNChart/PNChart.framework",
 				"${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SGPagingView/SGPagingView.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/ZBarSDK/ZBarSDK.framework",
 			);
@@ -729,11 +991,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PGDatePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PGPickerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PNChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTRootNavigationController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SGPagingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZBarSDK.framework",
 			);
@@ -784,17 +1048,23 @@
 			files = (
 				4D89355521302A03004B7518 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				4D89355A21302A03004B7518 /* LBXPermissionHealth.m in Sources */,
+				4D258FB22137E22800943AD1 /* AddressListResponse.m in Sources */,
 				4D89354021302A03004B7518 /* EmptyView.m in Sources */,
 				4D89353B21302A03004B7518 /* GLTextField.m in Sources */,
 				4D89355821302A03004B7518 /* LBXPermissionCalendar.m in Sources */,
 				4D89354121302A03004B7518 /* ZZYPhotoHelper.m in Sources */,
+				4D258F442133838500943AD1 /* UserInfoModel.m in Sources */,
 				4D89355621302A03004B7518 /* LBXPermissionMicrophone.m in Sources */,
+				4D258F9B2137E1F400943AD1 /* AddAddressTextFieldCell.m in Sources */,
 				4D89356C21302A03004B7518 /* Utility.m in Sources */,
 				4D89354621302A03004B7518 /* CreateBarCodeViewController.m in Sources */,
 				4D89354D21302A03004B7518 /* DIYScanViewController.m in Sources */,
 				4D89354421302A03004B7518 /* NoNetWorkView.m in Sources */,
+				4D258F802137E17700943AD1 /* ConfigNicknameViewController.m in Sources */,
+				4D258FAF2137E22800943AD1 /* AddressManagerCell.m in Sources */,
 				4D89356321302A03004B7518 /* SVProgressHUDManager.m in Sources */,
 				4D89354F21302A03004B7518 /* UIImageView+CornerRadius.m in Sources */,
+				4D258FAE2137E22800943AD1 /* AddressManagerViewController.m in Sources */,
 				4D89356921302A03004B7518 /* CityModel.m in Sources */,
 				4D8934B121302916004B7518 /* BaseViewController.m in Sources */,
 				4D8934B021302916004B7518 /* BaseNavViewController.m in Sources */,
@@ -803,42 +1073,60 @@
 				4D89355721302A03004B7518 /* LBXPermissionNetwork.m in Sources */,
 				4D89354321302A03004B7518 /* NetWorkingTool.m in Sources */,
 				4D89354A21302A03004B7518 /* ScanResultResponse.m in Sources */,
+				4D258F792137E05B00943AD1 /* SettingViewController.m in Sources */,
 				4D89354C21302A03004B7518 /* LBXAlertAction.m in Sources */,
 				4D89353A21302A03004B7518 /* UIView+category.m in Sources */,
 				4D89356721302A03004B7518 /* ChooseCityViewController.m in Sources */,
 				4D893574213031B9004B7518 /* AppDelegate+UI.m in Sources */,
 				4D89353F21302A03004B7518 /* UITableView+EmptyFooterView.m in Sources */,
+				4D258F422133838500943AD1 /* UserManager.m in Sources */,
 				4D89355B21302A03004B7518 /* LBXPermissionSetting.m in Sources */,
 				4D8934B221302916004B7518 /* TabBarViewController.m in Sources */,
-				4D89356E21302A03004B7518 /* HttpsRequestManager.m in Sources */,
 				4D89354221302A03004B7518 /* Reachability.m in Sources */,
 				4D89356221302A03004B7518 /* UIView+frameAdjust.m in Sources */,
+				4D258F432133838500943AD1 /* LoginViewController.m in Sources */,
 				4D89354821302A03004B7518 /* QQLBXScanViewController.m in Sources */,
-				4D89356D21302A03004B7518 /* HttpsRequestTool.m in Sources */,
 				4D89357E21303A43004B7518 /* MineViewController.m in Sources */,
+				4D258F8A2137E1CC00943AD1 /* QRCodeResponse.m in Sources */,
+				4D258F462133838500943AD1 /* UserInfoResponse.m in Sources */,
 				4D89354B21302A03004B7518 /* StyleDIY.m in Sources */,
 				4D89356A21302A03004B7518 /* CompanyChooseResultCell.m in Sources */,
 				4D89355921302A03004B7518 /* LBXPermissionReminders.m in Sources */,
+				4D258F8C2137E1CC00943AD1 /* QRCodeModel.m in Sources */,
 				4D89356021302A03004B7518 /* LBXPermission.m in Sources */,
+				4D258F402133838500943AD1 /* RegisterViewController.m in Sources */,
+				4D258F772137E05B00943AD1 /* SettingHeaderCell.m in Sources */,
 				4D89355321302A03004B7518 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				4D89354521302A03004B7518 /* NetWorkingPopManager.m in Sources */,
+				4D258F9E2137E1F400943AD1 /* AddAddressLabelCell.m in Sources */,
 				4D89354721302A03004B7518 /* ScanResultData.m in Sources */,
+				4D258F9F2137E1F400943AD1 /* AddAddressViewController.m in Sources */,
 				4D8934B92130297D004B7518 /* UIBarButtonItem+Badge.m in Sources */,
 				4D89356521302A03004B7518 /* BaseResponse.m in Sources */,
+				4D258F732137E05B00943AD1 /* SettingNormalCell.m in Sources */,
 				4D89355221302A03004B7518 /* UIWindow+LBXHierarchy.m in Sources */,
 				4D89356121302A03004B7518 /* CQScrollMenuView.m in Sources */,
 				4D893492213026E4004B7518 /* AppDelegate.m in Sources */,
 				4D89355421302A03004B7518 /* UIAlertView+LBXAlertAction.m in Sources */,
 				4D89354921302A03004B7518 /* ScanResultModel.m in Sources */,
+				4D258FB92137E2AF00943AD1 /* HttpsRequestTool.m in Sources */,
 				4D89356621302A03004B7518 /* CityResponse.m in Sources */,
 				4D89355C21302A03004B7518 /* LBXPermissionPhotos.m in Sources */,
+				4D258FAD2137E22800943AD1 /* AddressListModel.m in Sources */,
 				4D89354E21302A03004B7518 /* Global.m in Sources */,
 				4D89356421302A03004B7518 /* PageModel.m in Sources */,
 				4D89356F21302A03004B7518 /* CustomImagePickerViewController.m in Sources */,
 				4D8934BA2130297D004B7518 /* CALayer+XibBorderColor.m in Sources */,
+				4D258F2A2132A47D00943AD1 /* TestViewController.m in Sources */,
+				4D258F9D2137E1F400943AD1 /* AddAddressDefaultCell.m in Sources */,
+				4D258F752137E05B00943AD1 /* SettingInfoModel.m in Sources */,
+				4D258FBA2137E2AF00943AD1 /* HttpsRequestManager.m in Sources */,
 				4D89353C21302A03004B7518 /* IMJIETagView.m in Sources */,
 				4D89355F21302A03004B7518 /* LBXPermissionCamera.m in Sources */,
 				4D89355E21302A03004B7518 /* LBXPermissionContacts.m in Sources */,
+				4D258F742137E05B00943AD1 /* SettingResponse.m in Sources */,
+				4D258F8B2137E1CC00943AD1 /* MyQRCodeViewController.m in Sources */,
+				4D258F5D2137914500943AD1 /* UIImage+Color.m in Sources */,
 				4D89355D21302A03004B7518 /* LBXPermissionLocation.m in Sources */,
 				4D89353D21302A03004B7518 /* IMJIETagFrame.m in Sources */,
 			);

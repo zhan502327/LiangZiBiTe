@@ -30,6 +30,8 @@ PODS:
   - PGDatePicker (2.5.6):
     - PGPickerView
   - PGPickerView (1.3.3)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
   - RTRootNavigationController (0.6.7):
     - RTRootNavigationController/Core (= 0.6.7)
   - RTRootNavigationController/Core (0.6.7)
@@ -40,6 +42,7 @@ PODS:
   - SDWebImage/Core (4.4.2)
   - SGPagingView (1.5.1)
   - SVProgressHUD (2.2.5)
+  - UICountingLabel (1.2.0)
   - UITableView+FDTemplateLayoutCell (1.6)
   - ZBarSDK (1.3.1)
 
@@ -53,6 +56,7 @@ DEPENDENCIES:
   - LBXScan/UI (~> 2.2)
   - MJRefresh
   - PGDatePicker
+  - PNChart
   - RTRootNavigationController
   - SDCycleScrollView
   - SDWebImage
@@ -68,14 +72,16 @@ SPEC CHECKSUMS:
   MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
   PGDatePicker: dea9321d8fda67e64e82c74d0f5f9938686c0389
   PGPickerView: 0b781b1d8fb153db5ef09ac3842941f29cbca8a4
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   RTRootNavigationController: d6aa6cbb78a3eaecea4f6e4df63f15dd887836b8
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SGPagingView: 914ed5743e5a0c81a45d8229bfece2cd5b8cc013
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
   ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
-PODFILE CHECKSUM: bf82fe6c9a8c5d90fb047576821a65b018516aed
+PODFILE CHECKSUM: 66574200a4dd35a29113ef4e51b1a3e54bca19b8
 
 COCOAPODS: 1.4.0

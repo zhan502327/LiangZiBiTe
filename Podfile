@@ -20,7 +20,7 @@ target 'LiangZiBiTe' do
  pod 'LBXScan/LBXZBar','~> 2.2'
  pod 'LBXScan/UI','~> 2.2'
  
- 
+ pod 'PNChart'
  
  
 end

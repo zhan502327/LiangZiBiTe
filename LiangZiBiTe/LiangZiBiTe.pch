@@ -27,7 +27,7 @@
 #import "UITableView+EmptyFooterView.h"
 #import "UIImageView+WebCache.h"
 #import "UITableView+FDTemplateLayoutCell.h"
-//#import "UserManager.h"
+#import "UserManager.h"
 
 
 
