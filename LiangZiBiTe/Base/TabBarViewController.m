@@ -38,12 +38,13 @@
 //    ExtentionViewController *chatVC = [[ExtentionViewController alloc] init];
 //    [self setRootNavBarViewController:chatVC withBarTitle:@"推广" unselectImage:@"Tabbar_Extention_unselected" andSelectImage:@"Tabbar_Extention_selected"];
 
+    MineViewController *chatListVC = [[MineViewController alloc] init];
+    [self setRootNavBarViewController:chatListVC withBarTitle:@"我的" unselectImage:@"Tabbar_Mine_unselected" andSelectImage:@"Tabbar_Mine_selected"];
     
     SettingViewController *sesss = [[SettingViewController alloc] init];
     [self setRootNavBarViewController:sesss withBarTitle:@"我的" unselectImage:@"Tabbar_Mine_unselected" andSelectImage:@"Tabbar_Mine_selected"];
     
-    MineViewController *chatListVC = [[MineViewController alloc] init];
-     [self setRootNavBarViewController:chatListVC withBarTitle:@"我的" unselectImage:@"Tabbar_Mine_unselected" andSelectImage:@"Tabbar_Mine_selected"];
+
 
     
     

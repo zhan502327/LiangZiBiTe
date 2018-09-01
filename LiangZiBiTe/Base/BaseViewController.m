@@ -65,7 +65,7 @@
     
     self.title = string;
     
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:HexColor(0XFFFFFF),NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Semibold" size:16]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:HexColor(0XFFFFFF),NSFontAttributeName:[UIFont fontWithName:@"PingFangSC-Semibold" size:18]};
     
 }
 

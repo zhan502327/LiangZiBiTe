@@ -46,6 +46,36 @@
 		4D258FB22137E22800943AD1 /* AddressListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FAC2137E22800943AD1 /* AddressListResponse.m */; };
 		4D258FB92137E2AF00943AD1 /* HttpsRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FB72137E2AF00943AD1 /* HttpsRequestTool.m */; };
 		4D258FBA2137E2AF00943AD1 /* HttpsRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FB82137E2AF00943AD1 /* HttpsRequestManager.m */; };
+		4D5C0AA0213A302300E8B5D5 /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0A9E213A302300E8B5D5 /* MineCell.m */; };
+		4D5C0AA1213A302300E8B5D5 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0A9F213A302300E8B5D5 /* MineCell.xib */; };
+		4D5C0AA5213A317F00E8B5D5 /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AA3213A317F00E8B5D5 /* MineHeaderView.m */; };
+		4D5C0AA6213A317F00E8B5D5 /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AA4213A317F00E8B5D5 /* MineHeaderView.xib */; };
+		4D5C0AAC213A67B600E8B5D5 /* LiangZiBiTeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AAA213A67B600E8B5D5 /* LiangZiBiTeViewController.m */; };
+		4D5C0AAD213A67B600E8B5D5 /* LiangZiBiTeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AAB213A67B600E8B5D5 /* LiangZiBiTeViewController.xib */; };
+		4D5C0AB1213A683D00E8B5D5 /* LiangZiBiTeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AAF213A683D00E8B5D5 /* LiangZiBiTeCell.m */; };
+		4D5C0AB2213A683D00E8B5D5 /* LiangZiBiTeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AB0213A683D00E8B5D5 /* LiangZiBiTeCell.xib */; };
+		4D5C0AB6213A6CEE00E8B5D5 /* QKTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AB4213A6CEE00E8B5D5 /* QKTViewController.m */; };
+		4D5C0AB7213A6CEE00E8B5D5 /* QKTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AB5213A6CEE00E8B5D5 /* QKTViewController.xib */; };
+		4D5C0AC0213A700400E8B5D5 /* ZhuanRuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0ABE213A700400E8B5D5 /* ZhuanRuViewController.m */; };
+		4D5C0AC1213A700400E8B5D5 /* ZhuanRuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0ABF213A700400E8B5D5 /* ZhuanRuViewController.xib */; };
+		4D5C0AC5213A701A00E8B5D5 /* ZhuanChuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AC3213A701A00E8B5D5 /* ZhuanChuViewController.m */; };
+		4D5C0AC6213A701A00E8B5D5 /* ZhuanChuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AC4213A701A00E8B5D5 /* ZhuanChuViewController.xib */; };
+		4D5C0AD1213A75FA00E8B5D5 /* MaiRuListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0ACF213A75FA00E8B5D5 /* MaiRuListViewController.m */; };
+		4D5C0AD2213A75FA00E8B5D5 /* MaiRuListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AD0213A75FA00E8B5D5 /* MaiRuListViewController.xib */; };
+		4D5C0AD6213A780C00E8B5D5 /* MaiRuListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AD4213A780C00E8B5D5 /* MaiRuListCell.m */; };
+		4D5C0AD7213A780C00E8B5D5 /* MaiRuListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AD5213A780C00E8B5D5 /* MaiRuListCell.xib */; };
+		4D5C0ADB213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AD9213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.m */; };
+		4D5C0ADC213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0ADA213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib */; };
+		4D5C0AE5213A7D9900E8B5D5 /* MaiRuUnSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AE3213A7D9900E8B5D5 /* MaiRuUnSelectViewController.m */; };
+		4D5C0AE6213A7D9900E8B5D5 /* MaiRuUnSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AE4213A7D9900E8B5D5 /* MaiRuUnSelectViewController.xib */; };
+		4D5C0AEA213A7DAA00E8B5D5 /* MaiRuSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AE8213A7DAA00E8B5D5 /* MaiRuSelectViewController.m */; };
+		4D5C0AEB213A7DAA00E8B5D5 /* MaiRuSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AE9213A7DAA00E8B5D5 /* MaiRuSelectViewController.xib */; };
+		4D5C0AEF213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AED213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.m */; };
+		4D5C0AF0213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AEE213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.xib */; };
+		4D5C0AF4213A7EAF00E8B5D5 /* MaiRuSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AF2213A7EAF00E8B5D5 /* MaiRuSelectedCell.m */; };
+		4D5C0AF5213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AF3213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib */; };
+		4D5C0AFC213A8C2B00E8B5D5 /* AddBankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AFA213A8C2B00E8B5D5 /* AddBankViewController.m */; };
+		4D5C0AFD213A8C2B00E8B5D5 /* AddBankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AFB213A8C2B00E8B5D5 /* AddBankViewController.xib */; };
 		4D893492213026E4004B7518 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D893491213026E4004B7518 /* AppDelegate.m */; };
 		4D89349A213026E5004B7518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D893499213026E5004B7518 /* Assets.xcassets */; };
 		4D8934A0213026E5004B7518 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89349F213026E5004B7518 /* main.m */; };
@@ -179,6 +209,51 @@
 		4D258FB62137E2AF00943AD1 /* HttpsRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsRequestManager.h; sourceTree = "<group>"; };
 		4D258FB72137E2AF00943AD1 /* HttpsRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsRequestTool.m; sourceTree = "<group>"; };
 		4D258FB82137E2AF00943AD1 /* HttpsRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsRequestManager.m; sourceTree = "<group>"; };
+		4D5C0A9D213A302300E8B5D5 /* MineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
+		4D5C0A9E213A302300E8B5D5 /* MineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineCell.m; sourceTree = "<group>"; };
+		4D5C0A9F213A302300E8B5D5 /* MineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineCell.xib; sourceTree = "<group>"; };
+		4D5C0AA2213A317F00E8B5D5 /* MineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineHeaderView.h; sourceTree = "<group>"; };
+		4D5C0AA3213A317F00E8B5D5 /* MineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineHeaderView.m; sourceTree = "<group>"; };
+		4D5C0AA4213A317F00E8B5D5 /* MineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
+		4D5C0AA9213A67B600E8B5D5 /* LiangZiBiTeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiangZiBiTeViewController.h; sourceTree = "<group>"; };
+		4D5C0AAA213A67B600E8B5D5 /* LiangZiBiTeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiangZiBiTeViewController.m; sourceTree = "<group>"; };
+		4D5C0AAB213A67B600E8B5D5 /* LiangZiBiTeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiangZiBiTeViewController.xib; sourceTree = "<group>"; };
+		4D5C0AAE213A683D00E8B5D5 /* LiangZiBiTeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiangZiBiTeCell.h; sourceTree = "<group>"; };
+		4D5C0AAF213A683D00E8B5D5 /* LiangZiBiTeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiangZiBiTeCell.m; sourceTree = "<group>"; };
+		4D5C0AB0213A683D00E8B5D5 /* LiangZiBiTeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiangZiBiTeCell.xib; sourceTree = "<group>"; };
+		4D5C0AB3213A6CEE00E8B5D5 /* QKTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKTViewController.h; sourceTree = "<group>"; };
+		4D5C0AB4213A6CEE00E8B5D5 /* QKTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKTViewController.m; sourceTree = "<group>"; };
+		4D5C0AB5213A6CEE00E8B5D5 /* QKTViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QKTViewController.xib; sourceTree = "<group>"; };
+		4D5C0ABD213A700400E8B5D5 /* ZhuanRuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuanRuViewController.h; sourceTree = "<group>"; };
+		4D5C0ABE213A700400E8B5D5 /* ZhuanRuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuanRuViewController.m; sourceTree = "<group>"; };
+		4D5C0ABF213A700400E8B5D5 /* ZhuanRuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZhuanRuViewController.xib; sourceTree = "<group>"; };
+		4D5C0AC2213A701A00E8B5D5 /* ZhuanChuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuanChuViewController.h; sourceTree = "<group>"; };
+		4D5C0AC3213A701A00E8B5D5 /* ZhuanChuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuanChuViewController.m; sourceTree = "<group>"; };
+		4D5C0AC4213A701A00E8B5D5 /* ZhuanChuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZhuanChuViewController.xib; sourceTree = "<group>"; };
+		4D5C0ACE213A75FA00E8B5D5 /* MaiRuListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuListViewController.h; sourceTree = "<group>"; };
+		4D5C0ACF213A75FA00E8B5D5 /* MaiRuListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuListViewController.m; sourceTree = "<group>"; };
+		4D5C0AD0213A75FA00E8B5D5 /* MaiRuListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuListViewController.xib; sourceTree = "<group>"; };
+		4D5C0AD3213A780C00E8B5D5 /* MaiRuListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuListCell.h; sourceTree = "<group>"; };
+		4D5C0AD4213A780C00E8B5D5 /* MaiRuListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuListCell.m; sourceTree = "<group>"; };
+		4D5C0AD5213A780C00E8B5D5 /* MaiRuListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuListCell.xib; sourceTree = "<group>"; };
+		4D5C0AD8213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuUnFinishViewController.h; sourceTree = "<group>"; };
+		4D5C0AD9213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuUnFinishViewController.m; sourceTree = "<group>"; };
+		4D5C0ADA213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuUnFinishViewController.xib; sourceTree = "<group>"; };
+		4D5C0AE2213A7D9900E8B5D5 /* MaiRuUnSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuUnSelectViewController.h; sourceTree = "<group>"; };
+		4D5C0AE3213A7D9900E8B5D5 /* MaiRuUnSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuUnSelectViewController.m; sourceTree = "<group>"; };
+		4D5C0AE4213A7D9900E8B5D5 /* MaiRuUnSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuUnSelectViewController.xib; sourceTree = "<group>"; };
+		4D5C0AE7213A7DAA00E8B5D5 /* MaiRuSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuSelectViewController.h; sourceTree = "<group>"; };
+		4D5C0AE8213A7DAA00E8B5D5 /* MaiRuSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuSelectViewController.m; sourceTree = "<group>"; };
+		4D5C0AE9213A7DAA00E8B5D5 /* MaiRuSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuSelectViewController.xib; sourceTree = "<group>"; };
+		4D5C0AEC213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuUnSelectedCell.h; sourceTree = "<group>"; };
+		4D5C0AED213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuUnSelectedCell.m; sourceTree = "<group>"; };
+		4D5C0AEE213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuUnSelectedCell.xib; sourceTree = "<group>"; };
+		4D5C0AF1213A7EAF00E8B5D5 /* MaiRuSelectedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuSelectedCell.h; sourceTree = "<group>"; };
+		4D5C0AF2213A7EAF00E8B5D5 /* MaiRuSelectedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuSelectedCell.m; sourceTree = "<group>"; };
+		4D5C0AF3213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuSelectedCell.xib; sourceTree = "<group>"; };
+		4D5C0AF9213A8C2B00E8B5D5 /* AddBankViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddBankViewController.h; sourceTree = "<group>"; };
+		4D5C0AFA213A8C2B00E8B5D5 /* AddBankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddBankViewController.m; sourceTree = "<group>"; };
+		4D5C0AFB213A8C2B00E8B5D5 /* AddBankViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBankViewController.xib; sourceTree = "<group>"; };
 		4D89348D213026E4004B7518 /* LiangZiBiTe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiangZiBiTe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D893490213026E4004B7518 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4D893491213026E4004B7518 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -482,6 +557,174 @@
 				4D258FB82137E2AF00943AD1 /* HttpsRequestManager.m */,
 			);
 			path = HttpsRequestManager;
+			sourceTree = "<group>";
+		};
+		4D5C0AA7213A676900E8B5D5 /* QKT */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AB3213A6CEE00E8B5D5 /* QKTViewController.h */,
+				4D5C0AB4213A6CEE00E8B5D5 /* QKTViewController.m */,
+				4D5C0AB5213A6CEE00E8B5D5 /* QKTViewController.xib */,
+			);
+			path = QKT;
+			sourceTree = "<group>";
+		};
+		4D5C0AA8213A676900E8B5D5 /* LiangZiBiTe */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AA9213A67B600E8B5D5 /* LiangZiBiTeViewController.h */,
+				4D5C0AAA213A67B600E8B5D5 /* LiangZiBiTeViewController.m */,
+				4D5C0AAB213A67B600E8B5D5 /* LiangZiBiTeViewController.xib */,
+				4D5C0AAE213A683D00E8B5D5 /* LiangZiBiTeCell.h */,
+				4D5C0AAF213A683D00E8B5D5 /* LiangZiBiTeCell.m */,
+				4D5C0AB0213A683D00E8B5D5 /* LiangZiBiTeCell.xib */,
+			);
+			path = LiangZiBiTe;
+			sourceTree = "<group>";
+		};
+		4D5C0AB8213A6FBE00E8B5D5 /* MaiChu */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AF7213A8C0E00E8B5D5 /* MaiChu */,
+				4D5C0AF6213A8C0E00E8B5D5 /* AddBank */,
+				4D5C0AF8213A8C0E00E8B5D5 /* MaiChuCenter */,
+			);
+			path = MaiChu;
+			sourceTree = "<group>";
+		};
+		4D5C0AB9213A6FBE00E8B5D5 /* MaiRu */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0ACD213A75B400E8B5D5 /* MaiRu */,
+				4D5C0AC8213A75B400E8B5D5 /* MaiRuUnFinish */,
+				4D5C0ACC213A75B400E8B5D5 /* MaiRuList */,
+				4D5C0AC7213A75B400E8B5D5 /* MaiRuCenter */,
+			);
+			path = MaiRu;
+			sourceTree = "<group>";
+		};
+		4D5C0ABA213A6FBE00E8B5D5 /* TuiGuang */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TuiGuang;
+			sourceTree = "<group>";
+		};
+		4D5C0ABB213A6FBF00E8B5D5 /* ZhuanRu */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0ABD213A700400E8B5D5 /* ZhuanRuViewController.h */,
+				4D5C0ABE213A700400E8B5D5 /* ZhuanRuViewController.m */,
+				4D5C0ABF213A700400E8B5D5 /* ZhuanRuViewController.xib */,
+			);
+			path = ZhuanRu;
+			sourceTree = "<group>";
+		};
+		4D5C0ABC213A6FBF00E8B5D5 /* ZhuanChu */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AC2213A701A00E8B5D5 /* ZhuanChuViewController.h */,
+				4D5C0AC3213A701A00E8B5D5 /* ZhuanChuViewController.m */,
+				4D5C0AC4213A701A00E8B5D5 /* ZhuanChuViewController.xib */,
+			);
+			path = ZhuanChu;
+			sourceTree = "<group>";
+		};
+		4D5C0AC7213A75B400E8B5D5 /* MaiRuCenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MaiRuCenter;
+			sourceTree = "<group>";
+		};
+		4D5C0AC8213A75B400E8B5D5 /* MaiRuUnFinish */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AC9213A75B400E8B5D5 /* MaiRuUnFinishOrder */,
+				4D5C0ACA213A75B400E8B5D5 /* MaiRuUnSelected */,
+				4D5C0ACB213A75B400E8B5D5 /* MaiRuSelected */,
+			);
+			path = MaiRuUnFinish;
+			sourceTree = "<group>";
+		};
+		4D5C0AC9213A75B400E8B5D5 /* MaiRuUnFinishOrder */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AD8213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.h */,
+				4D5C0AD9213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.m */,
+				4D5C0ADA213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib */,
+			);
+			path = MaiRuUnFinishOrder;
+			sourceTree = "<group>";
+		};
+		4D5C0ACA213A75B400E8B5D5 /* MaiRuUnSelected */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AE2213A7D9900E8B5D5 /* MaiRuUnSelectViewController.h */,
+				4D5C0AE3213A7D9900E8B5D5 /* MaiRuUnSelectViewController.m */,
+				4D5C0AE4213A7D9900E8B5D5 /* MaiRuUnSelectViewController.xib */,
+				4D5C0AEC213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.h */,
+				4D5C0AED213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.m */,
+				4D5C0AEE213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.xib */,
+			);
+			path = MaiRuUnSelected;
+			sourceTree = "<group>";
+		};
+		4D5C0ACB213A75B400E8B5D5 /* MaiRuSelected */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AE7213A7DAA00E8B5D5 /* MaiRuSelectViewController.h */,
+				4D5C0AE8213A7DAA00E8B5D5 /* MaiRuSelectViewController.m */,
+				4D5C0AE9213A7DAA00E8B5D5 /* MaiRuSelectViewController.xib */,
+				4D5C0AF1213A7EAF00E8B5D5 /* MaiRuSelectedCell.h */,
+				4D5C0AF2213A7EAF00E8B5D5 /* MaiRuSelectedCell.m */,
+				4D5C0AF3213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib */,
+			);
+			path = MaiRuSelected;
+			sourceTree = "<group>";
+		};
+		4D5C0ACC213A75B400E8B5D5 /* MaiRuList */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0ACE213A75FA00E8B5D5 /* MaiRuListViewController.h */,
+				4D5C0ACF213A75FA00E8B5D5 /* MaiRuListViewController.m */,
+				4D5C0AD0213A75FA00E8B5D5 /* MaiRuListViewController.xib */,
+				4D5C0AD3213A780C00E8B5D5 /* MaiRuListCell.h */,
+				4D5C0AD4213A780C00E8B5D5 /* MaiRuListCell.m */,
+				4D5C0AD5213A780C00E8B5D5 /* MaiRuListCell.xib */,
+			);
+			path = MaiRuList;
+			sourceTree = "<group>";
+		};
+		4D5C0ACD213A75B400E8B5D5 /* MaiRu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MaiRu;
+			sourceTree = "<group>";
+		};
+		4D5C0AF6213A8C0E00E8B5D5 /* AddBank */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0AF9213A8C2B00E8B5D5 /* AddBankViewController.h */,
+				4D5C0AFA213A8C2B00E8B5D5 /* AddBankViewController.m */,
+				4D5C0AFB213A8C2B00E8B5D5 /* AddBankViewController.xib */,
+			);
+			path = AddBank;
+			sourceTree = "<group>";
+		};
+		4D5C0AF7213A8C0E00E8B5D5 /* MaiChu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MaiChu;
+			sourceTree = "<group>";
+		};
+		4D5C0AF8213A8C0E00E8B5D5 /* MaiChuCenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MaiChuCenter;
 			sourceTree = "<group>";
 		};
 		4D893484213026E4004B7518 = {
@@ -839,9 +1082,16 @@
 		4D89357621303989004B7518 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				4D258F272132A47200943AD1 /* one */,
 				4D893577213039A6004B7518 /* Mine */,
+				4D5C0AA7213A676900E8B5D5 /* QKT */,
+				4D5C0AA8213A676900E8B5D5 /* LiangZiBiTe */,
+				4D5C0ABB213A6FBF00E8B5D5 /* ZhuanRu */,
+				4D5C0ABC213A6FBF00E8B5D5 /* ZhuanChu */,
+				4D5C0AB9213A6FBE00E8B5D5 /* MaiRu */,
+				4D5C0AB8213A6FBE00E8B5D5 /* MaiChu */,
+				4D5C0ABA213A6FBE00E8B5D5 /* TuiGuang */,
 				4D258F642137E05B00943AD1 /* PersonInfo */,
+				4D258F272132A47200943AD1 /* one */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -852,6 +1102,12 @@
 				4D89357B21303A43004B7518 /* MineViewController.h */,
 				4D89357C21303A43004B7518 /* MineViewController.m */,
 				4D89357D21303A43004B7518 /* MineViewController.xib */,
+				4D5C0A9D213A302300E8B5D5 /* MineCell.h */,
+				4D5C0A9E213A302300E8B5D5 /* MineCell.m */,
+				4D5C0A9F213A302300E8B5D5 /* MineCell.xib */,
+				4D5C0AA2213A317F00E8B5D5 /* MineHeaderView.h */,
+				4D5C0AA3213A317F00E8B5D5 /* MineHeaderView.m */,
+				4D5C0AA4213A317F00E8B5D5 /* MineHeaderView.xib */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -933,24 +1189,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5C0AC1213A700400E8B5D5 /* ZhuanRuViewController.xib in Resources */,
 				4D258F7F2137E17700943AD1 /* ConfigNicknameViewController.xib in Resources */,
 				4D258FB12137E22800943AD1 /* AddressManagerCell.xib in Resources */,
 				4D258F452133838500943AD1 /* LoginViewController.xib in Resources */,
+				4D5C0AE6213A7D9900E8B5D5 /* MaiRuUnSelectViewController.xib in Resources */,
+				4D5C0AA6213A317F00E8B5D5 /* MineHeaderView.xib in Resources */,
 				4D89353E21302A03004B7518 /* EmptyView.xib in Resources */,
 				4D89355121302A03004B7518 /* ScanResultViewController.xib in Resources */,
 				4D258F9A2137E1F400943AD1 /* AddAddressTextFieldCell.xib in Resources */,
+				4D5C0AC6213A701A00E8B5D5 /* ZhuanChuViewController.xib in Resources */,
 				4D258F892137E1CC00943AD1 /* MyQRCodeViewController.xib in Resources */,
+				4D5C0AB2213A683D00E8B5D5 /* LiangZiBiTeCell.xib in Resources */,
+				4D5C0AF5213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib in Resources */,
+				4D5C0AEB213A7DAA00E8B5D5 /* MaiRuSelectViewController.xib in Resources */,
 				4D258F412133838500943AD1 /* RegisterViewController.xib in Resources */,
 				4D258FA02137E1F400943AD1 /* AddAddressLabelCell.xib in Resources */,
 				4D89356B21302A03004B7518 /* ChooseCityViewController.xib in Resources */,
 				4D258F9C2137E1F400943AD1 /* AddAddressDefaultCell.xib in Resources */,
+				4D5C0AFD213A8C2B00E8B5D5 /* AddBankViewController.xib in Resources */,
 				4D89349A213026E5004B7518 /* Assets.xcassets in Resources */,
+				4D5C0AF0213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.xib in Resources */,
+				4D5C0AD7213A780C00E8B5D5 /* MaiRuListCell.xib in Resources */,
+				4D5C0ADC213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib in Resources */,
+				4D5C0AAD213A67B600E8B5D5 /* LiangZiBiTeViewController.xib in Resources */,
 				4D258FA12137E1F400943AD1 /* AddAddressViewController.xib in Resources */,
 				4D258FB02137E22800943AD1 /* AddressManagerViewController.xib in Resources */,
 				4D258F782137E05B00943AD1 /* SettingViewController.xib in Resources */,
 				4D89356821302A03004B7518 /* CompanyChooseResultCell.xib in Resources */,
 				4D89357F21303A43004B7518 /* MineViewController.xib in Resources */,
 				4D258F762137E05B00943AD1 /* SettingHeaderCell.xib in Resources */,
+				4D5C0AB7213A6CEE00E8B5D5 /* QKTViewController.xib in Resources */,
+				4D5C0AD2213A75FA00E8B5D5 /* MaiRuListViewController.xib in Resources */,
+				4D5C0AA1213A302300E8B5D5 /* MineCell.xib in Resources */,
 				4D258F722137E05B00943AD1 /* SettingNormalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1048,6 +1319,7 @@
 			files = (
 				4D89355521302A03004B7518 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				4D89355A21302A03004B7518 /* LBXPermissionHealth.m in Sources */,
+				4D5C0AA0213A302300E8B5D5 /* MineCell.m in Sources */,
 				4D258FB22137E22800943AD1 /* AddressListResponse.m in Sources */,
 				4D89354021302A03004B7518 /* EmptyView.m in Sources */,
 				4D89353B21302A03004B7518 /* GLTextField.m in Sources */,
@@ -1059,7 +1331,10 @@
 				4D89356C21302A03004B7518 /* Utility.m in Sources */,
 				4D89354621302A03004B7518 /* CreateBarCodeViewController.m in Sources */,
 				4D89354D21302A03004B7518 /* DIYScanViewController.m in Sources */,
+				4D5C0ADB213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.m in Sources */,
+				4D5C0AEA213A7DAA00E8B5D5 /* MaiRuSelectViewController.m in Sources */,
 				4D89354421302A03004B7518 /* NoNetWorkView.m in Sources */,
+				4D5C0AA5213A317F00E8B5D5 /* MineHeaderView.m in Sources */,
 				4D258F802137E17700943AD1 /* ConfigNicknameViewController.m in Sources */,
 				4D258FAF2137E22800943AD1 /* AddressManagerCell.m in Sources */,
 				4D89356321302A03004B7518 /* SVProgressHUDManager.m in Sources */,
@@ -1079,8 +1354,10 @@
 				4D89356721302A03004B7518 /* ChooseCityViewController.m in Sources */,
 				4D893574213031B9004B7518 /* AppDelegate+UI.m in Sources */,
 				4D89353F21302A03004B7518 /* UITableView+EmptyFooterView.m in Sources */,
+				4D5C0AE5213A7D9900E8B5D5 /* MaiRuUnSelectViewController.m in Sources */,
 				4D258F422133838500943AD1 /* UserManager.m in Sources */,
 				4D89355B21302A03004B7518 /* LBXPermissionSetting.m in Sources */,
+				4D5C0AB6213A6CEE00E8B5D5 /* QKTViewController.m in Sources */,
 				4D8934B221302916004B7518 /* TabBarViewController.m in Sources */,
 				4D89354221302A03004B7518 /* Reachability.m in Sources */,
 				4D89356221302A03004B7518 /* UIView+frameAdjust.m in Sources */,
@@ -1093,8 +1370,12 @@
 				4D89356A21302A03004B7518 /* CompanyChooseResultCell.m in Sources */,
 				4D89355921302A03004B7518 /* LBXPermissionReminders.m in Sources */,
 				4D258F8C2137E1CC00943AD1 /* QRCodeModel.m in Sources */,
+				4D5C0AC5213A701A00E8B5D5 /* ZhuanChuViewController.m in Sources */,
 				4D89356021302A03004B7518 /* LBXPermission.m in Sources */,
 				4D258F402133838500943AD1 /* RegisterViewController.m in Sources */,
+				4D5C0AFC213A8C2B00E8B5D5 /* AddBankViewController.m in Sources */,
+				4D5C0AC0213A700400E8B5D5 /* ZhuanRuViewController.m in Sources */,
+				4D5C0AD1213A75FA00E8B5D5 /* MaiRuListViewController.m in Sources */,
 				4D258F772137E05B00943AD1 /* SettingHeaderCell.m in Sources */,
 				4D89355321302A03004B7518 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				4D89354521302A03004B7518 /* NetWorkingPopManager.m in Sources */,
@@ -1103,8 +1384,11 @@
 				4D258F9F2137E1F400943AD1 /* AddAddressViewController.m in Sources */,
 				4D8934B92130297D004B7518 /* UIBarButtonItem+Badge.m in Sources */,
 				4D89356521302A03004B7518 /* BaseResponse.m in Sources */,
+				4D5C0AF4213A7EAF00E8B5D5 /* MaiRuSelectedCell.m in Sources */,
 				4D258F732137E05B00943AD1 /* SettingNormalCell.m in Sources */,
+				4D5C0AD6213A780C00E8B5D5 /* MaiRuListCell.m in Sources */,
 				4D89355221302A03004B7518 /* UIWindow+LBXHierarchy.m in Sources */,
+				4D5C0AAC213A67B600E8B5D5 /* LiangZiBiTeViewController.m in Sources */,
 				4D89356121302A03004B7518 /* CQScrollMenuView.m in Sources */,
 				4D893492213026E4004B7518 /* AppDelegate.m in Sources */,
 				4D89355421302A03004B7518 /* UIAlertView+LBXAlertAction.m in Sources */,
@@ -1123,7 +1407,9 @@
 				4D258FBA2137E2AF00943AD1 /* HttpsRequestManager.m in Sources */,
 				4D89353C21302A03004B7518 /* IMJIETagView.m in Sources */,
 				4D89355F21302A03004B7518 /* LBXPermissionCamera.m in Sources */,
+				4D5C0AB1213A683D00E8B5D5 /* LiangZiBiTeCell.m in Sources */,
 				4D89355E21302A03004B7518 /* LBXPermissionContacts.m in Sources */,
+				4D5C0AEF213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.m in Sources */,
 				4D258F742137E05B00943AD1 /* SettingResponse.m in Sources */,
 				4D258F8B2137E1CC00943AD1 /* MyQRCodeViewController.m in Sources */,
 				4D258F5D2137914500943AD1 /* UIImage+Color.m in Sources */,

@@ -18,6 +18,8 @@
 @implementation AppDelegate (UI)
 
 - (void)registerRootVC{
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     // ------设置全局键盘位置监听
     [[IQKeyboardManager sharedManager] setToolbarManageBehaviour:IQAutoToolbarByPosition];
     // ------设置点击背景收回键盘
