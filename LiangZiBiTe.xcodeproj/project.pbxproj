@@ -76,6 +76,26 @@
 		4D5C0AF5213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AF3213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib */; };
 		4D5C0AFC213A8C2B00E8B5D5 /* AddBankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AFA213A8C2B00E8B5D5 /* AddBankViewController.m */; };
 		4D5C0AFD213A8C2B00E8B5D5 /* AddBankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0AFB213A8C2B00E8B5D5 /* AddBankViewController.xib */; };
+		4D5C0BB7214641F400E8B5D5 /* LiangZiTaoLiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BB5214641F400E8B5D5 /* LiangZiTaoLiViewController.m */; };
+		4D5C0BB8214641F400E8B5D5 /* LiangZiTaoLiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BB6214641F400E8B5D5 /* LiangZiTaoLiViewController.xib */; };
+		4D5C0BBC2146420C00E8B5D5 /* JiaoYiSuoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BBA2146420C00E8B5D5 /* JiaoYiSuoViewController.m */; };
+		4D5C0BBD2146420C00E8B5D5 /* JiaoYiSuoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BBB2146420C00E8B5D5 /* JiaoYiSuoViewController.xib */; };
+		4D5C0BC12146422100E8B5D5 /* KuangChiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BBF2146422100E8B5D5 /* KuangChiViewController.m */; };
+		4D5C0BC22146422100E8B5D5 /* KuangChiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BC02146422100E8B5D5 /* KuangChiViewController.xib */; };
+		4D5C0BC52146478300E8B5D5 /* JiaoYiSuoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BC42146478300E8B5D5 /* JiaoYiSuoHeaderView.m */; };
+		4D5C0BC72146478B00E8B5D5 /* JiaoYiSuoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BC62146478B00E8B5D5 /* JiaoYiSuoHeaderView.xib */; };
+		4D5C0BCB2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BC92146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.m */; };
+		4D5C0BCC2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BCA2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.xib */; };
+		4D5C0BD0214649AE00E8B5D5 /* JiaoYiSuoLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BCE214649AE00E8B5D5 /* JiaoYiSuoLineCell.m */; };
+		4D5C0BD1214649AE00E8B5D5 /* JiaoYiSuoLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BCF214649AE00E8B5D5 /* JiaoYiSuoLineCell.xib */; };
+		4D5C0BD521464FD600E8B5D5 /* MaiRuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BD321464FD600E8B5D5 /* MaiRuViewController.m */; };
+		4D5C0BD621464FD600E8B5D5 /* MaiRuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BD421464FD600E8B5D5 /* MaiRuViewController.xib */; };
+		4D5C0BDC2146509300E8B5D5 /* SixProjectSelectButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BDB2146509300E8B5D5 /* SixProjectSelectButtonView.m */; };
+		4D5C0BDE2146509C00E8B5D5 /* SixProjectSelectButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BDD2146509C00E8B5D5 /* SixProjectSelectButtonView.xib */; };
+		4D5C0BE221465A6900E8B5D5 /* MaiRuProjectButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BE021465A6900E8B5D5 /* MaiRuProjectButtonCell.m */; };
+		4D5C0BE321465A6900E8B5D5 /* MaiRuProjectButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BE121465A6900E8B5D5 /* MaiRuProjectButtonCell.xib */; };
+		4D5C0BE621465AC800E8B5D5 /* SelectMoneyTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0BE521465AC800E8B5D5 /* SelectMoneyTipsView.m */; };
+		4D5C0BE821465AD100E8B5D5 /* SelectMoneyTipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0BE721465AD100E8B5D5 /* SelectMoneyTipsView.xib */; };
 		4D893492213026E4004B7518 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D893491213026E4004B7518 /* AppDelegate.m */; };
 		4D89349A213026E5004B7518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D893499213026E5004B7518 /* Assets.xcassets */; };
 		4D8934A0213026E5004B7518 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D89349F213026E5004B7518 /* main.m */; };
@@ -254,6 +274,36 @@
 		4D5C0AF9213A8C2B00E8B5D5 /* AddBankViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddBankViewController.h; sourceTree = "<group>"; };
 		4D5C0AFA213A8C2B00E8B5D5 /* AddBankViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddBankViewController.m; sourceTree = "<group>"; };
 		4D5C0AFB213A8C2B00E8B5D5 /* AddBankViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBankViewController.xib; sourceTree = "<group>"; };
+		4D5C0BB4214641F400E8B5D5 /* LiangZiTaoLiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiangZiTaoLiViewController.h; sourceTree = "<group>"; };
+		4D5C0BB5214641F400E8B5D5 /* LiangZiTaoLiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiangZiTaoLiViewController.m; sourceTree = "<group>"; };
+		4D5C0BB6214641F400E8B5D5 /* LiangZiTaoLiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiangZiTaoLiViewController.xib; sourceTree = "<group>"; };
+		4D5C0BB92146420C00E8B5D5 /* JiaoYiSuoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiaoYiSuoViewController.h; sourceTree = "<group>"; };
+		4D5C0BBA2146420C00E8B5D5 /* JiaoYiSuoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaoYiSuoViewController.m; sourceTree = "<group>"; };
+		4D5C0BBB2146420C00E8B5D5 /* JiaoYiSuoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JiaoYiSuoViewController.xib; sourceTree = "<group>"; };
+		4D5C0BBE2146422100E8B5D5 /* KuangChiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KuangChiViewController.h; sourceTree = "<group>"; };
+		4D5C0BBF2146422100E8B5D5 /* KuangChiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KuangChiViewController.m; sourceTree = "<group>"; };
+		4D5C0BC02146422100E8B5D5 /* KuangChiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KuangChiViewController.xib; sourceTree = "<group>"; };
+		4D5C0BC32146478300E8B5D5 /* JiaoYiSuoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiaoYiSuoHeaderView.h; sourceTree = "<group>"; };
+		4D5C0BC42146478300E8B5D5 /* JiaoYiSuoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaoYiSuoHeaderView.m; sourceTree = "<group>"; };
+		4D5C0BC62146478B00E8B5D5 /* JiaoYiSuoHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JiaoYiSuoHeaderView.xib; sourceTree = "<group>"; };
+		4D5C0BC82146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiaoYiSuoJiaoYiLiangCell.h; sourceTree = "<group>"; };
+		4D5C0BC92146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaoYiSuoJiaoYiLiangCell.m; sourceTree = "<group>"; };
+		4D5C0BCA2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JiaoYiSuoJiaoYiLiangCell.xib; sourceTree = "<group>"; };
+		4D5C0BCD214649AE00E8B5D5 /* JiaoYiSuoLineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JiaoYiSuoLineCell.h; sourceTree = "<group>"; };
+		4D5C0BCE214649AE00E8B5D5 /* JiaoYiSuoLineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JiaoYiSuoLineCell.m; sourceTree = "<group>"; };
+		4D5C0BCF214649AE00E8B5D5 /* JiaoYiSuoLineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JiaoYiSuoLineCell.xib; sourceTree = "<group>"; };
+		4D5C0BD221464FD600E8B5D5 /* MaiRuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuViewController.h; sourceTree = "<group>"; };
+		4D5C0BD321464FD600E8B5D5 /* MaiRuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuViewController.m; sourceTree = "<group>"; };
+		4D5C0BD421464FD600E8B5D5 /* MaiRuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuViewController.xib; sourceTree = "<group>"; };
+		4D5C0BDA2146509300E8B5D5 /* SixProjectSelectButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SixProjectSelectButtonView.h; sourceTree = "<group>"; };
+		4D5C0BDB2146509300E8B5D5 /* SixProjectSelectButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SixProjectSelectButtonView.m; sourceTree = "<group>"; };
+		4D5C0BDD2146509C00E8B5D5 /* SixProjectSelectButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SixProjectSelectButtonView.xib; sourceTree = "<group>"; };
+		4D5C0BDF21465A6900E8B5D5 /* MaiRuProjectButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuProjectButtonCell.h; sourceTree = "<group>"; };
+		4D5C0BE021465A6900E8B5D5 /* MaiRuProjectButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuProjectButtonCell.m; sourceTree = "<group>"; };
+		4D5C0BE121465A6900E8B5D5 /* MaiRuProjectButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiRuProjectButtonCell.xib; sourceTree = "<group>"; };
+		4D5C0BE421465AC800E8B5D5 /* SelectMoneyTipsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectMoneyTipsView.h; sourceTree = "<group>"; };
+		4D5C0BE521465AC800E8B5D5 /* SelectMoneyTipsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectMoneyTipsView.m; sourceTree = "<group>"; };
+		4D5C0BE721465AD100E8B5D5 /* SelectMoneyTipsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectMoneyTipsView.xib; sourceTree = "<group>"; };
 		4D89348D213026E4004B7518 /* LiangZiBiTe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiangZiBiTe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D893490213026E4004B7518 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4D893491213026E4004B7518 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -699,6 +749,18 @@
 		4D5C0ACD213A75B400E8B5D5 /* MaiRu */ = {
 			isa = PBXGroup;
 			children = (
+				4D5C0BD221464FD600E8B5D5 /* MaiRuViewController.h */,
+				4D5C0BD321464FD600E8B5D5 /* MaiRuViewController.m */,
+				4D5C0BD421464FD600E8B5D5 /* MaiRuViewController.xib */,
+				4D5C0BDF21465A6900E8B5D5 /* MaiRuProjectButtonCell.h */,
+				4D5C0BE021465A6900E8B5D5 /* MaiRuProjectButtonCell.m */,
+				4D5C0BE121465A6900E8B5D5 /* MaiRuProjectButtonCell.xib */,
+				4D5C0BDA2146509300E8B5D5 /* SixProjectSelectButtonView.h */,
+				4D5C0BDB2146509300E8B5D5 /* SixProjectSelectButtonView.m */,
+				4D5C0BDD2146509C00E8B5D5 /* SixProjectSelectButtonView.xib */,
+				4D5C0BE421465AC800E8B5D5 /* SelectMoneyTipsView.h */,
+				4D5C0BE521465AC800E8B5D5 /* SelectMoneyTipsView.m */,
+				4D5C0BE721465AD100E8B5D5 /* SelectMoneyTipsView.xib */,
 			);
 			path = MaiRu;
 			sourceTree = "<group>";
@@ -725,6 +787,69 @@
 			children = (
 			);
 			path = MaiChuCenter;
+			sourceTree = "<group>";
+		};
+		4D5C0BAE214641CC00E8B5D5 /* KuangChi */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0BAF214641CC00E8B5D5 /* KuangChi */,
+			);
+			path = KuangChi;
+			sourceTree = "<group>";
+		};
+		4D5C0BAF214641CC00E8B5D5 /* KuangChi */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0BBE2146422100E8B5D5 /* KuangChiViewController.h */,
+				4D5C0BBF2146422100E8B5D5 /* KuangChiViewController.m */,
+				4D5C0BC02146422100E8B5D5 /* KuangChiViewController.xib */,
+			);
+			path = KuangChi;
+			sourceTree = "<group>";
+		};
+		4D5C0BB0214641CC00E8B5D5 /* JiaoYiSuo */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0BB1214641CC00E8B5D5 /* JiaoYiSuo */,
+			);
+			path = JiaoYiSuo;
+			sourceTree = "<group>";
+		};
+		4D5C0BB1214641CC00E8B5D5 /* JiaoYiSuo */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0BB92146420C00E8B5D5 /* JiaoYiSuoViewController.h */,
+				4D5C0BBA2146420C00E8B5D5 /* JiaoYiSuoViewController.m */,
+				4D5C0BBB2146420C00E8B5D5 /* JiaoYiSuoViewController.xib */,
+				4D5C0BC32146478300E8B5D5 /* JiaoYiSuoHeaderView.h */,
+				4D5C0BC42146478300E8B5D5 /* JiaoYiSuoHeaderView.m */,
+				4D5C0BC62146478B00E8B5D5 /* JiaoYiSuoHeaderView.xib */,
+				4D5C0BC82146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.h */,
+				4D5C0BC92146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.m */,
+				4D5C0BCA2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.xib */,
+				4D5C0BCD214649AE00E8B5D5 /* JiaoYiSuoLineCell.h */,
+				4D5C0BCE214649AE00E8B5D5 /* JiaoYiSuoLineCell.m */,
+				4D5C0BCF214649AE00E8B5D5 /* JiaoYiSuoLineCell.xib */,
+			);
+			path = JiaoYiSuo;
+			sourceTree = "<group>";
+		};
+		4D5C0BB2214641CC00E8B5D5 /* LiangZiTaoLi */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0BB3214641CC00E8B5D5 /* LiangZiTaoLi */,
+			);
+			path = LiangZiTaoLi;
+			sourceTree = "<group>";
+		};
+		4D5C0BB3214641CC00E8B5D5 /* LiangZiTaoLi */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C0BB4214641F400E8B5D5 /* LiangZiTaoLiViewController.h */,
+				4D5C0BB5214641F400E8B5D5 /* LiangZiTaoLiViewController.m */,
+				4D5C0BB6214641F400E8B5D5 /* LiangZiTaoLiViewController.xib */,
+			);
+			path = LiangZiTaoLi;
 			sourceTree = "<group>";
 		};
 		4D893484213026E4004B7518 = {
@@ -1073,8 +1198,11 @@
 		4D8935712130312E004B7518 /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				4D258F312133838500943AD1 /* Login */,
+				4D5C0BB2214641CC00E8B5D5 /* LiangZiTaoLi */,
+				4D5C0BB0214641CC00E8B5D5 /* JiaoYiSuo */,
+				4D5C0BAE214641CC00E8B5D5 /* KuangChi */,
 				4D89357621303989004B7518 /* Mine */,
+				4D258F312133838500943AD1 /* Login */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -1190,16 +1318,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D5C0AC1213A700400E8B5D5 /* ZhuanRuViewController.xib in Resources */,
+				4D5C0BB8214641F400E8B5D5 /* LiangZiTaoLiViewController.xib in Resources */,
 				4D258F7F2137E17700943AD1 /* ConfigNicknameViewController.xib in Resources */,
+				4D5C0BBD2146420C00E8B5D5 /* JiaoYiSuoViewController.xib in Resources */,
 				4D258FB12137E22800943AD1 /* AddressManagerCell.xib in Resources */,
 				4D258F452133838500943AD1 /* LoginViewController.xib in Resources */,
 				4D5C0AE6213A7D9900E8B5D5 /* MaiRuUnSelectViewController.xib in Resources */,
 				4D5C0AA6213A317F00E8B5D5 /* MineHeaderView.xib in Resources */,
+				4D5C0BCC2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.xib in Resources */,
 				4D89353E21302A03004B7518 /* EmptyView.xib in Resources */,
 				4D89355121302A03004B7518 /* ScanResultViewController.xib in Resources */,
 				4D258F9A2137E1F400943AD1 /* AddAddressTextFieldCell.xib in Resources */,
 				4D5C0AC6213A701A00E8B5D5 /* ZhuanChuViewController.xib in Resources */,
+				4D5C0BC22146422100E8B5D5 /* KuangChiViewController.xib in Resources */,
 				4D258F892137E1CC00943AD1 /* MyQRCodeViewController.xib in Resources */,
+				4D5C0BE821465AD100E8B5D5 /* SelectMoneyTipsView.xib in Resources */,
 				4D5C0AB2213A683D00E8B5D5 /* LiangZiBiTeCell.xib in Resources */,
 				4D5C0AF5213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib in Resources */,
 				4D5C0AEB213A7DAA00E8B5D5 /* MaiRuSelectViewController.xib in Resources */,
@@ -1212,14 +1345,19 @@
 				4D5C0AF0213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.xib in Resources */,
 				4D5C0AD7213A780C00E8B5D5 /* MaiRuListCell.xib in Resources */,
 				4D5C0ADC213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib in Resources */,
+				4D5C0BDE2146509C00E8B5D5 /* SixProjectSelectButtonView.xib in Resources */,
 				4D5C0AAD213A67B600E8B5D5 /* LiangZiBiTeViewController.xib in Resources */,
 				4D258FA12137E1F400943AD1 /* AddAddressViewController.xib in Resources */,
 				4D258FB02137E22800943AD1 /* AddressManagerViewController.xib in Resources */,
 				4D258F782137E05B00943AD1 /* SettingViewController.xib in Resources */,
+				4D5C0BC72146478B00E8B5D5 /* JiaoYiSuoHeaderView.xib in Resources */,
+				4D5C0BE321465A6900E8B5D5 /* MaiRuProjectButtonCell.xib in Resources */,
 				4D89356821302A03004B7518 /* CompanyChooseResultCell.xib in Resources */,
 				4D89357F21303A43004B7518 /* MineViewController.xib in Resources */,
+				4D5C0BD1214649AE00E8B5D5 /* JiaoYiSuoLineCell.xib in Resources */,
 				4D258F762137E05B00943AD1 /* SettingHeaderCell.xib in Resources */,
 				4D5C0AB7213A6CEE00E8B5D5 /* QKTViewController.xib in Resources */,
+				4D5C0BD621464FD600E8B5D5 /* MaiRuViewController.xib in Resources */,
 				4D5C0AD2213A75FA00E8B5D5 /* MaiRuListViewController.xib in Resources */,
 				4D5C0AA1213A302300E8B5D5 /* MineCell.xib in Resources */,
 				4D258F722137E05B00943AD1 /* SettingNormalCell.xib in Resources */,
@@ -1335,7 +1473,10 @@
 				4D5C0AEA213A7DAA00E8B5D5 /* MaiRuSelectViewController.m in Sources */,
 				4D89354421302A03004B7518 /* NoNetWorkView.m in Sources */,
 				4D5C0AA5213A317F00E8B5D5 /* MineHeaderView.m in Sources */,
+				4D5C0BD0214649AE00E8B5D5 /* JiaoYiSuoLineCell.m in Sources */,
 				4D258F802137E17700943AD1 /* ConfigNicknameViewController.m in Sources */,
+				4D5C0BBC2146420C00E8B5D5 /* JiaoYiSuoViewController.m in Sources */,
+				4D5C0BDC2146509300E8B5D5 /* SixProjectSelectButtonView.m in Sources */,
 				4D258FAF2137E22800943AD1 /* AddressManagerCell.m in Sources */,
 				4D89356321302A03004B7518 /* SVProgressHUDManager.m in Sources */,
 				4D89354F21302A03004B7518 /* UIImageView+CornerRadius.m in Sources */,
@@ -1360,10 +1501,13 @@
 				4D5C0AB6213A6CEE00E8B5D5 /* QKTViewController.m in Sources */,
 				4D8934B221302916004B7518 /* TabBarViewController.m in Sources */,
 				4D89354221302A03004B7518 /* Reachability.m in Sources */,
+				4D5C0BD521464FD600E8B5D5 /* MaiRuViewController.m in Sources */,
+				4D5C0BE221465A6900E8B5D5 /* MaiRuProjectButtonCell.m in Sources */,
 				4D89356221302A03004B7518 /* UIView+frameAdjust.m in Sources */,
 				4D258F432133838500943AD1 /* LoginViewController.m in Sources */,
 				4D89354821302A03004B7518 /* QQLBXScanViewController.m in Sources */,
 				4D89357E21303A43004B7518 /* MineViewController.m in Sources */,
+				4D5C0BB7214641F400E8B5D5 /* LiangZiTaoLiViewController.m in Sources */,
 				4D258F8A2137E1CC00943AD1 /* QRCodeResponse.m in Sources */,
 				4D258F462133838500943AD1 /* UserInfoResponse.m in Sources */,
 				4D89354B21302A03004B7518 /* StyleDIY.m in Sources */,
@@ -1406,12 +1550,16 @@
 				4D258F752137E05B00943AD1 /* SettingInfoModel.m in Sources */,
 				4D258FBA2137E2AF00943AD1 /* HttpsRequestManager.m in Sources */,
 				4D89353C21302A03004B7518 /* IMJIETagView.m in Sources */,
+				4D5C0BE621465AC800E8B5D5 /* SelectMoneyTipsView.m in Sources */,
 				4D89355F21302A03004B7518 /* LBXPermissionCamera.m in Sources */,
 				4D5C0AB1213A683D00E8B5D5 /* LiangZiBiTeCell.m in Sources */,
 				4D89355E21302A03004B7518 /* LBXPermissionContacts.m in Sources */,
+				4D5C0BC12146422100E8B5D5 /* KuangChiViewController.m in Sources */,
 				4D5C0AEF213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.m in Sources */,
 				4D258F742137E05B00943AD1 /* SettingResponse.m in Sources */,
 				4D258F8B2137E1CC00943AD1 /* MyQRCodeViewController.m in Sources */,
+				4D5C0BCB2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.m in Sources */,
+				4D5C0BC52146478300E8B5D5 /* JiaoYiSuoHeaderView.m in Sources */,
 				4D258F5D2137914500943AD1 /* UIImage+Color.m in Sources */,
 				4D89355D21302A03004B7518 /* LBXPermissionLocation.m in Sources */,
 				4D89353D21302A03004B7518 /* IMJIETagFrame.m in Sources */,

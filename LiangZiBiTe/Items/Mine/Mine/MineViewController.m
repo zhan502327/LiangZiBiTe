@@ -12,9 +12,7 @@
 #import "LiangZiBiTeViewController.h"
 #import "QKTViewController.h"
 #import "ZhuanChuViewController.h"
-
-#import "MaiRuUnFinishViewController.h" //------------------删除-------------------
-#import "AddBankViewController.h" //------------------删除-------------------
+#import "MaiRuViewController.h"
 
 static NSString *headerViewID = @"MineHeaderView";
 static NSString *itemcellID = @"MineCell";
@@ -151,14 +149,14 @@ static NSString *itemcellID = @"MineCell";
     }
     
     if (indexPath.row == 2) {//买入
-        MaiRuUnFinishViewController *vc = [[MaiRuUnFinishViewController alloc] init];
+        MaiRuViewController *vc = [[MaiRuViewController alloc] init];
         [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
     }
     
     if (indexPath.row == 3) {//卖出
         
-        AddBankViewController *vc = [[AddBankViewController alloc] init];
-        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+//        AddBankViewController *vc = [[AddBankViewController alloc] init];
+//        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
     }
     
 }

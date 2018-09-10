@@ -8,9 +8,10 @@
 
 #import "TabBarViewController.h"
 #import "BaseNavViewController.h"
+#import "LiangZiTaoLiViewController.h"
+#import "JiaoYiSuoViewController.h"
+#import "KuangChiViewController.h"
 #import "MineViewController.h"
-#import "TestViewController.h"
-#import "SettingViewController.h"
 
 @interface TabBarViewController ()<UITabBarControllerDelegate>
 
@@ -24,32 +25,21 @@
     [UITabBar appearance].barTintColor = [UIColor whiteColor];
 
     self.delegate = self;
+ 
+    LiangZiTaoLiViewController *one = [[LiangZiTaoLiViewController alloc] init];
+    [self setRootNavBarViewController:one withBarTitle:@"量子套利" unselectImage:@"App_Tabbar_LiangZiTaoLi_unselected" andSelectImage:@"App_Tabbar_LiangZiTaoLi_selected"];
     
-//
-//    HomeViewController *homeVC = [[HomeViewController alloc] init];
-//    [self setRootNavBarViewController:homeVC withBarTitle:@"首页" unselectImage:@"Tabbar_Home_unselected" andSelectImage:@"Tabbar_Home_selected"];
-//    
-//    MarketListViewController *orderVC = [[MarketListViewController alloc] init];
-//    [self setRootNavBarViewController:orderVC withBarTitle:@"商城" unselectImage:@"Tabbar_Market_unselected" andSelectImage:@"Tabbar_Market_selected"];
-//
-//    WelfareViewController *productListVC = [[WelfareViewController alloc] init];
-//    [self setRootNavBarViewController:productListVC withBarTitle:@"福利" unselectImage:@"Tabbar_Fuli_unselected" andSelectImage:@"Tabbar_Fuli_selected"];
-//    
-//    ExtentionViewController *chatVC = [[ExtentionViewController alloc] init];
-//    [self setRootNavBarViewController:chatVC withBarTitle:@"推广" unselectImage:@"Tabbar_Extention_unselected" andSelectImage:@"Tabbar_Extention_selected"];
-
-    MineViewController *chatListVC = [[MineViewController alloc] init];
-    [self setRootNavBarViewController:chatListVC withBarTitle:@"我的" unselectImage:@"Tabbar_Mine_unselected" andSelectImage:@"Tabbar_Mine_selected"];
+    JiaoYiSuoViewController *two = [[JiaoYiSuoViewController alloc] init];
+    [self setRootNavBarViewController:two withBarTitle:@"交易所" unselectImage:@"App_Tabbar_JiaoYiSuo_unselected" andSelectImage:@"App_Tabbar_JiaoYiSuo_selected"];
     
-    SettingViewController *sesss = [[SettingViewController alloc] init];
-    [self setRootNavBarViewController:sesss withBarTitle:@"我的" unselectImage:@"Tabbar_Mine_unselected" andSelectImage:@"Tabbar_Mine_selected"];
-    
-
-
+    KuangChiViewController *three = [[KuangChiViewController alloc] init];
+    [self setRootNavBarViewController:three withBarTitle:@"矿池" unselectImage:@"App_Tabbar_KuangChi_unselected" andSelectImage:@"App_Tabbar_KuangChi_selected"];
     
     
-    TestViewController *testVC = [[TestViewController alloc] init];
-    [self setRootNavBarViewController:testVC withBarTitle:@"testVC" unselectImage:@"Tabbar_Mine_unselected" andSelectImage:@"Tabbar_Mine_selected"];
+    MineViewController *four = [[MineViewController alloc] init];
+    [self setRootNavBarViewController:four withBarTitle:@"我的" unselectImage:@"App_Tabbar_Mine_unselected" andSelectImage:@"App_Tabbar_Mine_selected"];
+    
+    
     
 
 }
@@ -63,7 +53,7 @@
     
     // ------全局设置TabBar图标显示原图
     [childController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexColor(0X333333), NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
-    [childController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexColor(0XE7481E), NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
+    [childController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexColor(0X115BBB), NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
     
     childController.tabBarItem.image = [[UIImage imageNamed:unselectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     childController.tabBarItem.selectedImage = [[UIImage imageNamed:selectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
