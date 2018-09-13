@@ -13,8 +13,14 @@
 #import "QKTViewController.h"
 #import "ZhuanChuViewController.h"
 #import "MaiRuViewController.h"
+#import "MineFooterView.h"
+#import "MineInfoResponse.h"
+#import "ZhuanRuViewController.h"
+#import "ConfigPTMRResponse.h"
+#import "SettingViewController.h"
 
 static NSString *headerViewID = @"MineHeaderView";
+static NSString *footerViewID = @"MineFooterView";
 static NSString *itemcellID = @"MineCell";
 
 #define kGap 1
@@ -26,6 +32,10 @@ static NSString *itemcellID = @"MineCell";
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
+@property (nonatomic, strong) MineInfoModel *mineModel;
+
+@property (nonatomic, assign) BOOL isHiddenPTMR;
+
 @end
 
 @implementation MineViewController
@@ -36,14 +46,22 @@ static NSString *itemcellID = @"MineCell";
     
     self.navigationController.navigationBar.hidden = YES;
     
+    self.isHiddenPTMR = YES;
+    
     [self configCollectionView];
+    
+    [self loadData];
+    
+    //判断是否显示 平台买入
+    [self fonfigIsShowPingTaiMaiRu];
 }
 
 - (void)configCollectionView{
     self.collectionView.backgroundColor = HexColor(0XF5F5F5);
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    layout.headerReferenceSize = CGSizeMake(Current_Width, 300);
+    layout.headerReferenceSize = CGSizeMake(Current_Width, 280);
+    layout.footerReferenceSize = CGSizeMake(Current_Width, 120);
     layout.minimumInteritemSpacing = kGap;
     layout.minimumLineSpacing = kGap;//这个控制每个item的间隔
     self.collectionView.collectionViewLayout = layout;
@@ -52,10 +70,59 @@ static NSString *itemcellID = @"MineCell";
     
     [self.collectionView registerNib:[UINib nibWithNibName:headerViewID bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerViewID];
     
+    [self.collectionView registerNib:[UINib nibWithNibName:footerViewID bundle:[NSBundle mainBundle]] 
+          forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerViewID];
 
-    
 }
 
+- (void)fonfigIsShowPingTaiMaiRu{
+    
+    [App_HttpsRequestTool mineConfigIsShowPingTaiMaiRusuccess:^(id responseObject) {
+        
+        ConfigPTMRResponse *response = [[ConfigPTMRResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            if ([response.data isEqualToString:@"0"]) {
+                self.isHiddenPTMR = YES;
+            }
+            
+            if ([response.data isEqualToString:@"1"]) {
+                self.isHiddenPTMR = NO;
+            }
+            
+            [self.collectionView reloadData];
+        }else{
+            PopInfo(response.msg);
+        }
+        
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+}
+
+
+- (void)loadData{
+    
+    [App_HttpsRequestTool minedataWithsuccess:^(id responseObject) {
+        MineInfoResponse *response = [[MineInfoResponse alloc] initWithDictionary:responseObject error:nil];
+        
+        if ([response isSuccess]) {
+            
+            MineInfoModel *model = response.data;
+            self.mineModel = model;
+            [self.collectionView reloadData];
+            
+        }else{
+            PopInfo(response.msg);
+        }
+        
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
+}
 
 
 //-(UICollectionView *)collcetionView{
@@ -88,7 +155,7 @@ static NSString *itemcellID = @"MineCell";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return CGSizeMake(kItemWidth , kItemWidth);
+    return CGSizeMake(kItemWidth , kItemWidth - 30);
     
 }
 
@@ -112,6 +179,26 @@ static NSString *itemcellID = @"MineCell";
         
         MineHeaderView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerViewID forIndexPath:indexPath];
         
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(haderImageViewClicked)];
+        [header.headerImageView addGestureRecognizer:tap];
+
+        
+        
+        header.mairuButton.hidden = self.isHiddenPTMR;
+        //星级
+        header.starLabel.text = [NSString stringWithFormat:@"x%d",[self.mineModel.xingji intValue]];
+        //QKT
+        header.leftNumLabel.text = [NSString stringWithFormat:@"%.2f",[self.mineModel.qkt doubleValue]];
+        //量子比特
+        header.rightNumLabel.text = [NSString stringWithFormat:@"%.2f",[self.mineModel.lzbt doubleValue]];
+        //头像
+        [header.headerImageView sd_setImageWithURL:[NSURL URLWithString:self.mineModel.pic] placeholderImage:UseImage(@"")];
+        //昵称
+        header.nameLabel.text = self.mineModel.username;
+        //电话
+        header.mobileLabel.text = self.mineModel.phone;
+        
+        
         [header setScanButtonBlock:^{
             
         }];
@@ -133,15 +220,49 @@ static NSString *itemcellID = @"MineCell";
         return header;
         
     }
+    
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
+        MineFooterView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerViewID forIndexPath:indexPath];
+        
+        [view setLoginoutButtonBlock:^{
+           
+            UIAlertController *loginOutAlert = [UIAlertController alertControllerWithTitle:@"退出登录" message:@"确认要退出么？" preferredStyle:UIAlertControllerStyleAlert];
+            [loginOutAlert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+            }]];
+            [loginOutAlert addAction:[UIAlertAction actionWithTitle:@"退出" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                [App_UserManager loginOut];
+            }]];
+            [self presentViewController:loginOutAlert animated:YES completion:nil];
+            
+        }];
+        return view;
+        
+    }
     return nil;
     
 }
 
 
+#pragma mark -- 修改个人信息
+- (void)haderImageViewClicked{
+    SettingViewController *vc = [[SettingViewController alloc] init];
+    [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+}
+
 //点击调用
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"第%lu组 第%lu个", (long)indexPath.section, (long)indexPath.row);
+    
+
+    
+    if (indexPath.row == 0) {//转入
+        ZhuanRuViewController *vc = [[ZhuanRuViewController alloc] init];
+        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+    }
+    
     
     if (indexPath.row == 1) {//转出
         ZhuanChuViewController *vc = [[ZhuanChuViewController alloc] init];

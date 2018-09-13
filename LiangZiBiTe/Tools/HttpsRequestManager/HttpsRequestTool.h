@@ -25,12 +25,24 @@ typedef void (^getFailBlock)(NSError *error);
 
 #pragma mark - **************** 登陆注册
 // ------密码登陆
-- (void)loginLoginRequestMobile:(NSString *)mobile passWord:(NSString *)passWord deviceID:(NSString *)deviceId withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+- (void)loginLoginRequestMobile:(NSString *)phone password:(NSString *)password withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
 // ----- 用户注册
-- (void)registerUserWithphone:(NSString *)phone password:(NSString *)password pid:(NSString *)pid withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+- (void)registerUserWithphone:(NSString *)phone code:(NSString *)code pwd:(NSString *)pwd repwd:(NSString *)repwd yqm:(NSString *)yqm withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
+
+//------ 发送验证码
+-(void) sendCodeWithphone:(NSString *)phone withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+// ---- 提交实名认证信息
+- (void)commitShiMingInfoWithid:(NSString *)userid rname:(NSString *)rname sfzhm:(NSString *)sfzhm sfzzm:(NSData *)sfzzm sfzbm:(NSData *)sfzbm withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+
+//  ------ 判断是否已经实名认证 /index.php/api/myindex/issmrz
+- (void)configShiMingRenZhengWithID:(NSString *)user_id withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
 #pragma mark - **************** 首页
@@ -53,12 +65,12 @@ typedef void (^getFailBlock)(NSError *error);
 
 
 #pragma mark - **************** 个人信息
-// ------ 获取个人信息
-- (void)personuserInfoWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+//// ------ 获取个人信息
+//- (void)personuserInfoWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
 // ----- 编辑修改个人信息
-- (void)editPersonInfoWithImageData:(NSData *)imageData type:(NSString *)type value:(NSString *)value WithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+- (void)editPersonInfoWithImageData:(NSData *)imageData url:(NSString *)ssurl type:(NSString *)type value:(NSString *)value WithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
 // ------ 上传身份证
@@ -96,29 +108,27 @@ typedef void (^getFailBlock)(NSError *error);
 
 
 #pragma mark - **************** 我的
-// ----- 我的回收
-- (void)myOldPhoneListSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+// ----- 我的
+- (void)minedataWithsuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
-// ----- 发布回收
-- (void)publishHuishouWithspec:(NSString *)spec storage:(NSString *)storage color:(NSString *)color buytime:(NSString *)buytime usingtime:(NSString *)usingtime isrepair:(NSString *)isrepair hownew:(NSString *)hownew cover:(NSData *)cover Success:(getBackBlock)success failure:(getFailBlock)failure;
+// ---- 判断是否可以平台买入
+- (void)mineConfigIsShowPingTaiMaiRusuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
-// ----- 我的余额
-- (void)myWalletInfoSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
-// ----- 提现申请
-- (void)tixianApplytotal:(NSString *)total balance:(NSString *)balance bank_id:(NSString *)bank_id Success:(getBackBlock)success failure:(getFailBlock)failure;
+// ---- 我的 - QKT 量子比特
+- (void)mineQKTAndLiangZiBiTeWithtype:(NSString *)type success:(getBackBlock)success failure:(getFailBlock)failure;
 
-// ----- 我的积分
-- (void)myJiFenListSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
-// ----- 签到
-- (void)qiandaoSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+// --- 转入
+- (void)mineZhuanRusuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
-// ----- 我的订单
-- (void)myOrderListWithtype:(NSString *)type p:(int)p Success:(getBackBlock)success failure:(getFailBlock)failure;
+//----- 转出
+- (void)mineZhuanChuWithphone:(NSString *)phone qkd:(NSString *)qkd success:(getBackBlock)success failure:(getFailBlock)failure;
 
-// ----- 确认收货
-- (void)confirmShouHuoWithorder_sn:(NSString *)order_sn Success:(getBackBlock)success failure:(getFailBlock)failure;
+// ---- 买入 - 创建订单
+- (void)mineMaiRuCreateOrderjye:(NSString *)jye success:(getBackBlock)success failure:(getFailBlock)failure;
+
+
 
 
 

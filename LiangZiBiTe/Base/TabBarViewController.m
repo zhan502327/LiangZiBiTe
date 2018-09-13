@@ -41,6 +41,7 @@
     
     
     
+    self.selectedIndex = 3;
 
 }
 

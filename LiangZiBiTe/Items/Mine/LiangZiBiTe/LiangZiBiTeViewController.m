@@ -32,9 +32,19 @@ static NSString *cellID = @"LiangZiBiTeCell";
 - (void)configTableView{
     
     [self.tableView registerNib:[UINib nibWithNibName:cellID bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
+    [self loadData];
     
     
-    
+}
+
+- (void)loadData{
+    [App_HttpsRequestTool mineQKTAndLiangZiBiTeWithtype:@"1" success:^(id responseObject) {
+        
+        
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
 }
 
 

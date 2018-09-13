@@ -14,6 +14,7 @@
 #import "ZZYPhotoHelper.h"
 #import "ConfigNicknameViewController.h"
 #import "MyQRCodeViewController.h"
+#import "MineInfoResponse.h"
 
 static NSString *normalCell = @"SettingNormalCell";
 static NSString *headerCell = @"SettingHeaderCell";
@@ -27,6 +28,8 @@ static NSString *headerCell = @"SettingHeaderCell";
 @property (nonatomic, strong) NSMutableArray *resultArray;
 
 @property (nonatomic, strong) SettingInfoModel *model;
+
+@property (nonatomic, strong) MineInfoModel *mineModel;
 
 @end
 
@@ -44,35 +47,36 @@ static NSString *headerCell = @"SettingHeaderCell";
 }
 
 - (void)loadData{
-    [self.resultArray removeAllObjects];
-    [App_HttpsRequestTool personuserInfoWithSuccess:^(id responseObject) {
-
-        SettingResponse *response = [[SettingResponse alloc] initWithDictionary:responseObject error:nil];
+    
+    [App_HttpsRequestTool minedataWithsuccess:^(id responseObject) {
+        MineInfoResponse *response = [[MineInfoResponse alloc] initWithDictionary:responseObject error:nil];
+        
         if ([response isSuccess]) {
-
-            self.model = response.result;
+            
+            MineInfoModel *model = response.data;
+            self.mineModel = model;
+            
+            
+            [self.resultArray removeAllObjects];
+            
             NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
-            [array addObject:ADDOBJECT(self.model.avatar)];
-            [array addObject:ADDOBJECT(self.model.nickname)];
-            [array addObject:ADDOBJECT(self.model.sex)];
-            [array addObject:ADDOBJECT(@"")];
-            [array addObject:ADDOBJECT(self.model.phone)];
-            [array addObject:ADDOBJECT(@"")];
-
+            [array addObject:ADDOBJECT(model.pic)];
+            [array addObject:ADDOBJECT(model.username)];
             [self.resultArray addObjectsFromArray:array];
-
+            
             [self.tableView reloadData];
+            
         }else{
-            [SVProgressHUDManager popTostErrorWithString:response.reason];
-
+            PopInfo(response.msg);
         }
-
+        
+        
     } failure:^(NSError *error) {
-
-        [SVProgressHUDManager popTostErrorWithString:netError];
+        PopError(netError);
     }];
-
+    
 }
+
 - (void)configTableView{
     
     [self.tableView registerNib:[UINib nibWithNibName:normalCell bundle:[NSBundle mainBundle]] forCellReuseIdentifier:normalCell];
@@ -111,7 +115,7 @@ static NSString *headerCell = @"SettingHeaderCell";
             WeakSelf;
             [[ZZYPhotoHelper shareHelper] showImageViewSelcteWithResultBlock:^(id data) {
                 NSData *imagedata = UIImageJPEGRepresentation((UIImage *)data, 0.5);
-                [weakSelf editUserInfoRequestData:imagedata type:@"a" value:nil];
+                [weakSelf editUserInfoRequestData:imagedata url:@"/index.php/api/huiyuan/updatepic" type:@"a" value:nil];
             }];
         }];
         
@@ -127,13 +131,13 @@ static NSString *headerCell = @"SettingHeaderCell";
 }
 
 
-- (void)editUserInfoRequestData:(NSData *)imageData type:(NSString *)type value:(NSString *)value{
+- (void)editUserInfoRequestData:(NSData *)imageData url:(NSString *)url type:(NSString *)type value:(NSString *)value{
     
     
     [SVProgressHUDManager popTostLoadingWithString:@"上传个人信息中"];
 
 
-    [App_HttpsRequestTool editPersonInfoWithImageData:imageData type:type value:value WithSuccess:^(id responseObject) {
+    [App_HttpsRequestTool editPersonInfoWithImageData:imageData url:(NSString *)url type:type value:value WithSuccess:^(id responseObject) {
         
         [SVProgressHUDManager popTostDismiss];
 
@@ -143,7 +147,7 @@ static NSString *headerCell = @"SettingHeaderCell";
             [self loadData];
             
         }else{
-            [SVProgressHUDManager popTostErrorWithString:response.reason];
+            [SVProgressHUDManager popTostErrorWithString:response.msg];
         }
     } failure:^(NSError *error) {
         [SVProgressHUDManager popTostErrorWithString:netError];
@@ -197,11 +201,11 @@ static NSString *headerCell = @"SettingHeaderCell";
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"请选择性别" preferredStyle:UIAlertControllerStyleActionSheet];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"男" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self editUserInfoRequestData:nil type:@"s" value:@"男"];
+//        [self editUserInfoRequestData:nil type:@"s" value:@"男"];
     }]];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"女" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self editUserInfoRequestData:nil type:@"s" value:@"女"];
+//        [self editUserInfoRequestData:nil type:@"s" value:@"女"];
 
     }]];
     
@@ -214,7 +218,9 @@ static NSString *headerCell = @"SettingHeaderCell";
 #pragma mark -- 懒加载
 - (NSArray *)dataSource{
     if (_dataSource == nil) {
-        NSArray *array = @[@"头像",@"昵称",@"性别",@"手机号",@"收货地址",@"我的二维码"];
+//        NSArray *array = @[@"头像",@"昵称",@"性别",@"手机号",@"收货地址",@"我的二维码"];
+        NSArray *array = @[@"头像",@"昵称"];
+
         _dataSource = array;
     }
     return _dataSource;

@@ -53,7 +53,7 @@ static UserManager *_userManager;
 //获取头像
 - (NSString *)avatar{
     
-    return _userModel.avatar;
+    return _userModel.pic;
     
 }
 
@@ -65,12 +65,12 @@ static UserManager *_userManager;
 
 //获取用户id
 - (NSString *)uid{
-    return _userModel.uid;
+    return _userModel.id;
 }
 
 //判断是否登录
 - (BOOL)isLogined{
-    return _userModel && _userModel.uid;
+    return _userModel && _userModel.id;
 }
 
 
@@ -128,15 +128,6 @@ static UserManager *_userManager;
 - (BOOL)uploadStudentWithStatus{
     return [[NSUserDefaults standardUserDefaults] boolForKey:kUploadStudentStatus];
 }
-
-
-
-
-
-
-
-
-
 
 
 

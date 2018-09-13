@@ -20,5 +20,8 @@
 @property (nonatomic, copy) void(^leftButtonBlock)();
 @property (nonatomic, copy) void(^rightButtonBlock)();
 @property (nonatomic, copy) void(^scanButtonBlock)();
+@property (weak, nonatomic) IBOutlet UIButton *mairuButton;
+@property (nonatomic, copy) void(^maiRuButtonBlock)();
+@property (weak, nonatomic) IBOutlet UILabel *starLabel;
 
 @end

@@ -8,8 +8,16 @@
 
 #import "ZhuanChuViewController.h"
 
+//扫描二维码
+#import "LBXScanViewStyle.h"
+#import "DIYScanViewController.h"
+#import "StyleDIY.h"
+#import "Global.h"
+#import "QQLBXScanViewController.h"
+
 @interface ZhuanChuViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *numTextField;
 
 @end
 
@@ -22,8 +30,46 @@
 
 }
 - (IBAction)scanButtonClicked:(id)sender {
+    
+    //添加一些扫码或相册结果处理
+    QQLBXScanViewController *vc = [QQLBXScanViewController new];
+    vc.libraryType = [Global sharedManager].libraryType;
+    vc.scanCodeType = [Global sharedManager].scanCodeType;
+    vc.style = [StyleDIY qqStyle];
+    //镜头拉远拉近功能
+    vc.isVideoZoom = YES;
+    
+    [vc setRefreshZhuanChuBlock:^(NSString *scanResult) {
+       
+        self.textField.text = scanResult;
+        
+    }];
+    
+    [self.rt_navigationController pushViewController:vc animated:YES];
 }
 - (IBAction)nextButtonClicked:(id)sender {
+    
+    if (self.textField.text.length == 0) {
+        
+        PopInfo(@"请输入对方账户");
+        return;
+    }
+    
+    if (self.numTextField.text.length == 0) {
+        
+        PopInfo(@"请输入转出数量");
+        return;
+    }
+    
+    [App_HttpsRequestTool mineZhuanChuWithphone:self.textField.text qkd:self.numTextField.text success:^(id responseObject) {
+        
+        
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
+    
 }
 
 @end

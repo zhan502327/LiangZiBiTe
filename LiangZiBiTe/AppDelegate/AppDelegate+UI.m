@@ -45,21 +45,21 @@
 
 - (void)relinkToRootVC{
     
-    TabBarViewController *rootTabBarVC = [[TabBarViewController alloc] init];
-    self.window.rootViewController = rootTabBarVC;
+//    TabBarViewController *rootTabBarVC = [[TabBarViewController alloc] init];
+//    self.window.rootViewController = rootTabBarVC;
     
-//    if ([App_UserManager isLogined]) {
-//
-//        TabBarViewController *rootTabBarVC = [[TabBarViewController alloc] init];
-//        self.window.rootViewController = rootTabBarVC;
-//
-//    }else{
-//        LoginViewController *vc = [[LoginViewController alloc] init];
-//
-//        BaseNavViewController *childController = [[BaseNavViewController alloc] initWithRootViewController:vc];
-//
-//        self.window.rootViewController = childController;
-//    }
+    if ([App_UserManager isLogined]) {
+
+        TabBarViewController *rootTabBarVC = [[TabBarViewController alloc] init];
+        self.window.rootViewController = rootTabBarVC;
+
+    }else{
+        LoginViewController *vc = [[LoginViewController alloc] init];
+
+        BaseNavViewController *childController = [[BaseNavViewController alloc] initWithRootViewController:vc];
+
+        self.window.rootViewController = childController;
+    }
 
     
     

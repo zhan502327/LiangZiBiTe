@@ -11,7 +11,7 @@
 @implementation BaseResponse
 
 - (BOOL)isSuccess {
-    return _error_code == 0;
+    return [_code intValue] == 0;
 }
 
 @end

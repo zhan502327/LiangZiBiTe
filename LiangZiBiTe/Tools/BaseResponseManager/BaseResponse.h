@@ -10,10 +10,15 @@
 
 @interface BaseResponse : JSONModel
 
+
+//"code": 0,
+//"msg": "未实名认证",
+//"data": 0
+
 /** 错误代码*/
-@property (nonatomic, assign) int error_code;
+@property (nonatomic, copy) NSString *code;
 /** 错误原因（不准 --mark）*/ 
-@property (nonatomic, strong) NSString *reason;
+@property (nonatomic, copy) NSString *msg;
 
 /** 返回成功*/
 - (BOOL)isSuccess;

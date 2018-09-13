@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiangZiTaoLiViewController">
             <connections>
+                <outlet property="gifImageView" destination="cvv-y0-dVC" id="ET8-fG-qH8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="inq-Lf-2kr" id="m4D-66-RT3"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,7 +24,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0p-3m-Q6h">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Mine_TuiGuang_BG" translatesAutoresizingMaskIntoConstraints="NO" id="cvv-y0-dVC">
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inq-Lf-2kr">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="6Jz-TA-AlT"/>
+                            </connections>
+                        </webView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cvv-y0-dVC">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYy-3L-uXB">
@@ -49,11 +58,15 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="fYy-3L-uXB" firstAttribute="top" secondItem="f0p-3m-Q6h" secondAttribute="top" constant="20" id="21g-zL-FE0"/>
+                        <constraint firstAttribute="bottom" secondItem="inq-Lf-2kr" secondAttribute="bottom" id="321-dU-ZXW"/>
+                        <constraint firstItem="inq-Lf-2kr" firstAttribute="leading" secondItem="f0p-3m-Q6h" secondAttribute="leading" id="FH5-lY-IsG"/>
+                        <constraint firstAttribute="trailing" secondItem="inq-Lf-2kr" secondAttribute="trailing" id="Q62-86-LY4"/>
                         <constraint firstItem="cvv-y0-dVC" firstAttribute="top" secondItem="f0p-3m-Q6h" secondAttribute="top" id="ZuV-zs-Ks1"/>
                         <constraint firstAttribute="trailing" secondItem="cvv-y0-dVC" secondAttribute="trailing" id="clf-UB-yfN"/>
                         <constraint firstItem="cvv-y0-dVC" firstAttribute="leading" secondItem="f0p-3m-Q6h" secondAttribute="leading" id="e48-lw-g2b"/>
                         <constraint firstAttribute="bottom" secondItem="cvv-y0-dVC" secondAttribute="bottom" id="iw2-Ax-onh"/>
                         <constraint firstAttribute="trailing" secondItem="fYy-3L-uXB" secondAttribute="trailing" id="pLi-uC-GC4"/>
+                        <constraint firstItem="inq-Lf-2kr" firstAttribute="top" secondItem="f0p-3m-Q6h" secondAttribute="top" id="txk-5C-jNA"/>
                         <constraint firstItem="fYy-3L-uXB" firstAttribute="leading" secondItem="f0p-3m-Q6h" secondAttribute="leading" id="xDl-jj-GQr"/>
                     </constraints>
                 </view>
@@ -65,9 +78,7 @@
                 <constraint firstItem="f0p-3m-Q6h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jCd-lB-qbm"/>
                 <constraint firstAttribute="bottom" secondItem="f0p-3m-Q6h" secondAttribute="bottom" id="yZW-JJ-q4a"/>
             </constraints>
+            <point key="canvasLocation" x="33.5" y="89.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="App_Mine_TuiGuang_BG" width="345" height="575"/>
-    </resources>
 </document>

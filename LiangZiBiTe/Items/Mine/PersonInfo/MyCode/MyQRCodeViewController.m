@@ -41,7 +41,7 @@
             [self.codeImageView sd_setImageWithURL:[NSURL URLWithString:response.result.code_url] placeholderImage:UseImage(@"Public_Image_Zheng_PlaceHolder")];
             
         }else{
-            PopInfo(response.reason);
+            PopInfo(response.msg);
         }
         
         

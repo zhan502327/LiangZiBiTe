@@ -13,6 +13,6 @@
 @interface UserInfoResponse : BaseResponse
 
 
-@property (nonatomic, strong) UserInfoModel <Optional> *result;
+@property (nonatomic, strong) UserInfoModel <Optional> *data;
 
 @end

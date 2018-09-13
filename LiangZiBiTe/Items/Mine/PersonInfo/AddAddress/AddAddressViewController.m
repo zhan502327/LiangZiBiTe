@@ -231,7 +231,7 @@ static NSString *defaultCell = @"AddAddressDefaultCell";
             [self.rt_navigationController popViewControllerAnimated:YES complete:nil];
             
         }else{
-            [SVProgressHUDManager popTostErrorWithString:response.reason];
+            [SVProgressHUDManager popTostErrorWithString:response.msg];
         }
         
     } failure:^(NSError *error) {

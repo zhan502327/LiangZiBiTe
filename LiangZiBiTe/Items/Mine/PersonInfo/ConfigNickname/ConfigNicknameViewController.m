@@ -33,7 +33,7 @@
     }
     
     [SVProgressHUDManager popTostLoadingWithString:@"修改中"];
-    [App_HttpsRequestTool editPersonInfoWithImageData:nil type:@"n" value:self.nicknameTextField.text WithSuccess:^(id responseObject) {
+    [App_HttpsRequestTool editPersonInfoWithImageData:nil url:@"/index.php/api/huiyuan/upusername" type:@"username" value:self.nicknameTextField.text WithSuccess:^(id responseObject) {
         
         [SVProgressHUDManager popTostDismiss];
         
@@ -47,7 +47,7 @@
                 self.refreshDataBlock();
             }
         }else{
-            [SVProgressHUDManager popTostErrorWithString:response.reason];
+            [SVProgressHUDManager popTostErrorWithString:response.msg];
         }
        
         

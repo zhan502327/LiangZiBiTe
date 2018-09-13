@@ -87,24 +87,20 @@
     //    [self.navigationController pushViewController:vc animated:YES];
     
     
-    ScanResultResponse *response = [[ScanResultResponse alloc] initWithString:strResult.strScanned error:nil];
-    
-    if ([response isSuccess]) {
-//        RegisterViewController *vc = [[RegisterViewController alloc] init];
-//
-//        vc.scanModel = response.result;
-//
-//        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+    if (strResult.strScanned.length > 0) {
+        
+        if (_refreshZhuanChuBlock) {
+            _refreshZhuanChuBlock(strResult.strScanned);
+        }
+        
+        [self.rt_navigationController popViewControllerAnimated:YES complete:nil];
         
     }else{
         
-        //        PopInfo(@"请扫描正确二维码");
         [self popAlertMsgWithScanResult:nil];
-        NSLog(@"strResult.strBarCodeType == %@",strResult.strBarCodeType);
-        NSLog(@"strResult.strScanned == %@",strResult.strScanned);
-        NSLog(@"strResult.imgScanned == %@",strResult.imgScanned);
+        
+        
     }
-    
     
 }
 

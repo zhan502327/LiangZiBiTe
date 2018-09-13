@@ -54,40 +54,38 @@
 
 - (IBAction)loginButtonClicked:(id)sender {
     
-//    if (_mobileTextField.text.length == 0) {
-//        [SVProgressHUDManager popTostInfoWithString:@"请输入账号"];
-//        return;
-//    }
-//
-//    if (_passwordTextField.text.length == 0) {
-//        [SVProgressHUDManager popTostInfoWithString:@"请输入密码"];
-//        return;
-//
-//    }
-//
-//    [App_HttpsRequestTool loginLoginRequestMobile:self.mobileTextField.text passWord:self.passwordTextField.text deviceID:Device_Id withSuccess:^(id responseObject) {
-//
-//        UserInfoResponse *response = [[UserInfoResponse alloc] initWithDictionary:responseObject error:nil];
-//        if ([response isSuccess]) {
-//
-//            App_UserManager.userModel = response.result;
-//
-//
-//            [(AppDelegate *)[UIApplication sharedApplication].delegate relinkToRootVC];
-//
-//
-//        }else{
-//            [SVProgressHUDManager popTostErrorWithString:response.reason];
-//        }
-//
-//
-//    } failure:^(NSError *error) {
-//
-//    }];
-    
-    [(AppDelegate *)[UIApplication sharedApplication].delegate relinkToRootVC];
+    if (_mobileTextField.text.length == 0) {
+        [SVProgressHUDManager popTostInfoWithString:@"请输入账号"];
+        return;
+    }
 
-    
+    if (_passwordTextField.text.length == 0) {
+        [SVProgressHUDManager popTostInfoWithString:@"请输入密码"];
+        return;
+
+    }
+
+    PopLoading(@"登录中");
+    [App_HttpsRequestTool loginLoginRequestMobile:self.mobileTextField.text password:self.passwordTextField.text withSuccess:^(id responseObject) {
+        
+        PopDismiss;
+        UserInfoResponse *response = [[UserInfoResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            App_UserManager.userModel = response.data;
+            
+            [(AppDelegate *)[UIApplication sharedApplication].delegate relinkToRootVC];
+            
+        }else{
+            PopInfo(response.msg);
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+        PopDismiss;
+
+    }];
+
     
 }
 

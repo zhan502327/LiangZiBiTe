@@ -13,7 +13,14 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.mairuButton.titleLabel.lineBreakMode = 0;//这句话很重要，不加这句话加上换行符也没用
+
+    [self.mairuButton setTitle:@"平台\n买入" forState:UIControlStateNormal];
+    
+    
+    
 }
+
 - (IBAction)scanButtonClicked:(id)sender {
     if (_scanButtonBlock) {
         _scanButtonBlock();
@@ -27,6 +34,11 @@
 - (IBAction)rightButtonCLicked:(id)sender {
     if (_rightButtonBlock) {
         _rightButtonBlock();
+    }
+}
+- (IBAction)mairuButtonCLicked:(id)sender {
+    if (_maiRuButtonBlock) {
+        _maiRuButtonBlock();
     }
 }
 

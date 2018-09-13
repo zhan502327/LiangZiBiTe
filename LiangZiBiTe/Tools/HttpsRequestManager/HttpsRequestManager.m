@@ -61,7 +61,7 @@ static HttpsRequestManager *shareHttpsRequestManager = nil;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", nil];
     
     [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:imageData name:@"value" fileName:@"image.png" mimeType:@"image/png"];
+        [formData appendPartWithFileData:imageData name:@"pic" fileName:@"image.png" mimeType:@"image/png"];
     } progress:^(NSProgress * uploadProgress) {
         // ------ 数据请求的进度
         // ******************
@@ -101,9 +101,9 @@ static HttpsRequestManager *shareHttpsRequestManager = nil;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", nil];
     
     [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:card_face name:@"card_face" fileName:@"image.png" mimeType:@"image/png"];
+        [formData appendPartWithFileData:card_face name:@"sfzzm" fileName:@"image.png" mimeType:@"image/png"];
         
-        [formData appendPartWithFileData:card_back name:@"card_back" fileName:@"image.png" mimeType:@"image/png"];
+        [formData appendPartWithFileData:card_back name:@"sfzbm" fileName:@"image.png" mimeType:@"image/png"];
 
     } progress:^(NSProgress * uploadProgress) {
         // ------ 数据请求的进度

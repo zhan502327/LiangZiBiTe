@@ -33,6 +33,7 @@
 //我的二维码
 @property (nonatomic, strong) UIButton *btnMyQR;
 
+@property (nonatomic, copy) void(^refreshZhuanChuBlock)(NSString *scanResult);
 
 
 

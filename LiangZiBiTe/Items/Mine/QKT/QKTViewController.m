@@ -35,9 +35,21 @@ static NSString *cellID = @"LiangZiBiTeCell";
     [self.tableView registerNib:[UINib nibWithNibName:cellID bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
     
     
+    [self loadData];
     
 }
 
+- (void)loadData{
+
+    [App_HttpsRequestTool mineQKTAndLiangZiBiTeWithtype:@"2" success:^(id responseObject) {
+        
+        
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
+}
 
 #pragma mark - tableView delegate and tableView dataSource
 

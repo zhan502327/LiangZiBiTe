@@ -32,7 +32,10 @@
 
 
 //正式服务器
-static NSString *cnUrl = @"http://mayjoy.ezuan.cc/index.php?s=/Mobile";
+//static NSString *cnUrl = @"http://223.201.0.227";
+static NSString *cnUrl = @"http://115.47.126.105:10010";
+
+
 
 
 

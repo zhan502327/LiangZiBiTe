@@ -7,8 +7,10 @@
 //
 
 #import "ZhuanRuViewController.h"
+#import "ZhuanRuResponse.h"
 
 @interface ZhuanRuViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *logImageView;
 
 @end
 
@@ -16,22 +18,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self setNavgiationBarTitle:@"转入"];
+    
+    [self loadData];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadData{
+    
+    [App_HttpsRequestTool mineZhuanRusuccess:^(id responseObject) {
+        
+        ZhuanRuResponse *response = [[ZhuanRuResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response  isSuccess]) {
+            
+            [self.logImageView sd_setImageWithURL:[NSURL URLWithString:response.data] placeholderImage:UseImage(@"")];
+            
+        }else{
+            PopInfo(response.msg);
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

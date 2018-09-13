@@ -1,14 +1,14 @@
 //
-//  UserInfoModel.h
-//  TongChuanDu
+//  MineInfoModel.h
+//  LiangZiBiTe
 //
-//  Created by zhandb on 2018/7/16.
+//  Created by zhandb on 2018/9/13.
 //  Copyright © 2018年 zhandb. All rights reserved.
 //
 
 #import <JSONModel/JSONModel.h>
 
-@interface UserInfoModel : JSONModel
+@interface MineInfoModel : JSONModel
 
 
 
@@ -114,19 +114,6 @@ ltgm    int    主链推广码
  xingji    int    星级
  */
 @property (nonatomic, copy) NSString <Optional> *xingji;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

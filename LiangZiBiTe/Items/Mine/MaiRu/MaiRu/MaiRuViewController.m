@@ -11,6 +11,7 @@
 #import "SelectMoneyTipsView.h"
 #import "MaiRuListViewController.h"
 #import "MaiRuUnFinishViewController.h"
+#import "MaiRuFooterView.h"
 
 
 static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
@@ -20,12 +21,18 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
+@property (nonatomic, copy) NSString *selectMoneyStr;
+
+@property (nonatomic, strong) NSArray *moneyArray;
+
 @end
 
 @implementation MaiRuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.selectMoneyStr = self.moneyArray[0];
     
     [self setNavgiationBarTitle:@"买入"];
     
@@ -101,12 +108,32 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
         
     }else{
         
-        cell.selectView.buttonTitleArray = @[@"500",@"1000",@"3000",@"5000",@"10000",@"30000"];
-        
+        cell.selectView.buttonTitleArray = self.moneyArray;
         
         [cell.selectView setOneButtonBlock:^{
-            
+            self.selectMoneyStr = self.moneyArray[0];
         }];
+        
+        [cell.selectView setTwoButtonBlock:^{
+            self.selectMoneyStr = self.moneyArray[1];
+        }];
+        
+        [cell.selectView setThreeButtonBlock:^{
+            self.selectMoneyStr = self.moneyArray[2];
+        }];
+        
+        [cell.selectView setFourButtonBlock:^{
+            self.selectMoneyStr = self.moneyArray[3];
+        }];
+        
+        [cell.selectView setFiveButtonBlock:^{
+            self.selectMoneyStr = self.moneyArray[4];
+        }];
+        
+        [cell.selectView setSixButtonBlock:^{
+            self.selectMoneyStr = self.moneyArray[5];
+        }];
+        
     }
     
     
@@ -150,14 +177,46 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    UIView *backView = [[UIView alloc]init];
-    backView.backgroundColor = [UIColor clearColor];
-    return backView;
+    
+    if (section == 0) {
+        UIView *backView = [[UIView alloc]init];
+        backView.backgroundColor = [UIColor clearColor];
+        return backView;
+    }else{
+        MaiRuFooterView *view = [[[NSBundle mainBundle] loadNibNamed:@"MaiRuFooterView" owner:nil options:nil] lastObject];
+
+        [view setCreateOrderBlock:^{
+           
+            [App_HttpsRequestTool mineMaiRuCreateOrderjye:self.selectMoneyStr success:^(id responseObject) {
+                
+                BaseResponse * respoinse = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
+                if ([respoinse isSuccess]) {
+                    
+                    PopSuccess(respoinse.msg);
+                    
+                }else{
+                    PopInfo(respoinse.msg);
+                }
+                
+                
+            } failure:^(NSError *error) {
+                PopError(netError);
+            }];
+            
+        }];
+        return view;
+    }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 0.00000001;
+    if (section == 0) {
+        return 0.00001;
+    }else{
+        return 90;
+    }
+    
 }
 
 
@@ -169,5 +228,11 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
     return _dataSource;
 }
 
-
+- (NSArray *)moneyArray{
+    if (_moneyArray == nil) {
+        NSArray *array = @[@"500",@"1000",@"3000",@"5000",@"10000",@"30000"];
+        _moneyArray = array;
+    }
+    return _moneyArray;
+}
 @end
