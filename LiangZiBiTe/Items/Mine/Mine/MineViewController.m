@@ -27,6 +27,7 @@ static NSString *headerViewID = @"MineHeaderView";
 static NSString *footerViewID = @"MineFooterView";
 static NSString *itemcellID = @"MineCell";
 
+
 #define kGap 1
 #define kItemCount 3
 #define kItemWidth (Current_Width - (kItemCount+1) *kGap)/kItemCount
@@ -50,9 +51,14 @@ static NSString *itemcellID = @"MineCell";
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
+    
+    //判断实名认证
     [self configShiMingApply];
     
+    //判断消息列表
+    [self configXiaoXiList];
 }
+
 
 
 
@@ -71,6 +77,13 @@ static NSString *itemcellID = @"MineCell";
     
     //判断是否显示 平台买入
     [self fonfigIsShowPingTaiMaiRu];
+}
+#pragma mark -- 判断消息列表
+- (void)configXiaoXiList{
+    
+    [App_HttpsRequestTool ]
+    
+    
 }
 
 #pragma mark -- 判断是否实名认证
@@ -168,7 +181,6 @@ static NSString *itemcellID = @"MineCell";
                 self.isHiddenFuTou = YES;
             }
             
-            
             [self.collectionView reloadData];
             
         }else{
@@ -258,7 +270,10 @@ static NSString *itemcellID = @"MineCell";
         header.mobileLabel.text = self.mineModel.phone;
         
         
+        //消息
         [header setScanButtonBlock:^{
+            
+            
             
         }];
         
@@ -369,6 +384,7 @@ static NSString *itemcellID = @"MineCell";
     }
     return _dataSource;
 }
+
 
 
 

@@ -37,7 +37,7 @@
                                         <constraint firstAttribute="width" constant="30" id="CRX-oq-vEH"/>
                                         <constraint firstAttribute="height" constant="30" id="buh-nJ-97e"/>
                                     </constraints>
-                                    <state key="normal" backgroundImage="App_Mine_Header_Scan"/>
+                                    <state key="normal" backgroundImage="App_Mine_Header_xiaoxi"/>
                                     <connections>
                                         <action selector="scanButtonClicked:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="CMA-ax-th5"/>
                                     </connections>
@@ -91,9 +91,28 @@
                                         <constraint firstItem="LPK-05-DQY" firstAttribute="top" secondItem="SjC-lD-fJd" secondAttribute="top" id="kSz-B0-PKo"/>
                                     </constraints>
                                 </view>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF8-ZG-MXk">
+                                    <rect key="frame" x="455" y="5" width="10" height="10"/>
+                                    <color key="backgroundColor" red="0.96862745100000003" green="0.20784313730000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="10" id="osf-ug-gkb"/>
+                                        <constraint firstAttribute="height" constant="10" id="wON-3S-mqH"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="lF8-ZG-MXk" secondAttribute="trailing" constant="10" id="1S3-2x-wp4"/>
+                                <constraint firstItem="lF8-ZG-MXk" firstAttribute="top" secondItem="k7l-d9-bHq" secondAttribute="top" constant="5" id="9LY-Wm-c4G"/>
                                 <constraint firstAttribute="trailing" secondItem="fLj-EF-Jlx" secondAttribute="trailing" constant="10" id="Gkl-Tq-rVu"/>
                                 <constraint firstAttribute="bottom" secondItem="SjC-lD-fJd" secondAttribute="bottom" id="IdD-67-KSj"/>
                                 <constraint firstItem="pz7-qY-oMz" firstAttribute="leading" secondItem="SjC-lD-fJd" secondAttribute="trailing" id="Im4-NA-Orc"/>
@@ -320,6 +339,7 @@
                 <outlet property="mairuButton" destination="yaQ-Oa-Pmw" id="pcc-Ho-KMK"/>
                 <outlet property="mobileLabel" destination="mEy-jv-9lg" id="ReM-eF-6Ju"/>
                 <outlet property="nameLabel" destination="9mv-wf-mpY" id="Nqp-69-JYB"/>
+                <outlet property="redLabel" destination="lF8-ZG-MXk" id="hZn-Ns-Phk"/>
                 <outlet property="rightNumLabel" destination="kJU-x8-Oka" id="9X5-O7-y6l"/>
                 <outlet property="starLabel" destination="P7K-wh-WrF" id="fiT-FY-cxO"/>
                 <outlet property="starView" destination="LPK-05-DQY" id="qEu-5D-pgw"/>
@@ -329,7 +349,7 @@
     </objects>
     <resources>
         <image name="App_Mine_Header_BGView" width="375" height="240"/>
-        <image name="App_Mine_Header_Scan" width="22" height="22"/>
         <image name="App_Mine_Header_star" width="16" height="16"/>
+        <image name="App_Mine_Header_xiaoxi" width="22" height="22"/>
     </resources>
 </document>

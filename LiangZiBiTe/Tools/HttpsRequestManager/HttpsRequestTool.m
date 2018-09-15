@@ -475,6 +475,20 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 }
 
 
+//---- 消息列表
+- (void)xiaoXiListWithSuccess:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/myindex/usermessage");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
 
 
 

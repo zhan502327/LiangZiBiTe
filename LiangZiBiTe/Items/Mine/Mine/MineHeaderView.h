@@ -26,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *starLabel;
 @property (weak, nonatomic) IBOutlet UIButton *fuTouButton;
 @property (nonatomic, copy) void(^futouButtonBlock)(void);
+@property (weak, nonatomic) IBOutlet UILabel *redLabel;
 
 @end

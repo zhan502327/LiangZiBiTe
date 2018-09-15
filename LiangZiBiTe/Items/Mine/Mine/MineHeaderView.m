@@ -23,8 +23,6 @@
 }
 
 
-
-
 - (IBAction)scanButtonClicked:(id)sender {
     if (_scanButtonBlock) {
         _scanButtonBlock();
