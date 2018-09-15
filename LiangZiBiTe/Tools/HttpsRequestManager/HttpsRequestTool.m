@@ -116,10 +116,10 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
     }];
 }
 
-//  ------ 判断是否已经实名认证 /index.php/api/myindex/issmrz
+//  ------ 判断是否已经实名认证 
 - (void)configShiMingRenZhengWithID:(NSString *)user_id withSuccess:(getBackBlock)success failure:(getFailBlock)failure {
     
-    NSString *url = App_Api_Base_Url(@"/index.php/api/index/sencode");
+    NSString *url = App_Api_Base_Url(@"/index.php/api/myindex/issmrz");
     NSMutableDictionary *dic = [NSMutableDictionary new];
     [dic setValue:user_id forKey:@"id"];
     

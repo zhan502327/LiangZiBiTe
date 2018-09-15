@@ -10,4 +10,6 @@
 
 @interface QKTViewController : BaseViewController
 
+@property (nonatomic, copy) NSString *QKD;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "LiangZiBiTeViewController.h"
 #import "LiangZiBiTeCell.h"
+#import "QKDResponse.h"
 
 static NSString *cellID = @"LiangZiBiTeCell";
 
@@ -26,7 +27,6 @@ static NSString *cellID = @"LiangZiBiTeCell";
     [self setNavgiationBarTitle:@"量子比特"];
     
     [self configTableView];
-    
 }
 
 - (void)configTableView{
@@ -38,14 +38,29 @@ static NSString *cellID = @"LiangZiBiTeCell";
 }
 
 - (void)loadData{
+    
     [App_HttpsRequestTool mineQKTAndLiangZiBiTeWithtype:@"1" success:^(id responseObject) {
         
-        
+        QKDResponse *response = [[QKDResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            [self.dataSource removeAllObjects];
+            
+            [self.dataSource addObjectsFromArray:response.data];
+            
+            [self.tableView reloadData];
+            
+        }else{
+            PopInfo(response.msg);
+        }
         
     } failure:^(NSError *error) {
         PopError(netError);
     }];
+    
 }
+
+
 
 
 #pragma mark - tableView delegate and tableView dataSource
@@ -57,15 +72,20 @@ static NSString *cellID = @"LiangZiBiTeCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 11;
+    return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 90;
+    return 75;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    QKDModel *model = self.dataSource[indexPath.row];
+
+    
     LiangZiBiTeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    cell.model = model;
+
     return cell;
     
 }

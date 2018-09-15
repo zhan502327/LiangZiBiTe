@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QKDModel.h"
 
 @interface LiangZiBiTeCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *logImageView;
@@ -14,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *mobileLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+@property (nonatomic, strong) QKDModel *model;
 
 @end

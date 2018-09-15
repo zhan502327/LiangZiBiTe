@@ -68,6 +68,18 @@ static UserManager *_userManager;
     return _userModel.id;
 }
 
+//获取主链推广
+- (NSString *)zltg{
+    return _userModel.ltgm;
+}
+
+
+//获取测链推广
+- (NSString *)cltg{
+    return _userModel.rtgm;
+}
+
+
 //判断是否登录
 - (BOOL)isLogined{
     return _userModel && _userModel.id;

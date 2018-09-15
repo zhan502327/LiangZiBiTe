@@ -18,6 +18,10 @@
 #import "ZhuanRuViewController.h"
 #import "ConfigPTMRResponse.h"
 #import "SettingViewController.h"
+#import "TuiGuangViewController.h"
+#import "ShiMingResponse.h"
+#import "ShiMingViewController.h"
+
 
 static NSString *headerViewID = @"MineHeaderView";
 static NSString *footerViewID = @"MineFooterView";
@@ -35,10 +39,21 @@ static NSString *itemcellID = @"MineCell";
 @property (nonatomic, strong) MineInfoModel *mineModel;
 
 @property (nonatomic, assign) BOOL isHiddenPTMR;
+@property (nonatomic, assign) BOOL isHiddenFuTou;
+
+
 
 @end
 
 @implementation MineViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    [self configShiMingApply];
+    
+}
+
 
 
 - (void)viewDidLoad{
@@ -48,12 +63,47 @@ static NSString *itemcellID = @"MineCell";
     
     self.isHiddenPTMR = YES;
     
+    self.isHiddenFuTou = YES;
+    
     [self configCollectionView];
     
     [self loadData];
     
     //判断是否显示 平台买入
     [self fonfigIsShowPingTaiMaiRu];
+}
+
+#pragma mark -- 判断是否实名认证
+- (void)configShiMingApply{
+    
+    [App_HttpsRequestTool configShiMingRenZhengWithID:[App_UserManager uid] withSuccess:^(id responseObject) {
+        
+        ShiMingResponse *response = [[ShiMingResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            if ([response.data isEqualToString:@"0"]) {//未实名认证
+                
+                UIAlertController *loginOutAlert = [UIAlertController alertControllerWithTitle:@"实名认证" message:@"请先上传实名认证信息" preferredStyle:UIAlertControllerStyleAlert];
+
+                [loginOutAlert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+                    
+                    ShiMingViewController *vc = [[ShiMingViewController alloc] init];
+                    [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+                    
+                }]];
+                [self presentViewController:loginOutAlert animated:YES completion:nil];
+                
+                
+                
+            }
+            
+        }else{
+            PopInfo(response.msg);
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
 }
 
 - (void)configCollectionView{
@@ -111,6 +161,14 @@ static NSString *itemcellID = @"MineCell";
             
             MineInfoModel *model = response.data;
             self.mineModel = model;
+            
+            if ([model.qkt doubleValue] > 0) {
+                self.isHiddenFuTou = NO;
+            }else{
+                self.isHiddenFuTou = YES;
+            }
+            
+            
             [self.collectionView reloadData];
             
         }else{
@@ -182,9 +240,10 @@ static NSString *itemcellID = @"MineCell";
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(haderImageViewClicked)];
         [header.headerImageView addGestureRecognizer:tap];
 
-        
-        
         header.mairuButton.hidden = self.isHiddenPTMR;
+        header.fuTouButton.hidden = self.isHiddenFuTou;
+        
+        
         //星级
         header.starLabel.text = [NSString stringWithFormat:@"x%d",[self.mineModel.xingji intValue]];
         //QKT
@@ -207,6 +266,7 @@ static NSString *itemcellID = @"MineCell";
         [header setLeftButtonBlock:^{
             
             QKTViewController *vc = [[QKTViewController alloc] init];
+            vc.QKD = self.mineModel.qkt;
             [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
         }];
         
@@ -280,19 +340,25 @@ static NSString *itemcellID = @"MineCell";
 //        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
     }
     
+    if (indexPath.row == 4) {//推广链接
+        
+        TuiGuangViewController *vc = [[TuiGuangViewController alloc] init];
+        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+    }
+    
+    if (indexPath.row == 5) {//意见反馈
+        
+        
+    }
+    
 }
-
-
-
-
-
 
 - (NSMutableArray *)dataSource{
     if (_dataSource == nil) {
         NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
         
-        NSArray *titleArray = @[@"转入",@"转出",@"买入",@"卖出",@"推广链接"];
-        NSArray *imageArray = @[@"App_Mine_Header_zhuanru",@"App_Mine_Header_zhuanchu",@"App_Mine_Header_mairu",@"App_Mine_Header_maichu",@"App_Mine_Header_tuiguang"];
+        NSArray *titleArray = @[@"转入",@"转出",@"买入",@"卖出",@"推广链接",@"意见反馈"];
+        NSArray *imageArray = @[@"App_Mine_Header_zhuanru",@"App_Mine_Header_zhuanchu",@"App_Mine_Header_mairu",@"App_Mine_Header_maichu",@"App_Mine_Header_tuiguang",@"App_Mine_Header_yijian"];
         for (int i = 0; i<titleArray.count; i++) {
             NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
             [dic setValue:titleArray[i] forKey:@"title"];
@@ -303,36 +369,6 @@ static NSString *itemcellID = @"MineCell";
     }
     return _dataSource;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

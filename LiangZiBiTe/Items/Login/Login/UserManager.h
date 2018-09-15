@@ -29,6 +29,12 @@
 //获取用户id
 - (NSString *)uid;
 
+//获取主链推广
+- (NSString *)zltg;
+
+//获取测链推广
+- (NSString *)cltg;
+
 //判断是否登录
 - (BOOL)isLogined;
 

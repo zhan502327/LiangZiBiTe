@@ -1,14 +1,14 @@
 //
-//  LiangZiBiTeCell.m
+//  TuiGuangCell.m
 //  LiangZiBiTe
 //
-//  Created by zhandb on 2018/9/1.
+//  Created by zhandb on 2018/9/14.
 //  Copyright © 2018年 zhandb. All rights reserved.
 //
 
-#import "LiangZiBiTeCell.h"
+#import "TuiGuangCell.h"
 
-@implementation LiangZiBiTeCell
+@implementation TuiGuangCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -20,18 +20,15 @@
 
     // Configure the view for the selected state
 }
-
-
-
-- (void)setModel:(QKDModel *)model{
-    _model = model;
-    
-    _nameLabel.text = model.liayuan;
-    
-    _moneyLabel.text = model.suliang;
-    
-    _timeLabel.text = model.ztime;
-    
-    
+- (IBAction)zhuLiaTuiguangBUttonCLicked:(id)sender {
+    if (_zhuTuiBlock) {
+        _zhuTuiBlock();
+    }
 }
+- (IBAction)celainTuiGuangButtonClicked:(id)sender {
+    if (_ceTuiBlock) {
+        _ceTuiBlock();
+    }
+}
+
 @end

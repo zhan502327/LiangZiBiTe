@@ -119,7 +119,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1C4-Fb-VJU" userLabel="leftView">
                                     <rect key="frame" x="0.0" y="0.0" width="237" height="50"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QKT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzU-LO-jS6">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QKD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzU-LO-jS6">
                                             <rect key="frame" x="0.0" y="0.0" width="237" height="25"/>
                                             <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,17 +137,31 @@
                                                 <action selector="leftButtonClicked:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="bT6-yi-9dA"/>
                                             </connections>
                                         </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4o-dD-8Tc">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <color key="backgroundColor" red="0.066666666669999999" green="0.35686274509999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="y4o-dD-8Tc" secondAttribute="height" multiplier="1:1" id="Vdb-PX-6At"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                                            <connections>
+                                                <action selector="fuTouButtonCLicked:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="LGP-KE-MQM"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="QzU-LO-jS6" secondAttribute="trailing" id="2wd-xb-Yeq"/>
                                         <constraint firstItem="QzU-LO-jS6" firstAttribute="top" secondItem="1C4-Fb-VJU" secondAttribute="top" id="Akm-fa-rOb"/>
                                         <constraint firstItem="4SN-LH-jLC" firstAttribute="leading" secondItem="1C4-Fb-VJU" secondAttribute="leading" id="Bbm-je-7S1"/>
+                                        <constraint firstAttribute="bottom" secondItem="y4o-dD-8Tc" secondAttribute="bottom" id="QsB-ua-zTN"/>
                                         <constraint firstItem="QzU-LO-jS6" firstAttribute="leading" secondItem="1C4-Fb-VJU" secondAttribute="leading" id="R4f-DH-Mcd"/>
+                                        <constraint firstItem="y4o-dD-8Tc" firstAttribute="leading" secondItem="1C4-Fb-VJU" secondAttribute="leading" id="V20-AS-QCk"/>
                                         <constraint firstAttribute="trailing" secondItem="Q8j-8I-Kgx" secondAttribute="trailing" id="Wqt-W6-bYW"/>
                                         <constraint firstAttribute="trailing" secondItem="4SN-LH-jLC" secondAttribute="trailing" id="ZBy-pr-jNM"/>
                                         <constraint firstItem="Q8j-8I-Kgx" firstAttribute="top" secondItem="1C4-Fb-VJU" secondAttribute="top" id="bIu-Nj-p1u"/>
                                         <constraint firstItem="4SN-LH-jLC" firstAttribute="top" secondItem="QzU-LO-jS6" secondAttribute="bottom" id="bbl-90-IzM"/>
+                                        <constraint firstItem="y4o-dD-8Tc" firstAttribute="top" secondItem="1C4-Fb-VJU" secondAttribute="top" id="eBG-Fu-btp"/>
                                         <constraint firstAttribute="bottom" secondItem="4SN-LH-jLC" secondAttribute="bottom" id="epK-xM-nvd"/>
                                         <constraint firstItem="Q8j-8I-Kgx" firstAttribute="leading" secondItem="1C4-Fb-VJU" secondAttribute="leading" id="kQi-Pz-CAf"/>
                                         <constraint firstItem="4SN-LH-jLC" firstAttribute="top" secondItem="QzU-LO-jS6" secondAttribute="bottom" id="kxI-Qn-4Cz"/>
@@ -300,6 +314,7 @@
                 <constraint firstAttribute="trailing" secondItem="hit-ed-Ozz" secondAttribute="trailing" id="XDE-Rc-eiK"/>
             </constraints>
             <connections>
+                <outlet property="fuTouButton" destination="y4o-dD-8Tc" id="wo2-bJ-6KT"/>
                 <outlet property="headerImageView" destination="wVC-dJ-30V" id="q9b-QG-KiH"/>
                 <outlet property="leftNumLabel" destination="4SN-LH-jLC" id="oZc-0V-dAM"/>
                 <outlet property="mairuButton" destination="yaQ-Oa-Pmw" id="pcc-Ho-KMK"/>

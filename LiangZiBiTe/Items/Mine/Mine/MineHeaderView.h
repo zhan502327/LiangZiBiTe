@@ -17,11 +17,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobileLabel;
 
-@property (nonatomic, copy) void(^leftButtonBlock)();
-@property (nonatomic, copy) void(^rightButtonBlock)();
-@property (nonatomic, copy) void(^scanButtonBlock)();
+@property (nonatomic, copy) void(^leftButtonBlock)(void);
+@property (nonatomic, copy) void(^rightButtonBlock)(void);
+@property (nonatomic, copy) void(^scanButtonBlock)(void);
 @property (weak, nonatomic) IBOutlet UIButton *mairuButton;
-@property (nonatomic, copy) void(^maiRuButtonBlock)();
+@property (nonatomic, copy) void(^maiRuButtonBlock)(void);
+
 @property (weak, nonatomic) IBOutlet UILabel *starLabel;
+@property (weak, nonatomic) IBOutlet UIButton *fuTouButton;
+@property (nonatomic, copy) void(^futouButtonBlock)(void);
 
 @end

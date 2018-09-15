@@ -13,23 +13,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MineCell">
-            <rect key="frame" x="0.0" y="0.0" width="317" height="246"/>
+            <rect key="frame" x="0.0" y="0.0" width="177" height="158"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="317" height="246"/>
+                <rect key="frame" x="0.0" y="0.0" width="177" height="158"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XM4-oh-1dX">
-                        <rect key="frame" x="0.0" y="0.0" width="317" height="246"/>
+                        <rect key="frame" x="0.0" y="0.0" width="177" height="158"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Whm-Yy-qpj">
-                                <rect key="frame" x="60.5" y="10" width="196" height="196"/>
+                                <rect key="frame" x="34.5" y="10" width="108" height="108"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Whm-Yy-qpj" secondAttribute="height" multiplier="1:1" id="ITV-Ip-UlB"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPD-sL-lZg">
-                                <rect key="frame" x="5" y="216" width="307" height="20"/>
+                                <rect key="frame" x="5" y="128" width="167" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="5Xx-ro-Hxp"/>
                                 </constraints>
@@ -56,12 +56,12 @@
                 <constraint firstItem="XM4-oh-1dX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kHT-vd-WBI"/>
                 <constraint firstAttribute="trailing" secondItem="XM4-oh-1dX" secondAttribute="trailing" id="vvc-Rl-5Z6"/>
             </constraints>
-            <size key="customSize" width="317" height="246"/>
+            <size key="customSize" width="177" height="158"/>
             <connections>
                 <outlet property="logImageView" destination="Whm-Yy-qpj" id="sgJ-3M-8qG"/>
                 <outlet property="titleLabel" destination="rPD-sL-lZg" id="p03-DS-nlc"/>
             </connections>
-            <point key="canvasLocation" x="222.5" y="212"/>
+            <point key="canvasLocation" x="152.5" y="168"/>
         </collectionViewCell>
     </objects>
 </document>

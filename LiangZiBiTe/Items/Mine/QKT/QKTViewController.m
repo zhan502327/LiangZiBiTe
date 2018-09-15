@@ -8,6 +8,7 @@
 
 #import "QKTViewController.h"
 #import "LiangZiBiTeCell.h"
+#import "QKDResponse.h"
 
 static NSString *cellID = @"LiangZiBiTeCell";
 
@@ -15,6 +16,7 @@ static NSString *cellID = @"LiangZiBiTeCell";
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (weak, nonatomic) IBOutlet UILabel *QKDLabel;
 
 @end
 
@@ -24,13 +26,15 @@ static NSString *cellID = @"LiangZiBiTeCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setNavgiationBarTitle:@"QKT"];
+    [self setNavgiationBarTitle:@"QKD"];
 
     [self configTableView];
     
 }
 
 - (void)configTableView{
+    
+    self.QKDLabel.text = [NSString stringWithFormat:@"%.2f",[self.QKD doubleValue]];
     
     [self.tableView registerNib:[UINib nibWithNibName:cellID bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
     
@@ -42,6 +46,18 @@ static NSString *cellID = @"LiangZiBiTeCell";
 - (void)loadData{
 
     [App_HttpsRequestTool mineQKTAndLiangZiBiTeWithtype:@"2" success:^(id responseObject) {
+        
+        QKDResponse *response = [[QKDResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            [self.dataSource removeAllObjects];
+            [self.dataSource addObjectsFromArray:response.data];
+            [self.tableView reloadData];
+            
+            
+        }else{
+            PopInfo(response.msg);
+        }
         
         
         
@@ -60,15 +76,19 @@ static NSString *cellID = @"LiangZiBiTeCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 11;
+    return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 90;
+    return 75;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    QKDModel *model = self.dataSource[indexPath.row];
+    
     LiangZiBiTeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    cell.model = model;
     return cell;
     
 }
