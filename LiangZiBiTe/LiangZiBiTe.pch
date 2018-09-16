@@ -111,6 +111,14 @@ static NSString *cnUrl = @"http://115.47.126.105:10010";
 
 
 
+typedef enum AlertType{
+    
+    AlertTypePassword,
+    AlertTypeNum
+    
+}AlertType;
+
+
 //如果release状态就不执行NSLog函数
 #ifndef __OPTIMIZE__
 #define NSLog(...) NSLog(__VA_ARGS__)

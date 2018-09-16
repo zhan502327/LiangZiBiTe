@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MaiRuUnSelectListModel.h"
 
 @interface MaiRuUnSelectedCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *logImageView;
@@ -15,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *jiaoyiLabel;
 @property (weak, nonatomic) IBOutlet UILabel *shifuLabel;
 
-@property (nonatomic, copy) void(^cancelButtonBlock)();
+@property (weak, nonatomic) IBOutlet UILabel *starLabel;
+@property (nonatomic, copy) void(^cancelButtonBlock)(void);
+
+@property (nonatomic, strong) MaiRuUnSelectListModel *model;
 @end

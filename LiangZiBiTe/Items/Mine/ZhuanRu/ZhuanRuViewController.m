@@ -8,6 +8,7 @@
 
 #import "ZhuanRuViewController.h"
 #import "ZhuanRuResponse.h"
+#import "CreateQRCode.h"
 
 @interface ZhuanRuViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logImageView;
@@ -21,26 +22,18 @@
     
     [self setNavgiationBarTitle:@"转入"];
     
-    [self loadData];
 
-}
-
-- (void)loadData{
-    
-    [App_HttpsRequestTool mineZhuanRusuccess:^(id responseObject) {
-        
-        ZhuanRuResponse *response = [[ZhuanRuResponse alloc] initWithDictionary:responseObject error:nil];
-        if ([response  isSuccess]) {
-            
-            [self.logImageView sd_setImageWithURL:[NSURL URLWithString:response.data] placeholderImage:UseImage(@"")];
-            
-        }else{
-            PopInfo(response.msg);
-        }
-        
-    } failure:^(NSError *error) {
-        PopError(netError);
-    }];
+    [self createQRCode];
     
 }
+
+- (void)createQRCode{
+    
+    
+    self.logImageView.image = [CreateQRCode createQRCodeWithString:[NSString stringWithFormat:@"qkd%@",[App_UserManager phone]] withLength:300];
+    
+    
+}
+
+
 @end

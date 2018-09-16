@@ -12,6 +12,7 @@
 #import "MaiRuListViewController.h"
 #import "MaiRuUnFinishViewController.h"
 #import "MaiRuFooterView.h"
+#import "UserInfoResponse.h"
 
 
 static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
@@ -187,21 +188,9 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
 
         [view setCreateOrderBlock:^{
            
-            [App_HttpsRequestTool mineMaiRuCreateOrderjye:self.selectMoneyStr success:^(id responseObject) {
-                
-                BaseResponse * respoinse = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
-                if ([respoinse isSuccess]) {
-                    
-                    PopSuccess(respoinse.msg);
-                    
-                }else{
-                    PopInfo(respoinse.msg);
-                }
-                
-                
-            } failure:^(NSError *error) {
-                PopError(netError);
-            }];
+            
+            [self showAlertViewWithType:AlertTypePassword title:@"请输入登录密码"];
+
             
         }];
         return view;
@@ -235,4 +224,117 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
     }
     return _moneyArray;
 }
+
+
+
+#pragma mark -- 显示弹框
+- (void)showAlertViewWithType:(AlertType)type title:(NSString *)title{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:title preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        UITextField *userNameTextField = alertController.textFields.firstObject;
+        
+        if (userNameTextField.text.length == 0) {
+            return ;
+        }
+        
+        switch (type) {
+            case AlertTypePassword:
+                
+                [self configPasswordWithText:userNameTextField.text];
+                
+                
+                break;
+                
+            case AlertTypeNum:
+                
+//                [self configFuTouNumWithNum:userNameTextField.text];
+                
+                
+                break;
+                
+                
+                
+                
+            default:
+                break;
+        }
+        
+        
+        
+    }]];
+    
+    
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField*_Nonnull textField) {
+        
+        textField.placeholder = title;
+        switch (type) {
+            case AlertTypePassword:
+                
+                textField.secureTextEntry=YES;
+                
+                break;
+                
+                
+            case AlertTypeNum:
+                
+                textField.keyboardType = UIKeyboardTypeNumberPad;
+                
+                break;
+            default:
+                break;
+        }
+        
+        
+    }];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
+}
+
+
+#pragma mark -- 验证支付密码
+- (void)configPasswordWithText:(NSString *)text{
+    [App_HttpsRequestTool loginLoginRequestMobile:[App_UserManager phone] password:text withSuccess:^(id responseObject) {
+        
+        UserInfoResponse *response = [[UserInfoResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            [self createOrder];
+            
+        }else{
+            PopInfo(response.msg);
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+}
+
+
+- (void)createOrder{
+    [App_HttpsRequestTool mineMaiRuCreateOrderjye:self.selectMoneyStr success:^(id responseObject) {
+        
+        BaseResponse * respoinse = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([respoinse isSuccess]) {
+            
+            NSString *str = [NSString stringWithFormat:@"成功买入%@",self.selectMoneyStr];
+            PopSuccess(str);
+            
+        }else{
+            PopInfo(respoinse.msg);
+        }
+        
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+}
+
 @end

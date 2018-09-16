@@ -55,10 +55,44 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJw-3h-sqP">
                                 <rect key="frame" x="456" y="10" width="100" height="30"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvL-ZA-2dz">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Mine_Header_star" translatesAutoresizingMaskIntoConstraints="NO" id="xlj-4J-Q3E">
+                                                <rect key="frame" x="0.0" y="7.5" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="HwK-q4-3Fc"/>
+                                                    <constraint firstAttribute="width" constant="15" id="uQg-ot-zmO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-sX-Eh3">
+                                                <rect key="frame" x="15" y="5" width="0.0" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Mh1-Kw-H0f"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="12"/>
+                                                <color key="textColor" red="0.95294117649999999" green="0.90980392160000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="wsY-sX-Eh3" firstAttribute="centerY" secondItem="NvL-ZA-2dz" secondAttribute="centerY" id="K4z-wa-G9N"/>
+                                            <constraint firstItem="xlj-4J-Q3E" firstAttribute="centerY" secondItem="NvL-ZA-2dz" secondAttribute="centerY" id="RqL-Ha-WPV"/>
+                                            <constraint firstItem="wsY-sX-Eh3" firstAttribute="leading" secondItem="xlj-4J-Q3E" secondAttribute="trailing" id="nxZ-H4-SRX"/>
+                                            <constraint firstItem="xlj-4J-Q3E" firstAttribute="leading" secondItem="NvL-ZA-2dz" secondAttribute="leading" id="zIF-r1-LNV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="NvL-ZA-2dz" firstAttribute="top" secondItem="jJw-3h-sqP" secondAttribute="top" id="Dha-4w-fV1"/>
+                                    <constraint firstAttribute="trailing" secondItem="NvL-ZA-2dz" secondAttribute="trailing" id="Q5h-6c-XSu"/>
                                     <constraint firstAttribute="height" constant="30" id="Yzi-d3-KVo"/>
+                                    <constraint firstItem="NvL-ZA-2dz" firstAttribute="leading" secondItem="jJw-3h-sqP" secondAttribute="leading" id="ZD1-Ar-i2K"/>
                                     <constraint firstAttribute="width" constant="100" id="a9Z-cc-1QO"/>
+                                    <constraint firstAttribute="bottom" secondItem="NvL-ZA-2dz" secondAttribute="bottom" id="lDB-oL-Mfl"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="交易金额：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsc-Tz-Lfq">
@@ -187,9 +221,13 @@
                 <outlet property="logImageView" destination="wiz-mg-sGC" id="g22-Xu-AWA"/>
                 <outlet property="nameLabel" destination="npV-Hw-Siz" id="y2z-wf-IKr"/>
                 <outlet property="shifuLabel" destination="qs9-2T-BHq" id="a6Z-AS-09O"/>
+                <outlet property="starLabel" destination="wsY-sX-Eh3" id="NpS-xO-Xdv"/>
                 <outlet property="starView" destination="jJw-3h-sqP" id="F4b-92-bRl"/>
             </connections>
             <point key="canvasLocation" x="163" y="146.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="App_Mine_Header_star" width="16" height="16"/>
+    </resources>
 </document>

@@ -29,6 +29,10 @@
 //获取用户id
 - (NSString *)uid;
 
+//获取用户电话
+- (NSString *)phone;
+
+
 //获取主链推广
 - (NSString *)zltg;
 

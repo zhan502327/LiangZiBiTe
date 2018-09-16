@@ -25,8 +25,8 @@
 - (void)configPersonAvatarWithUrl:(NSString *)url imageData:(NSData *)imageData andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 
-/** 发布回收 */
-- (void)publishHuiShouWithUrl:(NSString *)url imageData:(NSData *)imageData andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+/** 母币买入 */
+- (void)mubimairuCommitWithUrl:(NSString *)url imageData:(NSData *)imageData andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 /** 上传身份证  */
 - (void)upLoadShenFenZhengWithurl:(NSString *)url card_face:(NSData *)card_face card_back:(NSData *)card_back andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;

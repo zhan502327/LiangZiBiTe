@@ -118,7 +118,6 @@ typedef void (^getFailBlock)(NSError *error);
 // ---- 我的 - QKT 量子比特
 - (void)mineQKTAndLiangZiBiTeWithtype:(NSString *)type success:(getBackBlock)success failure:(getFailBlock)failure;
 
-
 // --- 转入
 - (void)mineZhuanRusuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
@@ -128,13 +127,29 @@ typedef void (^getFailBlock)(NSError *error);
 // ---- 买入 - 创建订单
 - (void)mineMaiRuCreateOrderjye:(NSString *)jye success:(getBackBlock)success failure:(getFailBlock)failure;
 
-
 //---- 消息列表
 - (void)xiaoXiListWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
+// ----- 母币买入
+- (void)muBiMaiRuCommitWithqbdzje:(NSString *)qbdzje jtpz:(NSData *)jtpz bzpz:(NSString *)bzpz Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 
+// ----- 复投
+- (void)mineFuTouWithqkd:(NSString *)qkd WithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
+
+// ---- 买入 - 未完成订单 - 未选择收款人
+- (void)mineMaiRuUnfinishOrderUnSelectOrderWithSuccess:(getBackBlock)success failure:(getFailBlock)failur;
+
+// ---- 买入 - 未完成订单 - 未选择收款人 - 取消订单
+- (void)mineMaiRuUnselectOrderCancelWithOrderID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+// ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成
+- (void)mineMaiRuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+// ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成  - 取消订单
+- (void)mineMaiRuUnfinishSelectOrderCanceWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 #pragma mark - **************** 商城
 // ------ 商城首页-banner

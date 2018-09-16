@@ -68,6 +68,11 @@ static UserManager *_userManager;
     return _userModel.id;
 }
 
+//获取用户电话
+- (NSString *)phone{
+    return _userModel.phone;
+}
+
 //获取主链推广
 - (NSString *)zltg{
     return _userModel.ltgm;

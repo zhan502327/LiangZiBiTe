@@ -8,6 +8,8 @@
 
 #import "MaiRuSelectViewController.h"
 #import "MaiRuSelectedCell.h"
+#import "MaiRuUnselectResponse.h"
+
 
 static NSString *cellID = @"MaiRuSelectedCell";
 
@@ -26,14 +28,50 @@ static NSString *cellID = @"MaiRuSelectedCell";
     [self setNavgiationBarTitle:@"已选择收款人"];
     
     [self configTableView];
+    
+    [self loadData];
 }
 
 - (void)configTableView{
     [self.tableView registerNib:[UINib nibWithNibName:cellID bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
     
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self loadData];
+    }];
+}
+
+- (void)loadData{
+    
+    [App_HttpsRequestTool mineMaiRuUnfinishOrderSelectSureFinishOrderWithType:@"2" Success:^(id responseObject) {
+        [self endRefresh];
+
+        MaiRuUnselectResponse *response = [[MaiRuUnselectResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            [self.dataSource removeAllObjects];
+            [self.dataSource addObjectsFromArray:response.data];
+            [self.tableView reloadData];
+            
+        }else{
+            
+            PopInfo(response.msg);
+        }
+        
+        [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
+
+        
+        
+    } failure:^(NSError *error) {
+        [self endRefresh];
+        PopError(netError);
+    }];
     
 }
 
+- (void)endRefresh{
+    
+    [self.tableView.mj_header endRefreshing];
+}
 
 #pragma mark - tableView delegate and tableView dataSource
 
@@ -44,7 +82,7 @@ static NSString *cellID = @"MaiRuSelectedCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 11;
+    return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -52,10 +90,37 @@ static NSString *cellID = @"MaiRuSelectedCell";
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    MaiRuUnSelectListModel *model = self.dataSource[indexPath.row];
+
     MaiRuSelectedCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    cell.model = model;
+    
+    [cell setCancelButtonBlock:^{
+        [self cancelOrder:model.id];
+    }];
     
     return cell;
 }
+
+- (void)cancelOrder:(NSString *)orderid{
+    [App_HttpsRequestTool mineMaiRuUnfinishSelectOrderCanceWithOrderid:orderid Success:^(id responseObject) {
+        
+        BaseResponse *response = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            PopSuccess(@"取消成功");
+            [self loadData];
+            
+        }else{
+            PopInfo(@"取消失败");
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //消除cell选择痕迹

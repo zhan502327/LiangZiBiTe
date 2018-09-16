@@ -24,6 +24,8 @@
 #import "XiaoXiViewController.h"
 #import "XiaoXiResponse.h"
 #import "DBDataBaseManager.h"
+#import "MuBiMaiRuViewController.h"
+#import "UserInfoResponse.h"
 
 
 static NSString *headerViewID = @"MineHeaderView";
@@ -91,12 +93,12 @@ static NSString *itemcellID = @"MineCell";
 #pragma mark -- 判断消息列表
 - (void)configXiaoXiList{
     [self.xiaoxiDataSource removeAllObjects];
-
+    
     [App_HttpsRequestTool xiaoXiListWithSuccess:^(id responseObject) {
         
         XiaoXiResponse *response = [[XiaoXiResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
-        
+            
             
             //请求到的数据
             NSArray *dataArray = response.data;
@@ -104,8 +106,8 @@ static NSString *itemcellID = @"MineCell";
             //数据源
             [self.xiaoxiDataSource addObjectsFromArray:dataArray];
             
-//            //获得模型数据
-//            [self.tableView reloadData];
+            //            //获得模型数据
+            //            [self.tableView reloadData];
             
             
             //写入数据库
@@ -133,10 +135,10 @@ static NSString *itemcellID = @"MineCell";
             [[NSUserDefaults standardUserDefaults] setInteger:notLookedArray.count forKey:@"kNotificationOneIsLookedCount"];
             [[NSUserDefaults standardUserDefaults] synchronize];
             
-//            if (_kNotificationOneCountBlock) {
-//                _kNotificationOneCountBlock(notLookedArray.count);
-//            }
-
+            //            if (_kNotificationOneCountBlock) {
+            //                _kNotificationOneCountBlock(notLookedArray.count);
+            //            }
+            
             if (notLookedArray.count > 0) {
                 
                 self.isHiddenXiaoXiRedTips = NO;
@@ -170,7 +172,7 @@ static NSString *itemcellID = @"MineCell";
             if ([response.data isEqualToString:@"0"]) {//未实名认证
                 
                 UIAlertController *loginOutAlert = [UIAlertController alertControllerWithTitle:@"实名认证" message:@"请先上传实名认证信息" preferredStyle:UIAlertControllerStyleAlert];
-
+                
                 [loginOutAlert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
                     
                     ShiMingViewController *vc = [[ShiMingViewController alloc] init];
@@ -207,9 +209,9 @@ static NSString *itemcellID = @"MineCell";
     
     [self.collectionView registerNib:[UINib nibWithNibName:headerViewID bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerViewID];
     
-    [self.collectionView registerNib:[UINib nibWithNibName:footerViewID bundle:[NSBundle mainBundle]] 
+    [self.collectionView registerNib:[UINib nibWithNibName:footerViewID bundle:[NSBundle mainBundle]]
           forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerViewID];
-
+    
 }
 
 - (void)fonfigIsShowPingTaiMaiRu{
@@ -325,7 +327,7 @@ static NSString *itemcellID = @"MineCell";
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(haderImageViewClicked)];
         [header.headerImageView addGestureRecognizer:tap];
-
+        
         header.mairuButton.hidden = self.isHiddenPTMR;
         header.fuTouButton.hidden = self.isHiddenFuTou;
         header.redLabel.hidden = self.isHiddenXiaoXiRedTips;
@@ -351,6 +353,22 @@ static NSString *itemcellID = @"MineCell";
             [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
         }];
         
+        //复投
+        [header setFutouButtonBlock:^{
+            
+            [self showAlertViewWithType:AlertTypePassword title:@"请输入登录密码"];
+            
+            
+        }];
+        
+        
+        //母币买入
+        [header setMaiRuButtonBlock:^{
+            
+            MuBiMaiRuViewController *vc = [[MuBiMaiRuViewController alloc] init];
+            [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+            
+        }];
         
         [header setLeftButtonBlock:^{
             
@@ -375,7 +393,7 @@ static NSString *itemcellID = @"MineCell";
         MineFooterView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerViewID forIndexPath:indexPath];
         
         [view setLoginoutButtonBlock:^{
-           
+            
             UIAlertController *loginOutAlert = [UIAlertController alertControllerWithTitle:@"退出登录" message:@"确认要退出么？" preferredStyle:UIAlertControllerStyleAlert];
             [loginOutAlert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                 
@@ -394,6 +412,124 @@ static NSString *itemcellID = @"MineCell";
 }
 
 
+- (void)showAlertViewWithType:(AlertType)type title:(NSString *)title{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:title preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        UITextField *userNameTextField = alertController.textFields.firstObject;
+        
+        if (userNameTextField.text.length == 0) {
+            return ;
+        }
+        
+        switch (type) {
+            case AlertTypePassword:
+                
+                [self configPasswordWithText:userNameTextField.text];
+                
+                
+                break;
+           
+            case AlertTypeNum:
+                
+                [self configFuTouNumWithNum:userNameTextField.text];
+                
+                
+                break;
+                
+                
+                
+                
+            default:
+                break;
+        }
+        
+        
+        
+    }]];
+    
+    
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField*_Nonnull textField) {
+        
+        textField.placeholder = title;
+        switch (type) {
+            case AlertTypePassword:
+                
+                textField.secureTextEntry=YES;
+                
+                break;
+                
+                
+            case AlertTypeNum:
+                
+                textField.keyboardType = UIKeyboardTypeNumberPad;
+                
+                break;
+            default:
+                break;
+        }
+        
+        
+    }];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
+}
+
+
+#pragma mark -- 验证支付密码
+- (void)configPasswordWithText:(NSString *)text{
+    [App_HttpsRequestTool loginLoginRequestMobile:[App_UserManager phone] password:text withSuccess:^(id responseObject) {
+        
+        UserInfoResponse *response = [[UserInfoResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            
+            [self showAlertViewWithType:AlertTypeNum title:@"请输入复投数量"];
+            
+        }else{
+            PopInfo(response.msg);
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+}
+
+#pragma mark -- 验证复投数量
+- (void)configFuTouNumWithNum:(NSString *)text{
+    
+    
+    [App_HttpsRequestTool mineFuTouWithqkd:text WithSuccess:^(id responseObject) {
+        
+        BaseResponse *response = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
+        
+        if ([response isSuccess]) {
+            
+            PopSuccess(@"复投成功");
+            
+            [self loadData];
+            
+            [self configXiaoXiList];
+            
+        }else{
+            PopInfo(response.msg);
+            
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
+    
+}
+
 #pragma mark -- 修改个人信息
 - (void)haderImageViewClicked{
     SettingViewController *vc = [[SettingViewController alloc] init];
@@ -405,7 +541,7 @@ static NSString *itemcellID = @"MineCell";
 {
     NSLog(@"第%lu组 第%lu个", (long)indexPath.section, (long)indexPath.row);
     
-
+    
     
     if (indexPath.row == 0) {//转入
         ZhuanRuViewController *vc = [[ZhuanRuViewController alloc] init];
@@ -425,8 +561,8 @@ static NSString *itemcellID = @"MineCell";
     
     if (indexPath.row == 3) {//卖出
         
-//        AddBankViewController *vc = [[AddBankViewController alloc] init];
-//        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+        //        AddBankViewController *vc = [[AddBankViewController alloc] init];
+        //        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
     }
     
     if (indexPath.row == 4) {//推广链接

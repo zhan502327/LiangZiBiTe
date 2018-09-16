@@ -491,6 +491,114 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 }
 
 
+// ----- 母币买入
+- (void)muBiMaiRuCommitWithqbdzje:(NSString *)qbdzje jtpz:(NSData *)jtpz bzpz:(NSString *)bzpz Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/myindex/usermessage");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    [dic setValue:qbdzje forKey:@"qbdzje"];
+    [dic setValue:bzpz forKey:@"bzpz"];
+
+    //必选    类型    说明
+    //id    是    string    用户id
+    //qbdzje    是    string    转账数量（或金额）
+    //jtpz    是    string    截图凭证
+    //bzpz    是    string    备注信息
+    
+    
+    
+    [App_HttpsRequestManager mubimairuCommitWithUrl:url imageData:jtpz andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+
+    } failure:^(NSError *error) {
+        failure(error);
+
+    }];
+    
+}
+
+// ----- 复投
+- (void)mineFuTouWithqkd:(NSString *)qkd WithSuccess:(getBackBlock)success failure:(getFailBlock)failure {
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/futou/futou");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    [dic setValue:qkd forKey:@"qkd"];
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+// ---- 买入 - 未完成订单 - 未选择收款人
+- (void)mineMaiRuUnfinishOrderUnSelectOrderWithSuccess:(getBackBlock)success failure:(getFailBlock)failure {
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmr/mrddlist");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+// ---- 买入 - 未完成订单 - 未选择收款人 - 取消订单
+- (void)mineMaiRuUnselectOrderCancelWithOrderID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure {
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmr/qxwxzshr");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderid forKey:@"id"];
+    
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+// ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成
+- (void)mineMaiRuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmr/mryqwlist");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    [dic setValue:type forKey:@"type"];
+
+    
+//    type    是    string    列表类型， 2已选择收款人，3待确认打款（等待对方确认收款），4已完成订单（确认完成）
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+
+
+// ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成  - 取消订单
+- (void)mineMaiRuUnfinishSelectOrderCanceWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmr/qxhf1");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderid forKey:@"id"];
+
+
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
 
 
 

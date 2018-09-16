@@ -73,8 +73,13 @@ static HttpsRequestManager *shareHttpsRequestManager = nil;
 }
 
 
-/** 发布回收 */
-- (void)publishHuiShouWithUrl:(NSString *)url imageData:(NSData *)imageData andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure{
+
+
+
+
+
+/** 母币买入 */
+- (void)mubimairuCommitWithUrl:(NSString *)url imageData:(NSData *)imageData andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure{
     
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -82,7 +87,7 @@ static HttpsRequestManager *shareHttpsRequestManager = nil;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", nil];
     
     [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:imageData name:@"cover" fileName:@"image.png" mimeType:@"image/png"];
+        [formData appendPartWithFileData:imageData name:@"jtpz" fileName:@"image.png" mimeType:@"image/png"];
     } progress:^(NSProgress * uploadProgress) {
         // ------ 数据请求的进度
         // ******************
