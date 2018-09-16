@@ -21,6 +21,9 @@
 #import "TuiGuangViewController.h"
 #import "ShiMingResponse.h"
 #import "ShiMingViewController.h"
+#import "XiaoXiViewController.h"
+#import "XiaoXiResponse.h"
+#import "DBDataBaseManager.h"
 
 
 static NSString *headerViewID = @"MineHeaderView";
@@ -42,7 +45,10 @@ static NSString *itemcellID = @"MineCell";
 @property (nonatomic, assign) BOOL isHiddenPTMR;
 @property (nonatomic, assign) BOOL isHiddenFuTou;
 
+@property (nonatomic, assign) BOOL isHiddenXiaoXiRedTips;
 
+
+@property (nonatomic, strong) NSMutableArray *xiaoxiDataSource;
 
 @end
 
@@ -57,6 +63,9 @@ static NSString *itemcellID = @"MineCell";
     
     //判断消息列表
     [self configXiaoXiList];
+    
+    //加载数据
+    [self loadData];
 }
 
 
@@ -71,17 +80,82 @@ static NSString *itemcellID = @"MineCell";
     
     self.isHiddenFuTou = YES;
     
+    self.isHiddenXiaoXiRedTips = YES;
+    
     [self configCollectionView];
     
-    [self loadData];
     
     //判断是否显示 平台买入
     [self fonfigIsShowPingTaiMaiRu];
 }
 #pragma mark -- 判断消息列表
 - (void)configXiaoXiList{
-    
-    [App_HttpsRequestTool ]
+    [self.xiaoxiDataSource removeAllObjects];
+
+    [App_HttpsRequestTool xiaoXiListWithSuccess:^(id responseObject) {
+        
+        XiaoXiResponse *response = [[XiaoXiResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+        
+            
+            //请求到的数据
+            NSArray *dataArray = response.data;
+            
+            //数据源
+            [self.xiaoxiDataSource addObjectsFromArray:dataArray];
+            
+//            //获得模型数据
+//            [self.tableView reloadData];
+            
+            
+            //写入数据库
+            if (dataArray.count > 0) {
+                for (XiaoXiModel *model in dataArray) {
+                    [[DBDataBaseManager shareDataBaseManager] insertNotificationModel:model tableName:kNotificationOne];
+                }
+            }
+            //获取未读数据 数组
+            NSMutableArray *notLookedArray = [NSMutableArray arrayWithCapacity:0];
+            
+            for (int i = 0; i<dataArray.count; i++) {
+                
+                XiaoXiModel *model = dataArray[i];
+                
+                XiaoXiModel *resultModel = [[DBDataBaseManager shareDataBaseManager] queryIsLookedOrNotWithTableName:kNotificationOne model:model];
+                if ([resultModel.isLooked isEqualToString:@"0"]) {
+                    [notLookedArray addObject:model];
+                }
+            }
+            
+            //            //查询 isLooked 数据
+            //            NSArray *isLookedArray = [[DBDataBaseManager shareDataBaseManager] queryIsLookedCountWithTableName:kNotificationOne];
+            
+            [[NSUserDefaults standardUserDefaults] setInteger:notLookedArray.count forKey:@"kNotificationOneIsLookedCount"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+//            if (_kNotificationOneCountBlock) {
+//                _kNotificationOneCountBlock(notLookedArray.count);
+//            }
+
+            if (notLookedArray.count > 0) {
+                
+                self.isHiddenXiaoXiRedTips = NO;
+                
+            }else{
+                self.isHiddenXiaoXiRedTips = YES;
+            }
+            
+            [self.collectionView reloadData];
+            
+            
+        }else{
+            PopInfo(response.msg);
+            
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
     
     
 }
@@ -254,6 +328,7 @@ static NSString *itemcellID = @"MineCell";
 
         header.mairuButton.hidden = self.isHiddenPTMR;
         header.fuTouButton.hidden = self.isHiddenFuTou;
+        header.redLabel.hidden = self.isHiddenXiaoXiRedTips;
         
         
         //星级
@@ -272,9 +347,8 @@ static NSString *itemcellID = @"MineCell";
         
         //消息
         [header setScanButtonBlock:^{
-            
-            
-            
+            XiaoXiViewController *vc = [[XiaoXiViewController alloc] init];
+            [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
         }];
         
         
@@ -385,7 +459,13 @@ static NSString *itemcellID = @"MineCell";
     return _dataSource;
 }
 
-
+- (NSMutableArray *)xiaoxiDataSource{
+    if (_xiaoxiDataSource == nil) {
+        NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
+        _xiaoxiDataSource = array;
+    }
+    return _xiaoxiDataSource;
+}
 
 
 

@@ -71,6 +71,19 @@
     return dateString;
 }
 
+/** 时间戳转换成时间 */
++ (NSString *)timeWithTimeIntervalString:(NSString *)timeString{
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"shanghai"];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"]; //@"yyyy年MM月dd日 HH:mm:ss"
+    long long int date1 = (long long int)[timeString intValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:date1];
+    NSString *dateString = [formatter stringFromDate:date];
+    return dateString;
+    
+}
+
 + (NSDate *)resolveTimeDifference:(NSDate *)currentDate {
     
     NSTimeZone *zone = [NSTimeZone systemTimeZone];

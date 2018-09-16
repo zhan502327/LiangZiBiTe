@@ -54,6 +54,18 @@
 		4D2E816E214CA50A003D67B5 /* ShiMingResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E816D214CA50A003D67B5 /* ShiMingResponse.m */; };
 		4D2E8171214CAACC003D67B5 /* QKDResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8170214CAACC003D67B5 /* QKDResponse.m */; };
 		4D2E8174214CAADA003D67B5 /* QKDModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8173214CAADA003D67B5 /* QKDModel.m */; };
+		4D2E8189214DDAB5003D67B5 /* XiaoXiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8187214DDAB5003D67B5 /* XiaoXiViewController.m */; };
+		4D2E818A214DDAB5003D67B5 /* XiaoXiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E8188214DDAB5003D67B5 /* XiaoXiViewController.xib */; };
+		4D2E818D214DDB20003D67B5 /* XiaoXiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E818C214DDB20003D67B5 /* XiaoXiResponse.m */; };
+		4D2E8190214DDB2E003D67B5 /* XiaoXiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E818F214DDB2E003D67B5 /* XiaoXiModel.m */; };
+		4D2E8197214DDEDB003D67B5 /* DBDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8194214DDEDB003D67B5 /* DBDataBaseManager.m */; };
+		4D2E81A4214DEE2F003D67B5 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E819A214DEE2F003D67B5 /* FMDatabaseQueue.m */; };
+		4D2E81A5214DEE2F003D67B5 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E819D214DEE2F003D67B5 /* FMDatabaseAdditions.m */; };
+		4D2E81A6214DEE2F003D67B5 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E819E214DEE2F003D67B5 /* FMDatabase.m */; };
+		4D2E81A7214DEE2F003D67B5 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81A2214DEE2F003D67B5 /* FMDatabasePool.m */; };
+		4D2E81A8214DEE2F003D67B5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81A3214DEE2F003D67B5 /* FMResultSet.m */; };
+		4D2E81AC214DFDE3003D67B5 /* XiaoXiListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81AA214DFDE3003D67B5 /* XiaoXiListCell.m */; };
+		4D2E81AD214DFDE3003D67B5 /* XiaoXiListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E81AB214DFDE3003D67B5 /* XiaoXiListCell.xib */; };
 		4D5C0AA0213A302300E8B5D5 /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0A9E213A302300E8B5D5 /* MineCell.m */; };
 		4D5C0AA1213A302300E8B5D5 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0A9F213A302300E8B5D5 /* MineCell.xib */; };
 		4D5C0AA5213A317F00E8B5D5 /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AA3213A317F00E8B5D5 /* MineHeaderView.m */; };
@@ -262,6 +274,29 @@
 		4D2E8170214CAACC003D67B5 /* QKDResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKDResponse.m; sourceTree = "<group>"; };
 		4D2E8172214CAADA003D67B5 /* QKDModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKDModel.h; sourceTree = "<group>"; };
 		4D2E8173214CAADA003D67B5 /* QKDModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKDModel.m; sourceTree = "<group>"; };
+		4D2E8186214DDAB5003D67B5 /* XiaoXiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiaoXiViewController.h; sourceTree = "<group>"; };
+		4D2E8187214DDAB5003D67B5 /* XiaoXiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiaoXiViewController.m; sourceTree = "<group>"; };
+		4D2E8188214DDAB5003D67B5 /* XiaoXiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XiaoXiViewController.xib; sourceTree = "<group>"; };
+		4D2E818B214DDB20003D67B5 /* XiaoXiResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiaoXiResponse.h; sourceTree = "<group>"; };
+		4D2E818C214DDB20003D67B5 /* XiaoXiResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiaoXiResponse.m; sourceTree = "<group>"; };
+		4D2E818E214DDB2E003D67B5 /* XiaoXiModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiaoXiModel.h; sourceTree = "<group>"; };
+		4D2E818F214DDB2E003D67B5 /* XiaoXiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiaoXiModel.m; sourceTree = "<group>"; };
+		4D2E8192214DDEDB003D67B5 /* DBDataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBDataBaseManager.h; sourceTree = "<group>"; };
+		4D2E8194214DDEDB003D67B5 /* DBDataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBDataBaseManager.m; sourceTree = "<group>"; };
+		4D2E8199214DEE2F003D67B5 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		4D2E819A214DEE2F003D67B5 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		4D2E819B214DEE2F003D67B5 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		4D2E819C214DEE2F003D67B5 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		4D2E819D214DEE2F003D67B5 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		4D2E819E214DEE2F003D67B5 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		4D2E819F214DEE2F003D67B5 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		4D2E81A0214DEE2F003D67B5 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		4D2E81A1214DEE2F003D67B5 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		4D2E81A2214DEE2F003D67B5 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		4D2E81A3214DEE2F003D67B5 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		4D2E81A9214DFDE3003D67B5 /* XiaoXiListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiaoXiListCell.h; sourceTree = "<group>"; };
+		4D2E81AA214DFDE3003D67B5 /* XiaoXiListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiaoXiListCell.m; sourceTree = "<group>"; };
+		4D2E81AB214DFDE3003D67B5 /* XiaoXiListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XiaoXiListCell.xib; sourceTree = "<group>"; };
 		4D5C0A9D213A302300E8B5D5 /* MineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
 		4D5C0A9E213A302300E8B5D5 /* MineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineCell.m; sourceTree = "<group>"; };
 		4D5C0A9F213A302300E8B5D5 /* MineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineCell.xib; sourceTree = "<group>"; };
@@ -679,6 +714,50 @@
 			path = ShiMing;
 			sourceTree = "<group>";
 		};
+		4D2E8185214DDAA2003D67B5 /* XiaoXi */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E8186214DDAB5003D67B5 /* XiaoXiViewController.h */,
+				4D2E8187214DDAB5003D67B5 /* XiaoXiViewController.m */,
+				4D2E8188214DDAB5003D67B5 /* XiaoXiViewController.xib */,
+				4D2E818B214DDB20003D67B5 /* XiaoXiResponse.h */,
+				4D2E818C214DDB20003D67B5 /* XiaoXiResponse.m */,
+				4D2E818E214DDB2E003D67B5 /* XiaoXiModel.h */,
+				4D2E818F214DDB2E003D67B5 /* XiaoXiModel.m */,
+				4D2E81A9214DFDE3003D67B5 /* XiaoXiListCell.h */,
+				4D2E81AA214DFDE3003D67B5 /* XiaoXiListCell.m */,
+				4D2E81AB214DFDE3003D67B5 /* XiaoXiListCell.xib */,
+			);
+			path = XiaoXi;
+			sourceTree = "<group>";
+		};
+		4D2E8191214DDEDB003D67B5 /* DBDataBaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E8192214DDEDB003D67B5 /* DBDataBaseManager.h */,
+				4D2E8194214DDEDB003D67B5 /* DBDataBaseManager.m */,
+			);
+			path = DBDataBaseManager;
+			sourceTree = "<group>";
+		};
+		4D2E8198214DEE2F003D67B5 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E8199214DEE2F003D67B5 /* FMDatabase.h */,
+				4D2E819A214DEE2F003D67B5 /* FMDatabaseQueue.m */,
+				4D2E819B214DEE2F003D67B5 /* FMResultSet.h */,
+				4D2E819C214DEE2F003D67B5 /* FMDatabasePool.h */,
+				4D2E819D214DEE2F003D67B5 /* FMDatabaseAdditions.m */,
+				4D2E819E214DEE2F003D67B5 /* FMDatabase.m */,
+				4D2E819F214DEE2F003D67B5 /* FMDatabaseQueue.h */,
+				4D2E81A0214DEE2F003D67B5 /* FMDB.h */,
+				4D2E81A1214DEE2F003D67B5 /* FMDatabaseAdditions.h */,
+				4D2E81A2214DEE2F003D67B5 /* FMDatabasePool.m */,
+				4D2E81A3214DEE2F003D67B5 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
 		4D5C0AA7213A676900E8B5D5 /* QKT */ = {
 			isa = PBXGroup;
 			children = (
@@ -1025,6 +1104,7 @@
 		4D8934BB21302A03004B7518 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				4D2E8198214DEE2F003D67B5 /* fmdb */,
 				4D8934BC21302A03004B7518 /* ConfigPassword */,
 				4D8934C121302A03004B7518 /* IMJIETagView */,
 				4D8934C621302A03004B7518 /* NoDataCustomView */,
@@ -1224,6 +1304,7 @@
 		4D89351A21302A03004B7518 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				4D2E8191214DDEDB003D67B5 /* DBDataBaseManager */,
 				4D2E8159214BBD9A003D67B5 /* QRCode */,
 				4D258FB42137E2AF00943AD1 /* HttpsRequestManager */,
 				4D89351B21302A03004B7518 /* SVProgressHUDManager */,
@@ -1316,6 +1397,7 @@
 				4D258F642137E05B00943AD1 /* PersonInfo */,
 				4D258F272132A47200943AD1 /* one */,
 				4D2E8166214C9D84003D67B5 /* ShiMing */,
+				4D2E8185214DDAA2003D67B5 /* XiaoXi */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1433,6 +1515,7 @@
 				4D258FB12137E22800943AD1 /* AddressManagerCell.xib in Resources */,
 				4D258F452133838500943AD1 /* LoginViewController.xib in Resources */,
 				4D5C0AE6213A7D9900E8B5D5 /* MaiRuUnSelectViewController.xib in Resources */,
+				4D2E818A214DDAB5003D67B5 /* XiaoXiViewController.xib in Resources */,
 				4D5C0AA6213A317F00E8B5D5 /* MineHeaderView.xib in Resources */,
 				4D5C0BCC2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.xib in Resources */,
 				4D89353E21302A03004B7518 /* EmptyView.xib in Resources */,
@@ -1456,6 +1539,7 @@
 				4D5C0AD7213A780C00E8B5D5 /* MaiRuListCell.xib in Resources */,
 				4D2E816B214C9D9B003D67B5 /* ShiMingViewController.xib in Resources */,
 				4D5C0ADC213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib in Resources */,
+				4D2E81AD214DFDE3003D67B5 /* XiaoXiListCell.xib in Resources */,
 				4D5C0BED214A43C000E8B5D5 /* MineFooterView.xib in Resources */,
 				4D5C0BDE2146509C00E8B5D5 /* SixProjectSelectButtonView.xib in Resources */,
 				4D5C0AAD213A67B600E8B5D5 /* LiangZiBiTeViewController.xib in Resources */,
@@ -1585,6 +1669,7 @@
 				4D89354621302A03004B7518 /* CreateBarCodeViewController.m in Sources */,
 				4D89354D21302A03004B7518 /* DIYScanViewController.m in Sources */,
 				4D5C0ADB213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.m in Sources */,
+				4D2E81A4214DEE2F003D67B5 /* FMDatabaseQueue.m in Sources */,
 				4D5C0AEA213A7DAA00E8B5D5 /* MaiRuSelectViewController.m in Sources */,
 				4D89354421302A03004B7518 /* NoNetWorkView.m in Sources */,
 				4D5C0AA5213A317F00E8B5D5 /* MineHeaderView.m in Sources */,
@@ -1601,6 +1686,7 @@
 				4D2E816E214CA50A003D67B5 /* ShiMingResponse.m in Sources */,
 				4D8934B021302916004B7518 /* BaseNavViewController.m in Sources */,
 				4D89355021302A03004B7518 /* ScanResultViewController.m in Sources */,
+				4D2E818D214DDB20003D67B5 /* XiaoXiResponse.m in Sources */,
 				4D8934A0213026E5004B7518 /* main.m in Sources */,
 				4D89355721302A03004B7518 /* LBXPermissionNetwork.m in Sources */,
 				4D89354321302A03004B7518 /* NetWorkingTool.m in Sources */,
@@ -1622,7 +1708,9 @@
 				4D5C0BD521464FD600E8B5D5 /* MaiRuViewController.m in Sources */,
 				4D5C0BE221465A6900E8B5D5 /* MaiRuProjectButtonCell.m in Sources */,
 				4D2E815C214BBDBB003D67B5 /* CreateQRCode.m in Sources */,
+				4D2E8190214DDB2E003D67B5 /* XiaoXiModel.m in Sources */,
 				4D89356221302A03004B7518 /* UIView+frameAdjust.m in Sources */,
+				4D2E8197214DDEDB003D67B5 /* DBDataBaseManager.m in Sources */,
 				4D258F432133838500943AD1 /* LoginViewController.m in Sources */,
 				4D89354821302A03004B7518 /* QQLBXScanViewController.m in Sources */,
 				4D5C0BEC214A43C000E8B5D5 /* MineFooterView.m in Sources */,
@@ -1636,26 +1724,32 @@
 				4D89355921302A03004B7518 /* LBXPermissionReminders.m in Sources */,
 				4D258F8C2137E1CC00943AD1 /* QRCodeModel.m in Sources */,
 				4D5C0AC5213A701A00E8B5D5 /* ZhuanChuViewController.m in Sources */,
+				4D2E8189214DDAB5003D67B5 /* XiaoXiViewController.m in Sources */,
 				4D89356021302A03004B7518 /* LBXPermission.m in Sources */,
 				4D258F402133838500943AD1 /* RegisterViewController.m in Sources */,
 				4D5C0AFC213A8C2B00E8B5D5 /* AddBankViewController.m in Sources */,
 				4D5C0AC0213A700400E8B5D5 /* ZhuanRuViewController.m in Sources */,
 				4D5C0AD1213A75FA00E8B5D5 /* MaiRuListViewController.m in Sources */,
 				4D258F772137E05B00943AD1 /* SettingHeaderCell.m in Sources */,
+				4D2E81A6214DEE2F003D67B5 /* FMDatabase.m in Sources */,
 				4D89355321302A03004B7518 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				4D89354521302A03004B7518 /* NetWorkingPopManager.m in Sources */,
 				4D5C0BF0214A53F100E8B5D5 /* MineInfoResponse.m in Sources */,
 				4D258F9E2137E1F400943AD1 /* AddAddressLabelCell.m in Sources */,
+				4D2E81A8214DEE2F003D67B5 /* FMResultSet.m in Sources */,
 				4D89354721302A03004B7518 /* ScanResultData.m in Sources */,
 				4D2E8171214CAACC003D67B5 /* QKDResponse.m in Sources */,
 				4D258F9F2137E1F400943AD1 /* AddAddressViewController.m in Sources */,
+				4D2E81A5214DEE2F003D67B5 /* FMDatabaseAdditions.m in Sources */,
 				4D8934B92130297D004B7518 /* UIBarButtonItem+Badge.m in Sources */,
 				4D89356521302A03004B7518 /* BaseResponse.m in Sources */,
 				4D2E8174214CAADA003D67B5 /* QKDModel.m in Sources */,
 				4D5C0AF4213A7EAF00E8B5D5 /* MaiRuSelectedCell.m in Sources */,
 				4D258F732137E05B00943AD1 /* SettingNormalCell.m in Sources */,
 				4D5C0AD6213A780C00E8B5D5 /* MaiRuListCell.m in Sources */,
+				4D2E81A7214DEE2F003D67B5 /* FMDatabasePool.m in Sources */,
 				4D89355221302A03004B7518 /* UIWindow+LBXHierarchy.m in Sources */,
+				4D2E81AC214DFDE3003D67B5 /* XiaoXiListCell.m in Sources */,
 				4D5C0AAC213A67B600E8B5D5 /* LiangZiBiTeViewController.m in Sources */,
 				4D89356121302A03004B7518 /* CQScrollMenuView.m in Sources */,
 				4D893492213026E4004B7518 /* AppDelegate.m in Sources */,

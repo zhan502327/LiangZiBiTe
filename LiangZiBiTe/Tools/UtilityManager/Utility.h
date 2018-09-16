@@ -31,6 +31,9 @@
 /** 时间戳转换成时间 */
 + (NSString *)timeWithTimeIntervalString:(NSString *)timeString timeDateFormat:(NSString *)dateFormat;
 
+/** 时间戳转换成时间 */
++ (NSString *)timeWithTimeIntervalString:(NSString *)timeString;
+
 /** 解决 [NSDate date] 获取时间 有时间差 增加8小时  得到 北京时间 */
 + (NSDate *)resolveTimeDifference:(NSDate *)currentDate;
 

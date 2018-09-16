@@ -129,6 +129,8 @@ typedef void (^getFailBlock)(NSError *error);
 - (void)mineMaiRuCreateOrderjye:(NSString *)jye success:(getBackBlock)success failure:(getFailBlock)failure;
 
 
+//---- 消息列表
+- (void)xiaoXiListWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
 

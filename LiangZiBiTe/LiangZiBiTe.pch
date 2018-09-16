@@ -71,7 +71,9 @@ static NSString *cnUrl = @"http://115.47.126.105:10010";
 #define PopSuccess(value) [SVProgressHUDManager popTostSuccessWithString:value]
 
 
-
+// 偏好设置
+#define kDataPersistence(object,key) [[NSUserDefaults standardUserDefaults] setObject:object forKey:key]
+#define kGetData(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
 
 
 //全局提示语
@@ -102,7 +104,10 @@ static NSString *cnUrl = @"http://115.47.126.105:10010";
 #define LightHexColcor HexColor(0XBEDEC4)
 
 
-
+//数据库 表名
+#define kNotificationOne     @"t_notification_one"
+//#define kNotificationTwo     @"t_notification_two"
+//#define kNotificationThree   @"t_notification_three"
 
 
 
