@@ -13,9 +13,9 @@
 static NSString *cellID = @"MaiRuUnSelectedCell";
 
 @interface MaiRuUnSelectViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 
@@ -46,7 +46,7 @@ static NSString *cellID = @"MaiRuUnSelectedCell";
             
         }else{
             
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
@@ -112,7 +112,7 @@ static NSString *cellID = @"MaiRuUnSelectedCell";
             PopSuccess(@"取消订单成功");
             [self loadData];
         }else{
-            PopError(@"取消失败");
+            PopInfo(failMsg);
         }
         
     } failure:^(NSError *error) {

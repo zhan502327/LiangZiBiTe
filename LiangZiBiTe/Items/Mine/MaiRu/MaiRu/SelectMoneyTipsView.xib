@@ -63,6 +63,9 @@
                 <constraint firstAttribute="trailing" secondItem="62g-9Z-RFA" secondAttribute="trailing" id="oga-FM-hM0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tipsLabel" destination="Tc7-Mq-2Ii" id="pKm-Uq-Z1W"/>
+            </connections>
             <point key="canvasLocation" x="35" y="-233"/>
         </view>
     </objects>

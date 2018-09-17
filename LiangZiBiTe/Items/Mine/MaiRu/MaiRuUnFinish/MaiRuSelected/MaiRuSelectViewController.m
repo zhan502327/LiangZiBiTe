@@ -14,9 +14,9 @@
 static NSString *cellID = @"MaiRuSelectedCell";
 
 @interface MaiRuSelectViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 
@@ -54,7 +54,7 @@ static NSString *cellID = @"MaiRuSelectedCell";
             
         }else{
             
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
@@ -113,7 +113,7 @@ static NSString *cellID = @"MaiRuSelectedCell";
             [self loadData];
             
         }else{
-            PopInfo(@"取消失败");
+            PopInfo(failMsg);
         }
         
     } failure:^(NSError *error) {

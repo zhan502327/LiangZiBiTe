@@ -93,7 +93,7 @@
             PopSuccess(@"母币买入成功");
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
         

@@ -84,7 +84,7 @@
             [self.rt_navigationController popViewControllerAnimated:YES complete:nil];
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
         

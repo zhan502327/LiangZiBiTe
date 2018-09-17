@@ -67,7 +67,7 @@ static NSString *headerCell = @"SettingHeaderCell";
             [self.tableView reloadData];
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
         
@@ -147,7 +147,7 @@ static NSString *headerCell = @"SettingHeaderCell";
             [self loadData];
             
         }else{
-            [SVProgressHUDManager popTostErrorWithString:response.msg];
+            PopInfo(failMsg);
         }
     } failure:^(NSError *error) {
         [SVProgressHUDManager popTostErrorWithString:netError];

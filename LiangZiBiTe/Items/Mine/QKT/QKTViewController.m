@@ -56,7 +56,7 @@ static NSString *cellID = @"LiangZiBiTeCell";
             
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];

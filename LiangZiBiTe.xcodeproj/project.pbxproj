@@ -74,6 +74,32 @@
 		4D2E81C0214E3107003D67B5 /* MuBiNextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E81BE214E3107003D67B5 /* MuBiNextViewController.xib */; };
 		4D2E81C7214E56AA003D67B5 /* MaiRuUnselectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81C6214E56AA003D67B5 /* MaiRuUnselectResponse.m */; };
 		4D2E81CA214E56C3003D67B5 /* MaiRuUnSelectListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81C9214E56C3003D67B5 /* MaiRuUnSelectListModel.m */; };
+		4D2E81CE214F2CBF003D67B5 /* MaiChuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81CC214F2CBF003D67B5 /* MaiChuViewController.m */; };
+		4D2E81CF214F2CBF003D67B5 /* MaiChuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E81CD214F2CBF003D67B5 /* MaiChuViewController.xib */; };
+		4D2E81D3214F5827003D67B5 /* MaiChuBankTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81D1214F5827003D67B5 /* MaiChuBankTableViewCell.m */; };
+		4D2E81D4214F5827003D67B5 /* MaiChuBankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E81D2214F5827003D67B5 /* MaiChuBankTableViewCell.xib */; };
+		4D2E81D7214F5CE7003D67B5 /* MaiChuVipInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81D6214F5CE7003D67B5 /* MaiChuVipInfoResponse.m */; };
+		4D2E81DA214F5CF6003D67B5 /* MaiChuVipInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81D9214F5CF6003D67B5 /* MaiChuVipInfoModel.m */; };
+		4D2E81E2214F8006003D67B5 /* MiaChuOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81E0214F8006003D67B5 /* MiaChuOrderViewController.m */; };
+		4D2E81E3214F8006003D67B5 /* MiaChuOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E81E1214F8006003D67B5 /* MiaChuOrderViewController.xib */; };
+		4D2E81E7214F801A003D67B5 /* MaiChuSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81E5214F801A003D67B5 /* MaiChuSelectViewController.m */; };
+		4D2E81E8214F801A003D67B5 /* MaiChuSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E81E6214F801A003D67B5 /* MaiChuSelectViewController.xib */; };
+		4D2E81EC214F8029003D67B5 /* MaiChuUnselectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E81EA214F8029003D67B5 /* MaiChuUnselectViewController.m */; };
+		4D2E81ED214F8029003D67B5 /* MaiChuUnselectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E81EB214F8029003D67B5 /* MaiChuUnselectViewController.xib */; };
+		4D2E8208214F8C23003D67B5 /* MaiChuFinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8206214F8C23003D67B5 /* MaiChuFinishViewController.m */; };
+		4D2E8209214F8C23003D67B5 /* MaiChuFinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E8207214F8C23003D67B5 /* MaiChuFinishViewController.xib */; };
+		4D2E8211214F8CCE003D67B5 /* MaiChuSureOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E820B214F8CCE003D67B5 /* MaiChuSureOrderViewController.xib */; };
+		4D2E8212214F8CCE003D67B5 /* MaiChuSureOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E820C214F8CCE003D67B5 /* MaiChuSureOrderCell.xib */; };
+		4D2E8213214F8CCE003D67B5 /* MaiChuSureOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E820F214F8CCE003D67B5 /* MaiChuSureOrderCell.m */; };
+		4D2E8214214F8CCE003D67B5 /* MaiChuSureOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8210214F8CCE003D67B5 /* MaiChuSureOrderViewController.m */; };
+		4D2E8219214F8FE3003D67B5 /* MaiChuListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8217214F8FE3003D67B5 /* MaiChuListViewController.m */; };
+		4D2E821A214F8FE3003D67B5 /* MaiChuListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E8218214F8FE3003D67B5 /* MaiChuListViewController.xib */; };
+		4D2E821E214F90F9003D67B5 /* MaiChuCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E821C214F90F9003D67B5 /* MaiChuCenterViewController.m */; };
+		4D2E821F214F90F9003D67B5 /* MaiChuCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E821D214F90F9003D67B5 /* MaiChuCenterViewController.xib */; };
+		4D2E8223214F92A8003D67B5 /* MaiChuCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8221214F92A8003D67B5 /* MaiChuCenterCell.m */; };
+		4D2E8224214F92A8003D67B5 /* MaiChuCenterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E8222214F92A8003D67B5 /* MaiChuCenterCell.xib */; };
+		4D2E8227214F954A003D67B5 /* MaiChuCenterResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8226214F954A003D67B5 /* MaiChuCenterResponse.m */; };
+		4D2E822A214F9558003D67B5 /* MaiChuCenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8229214F9558003D67B5 /* MaiChuCenterModel.m */; };
 		4D5C0AA0213A302300E8B5D5 /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0A9E213A302300E8B5D5 /* MineCell.m */; };
 		4D5C0AA1213A302300E8B5D5 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0A9F213A302300E8B5D5 /* MineCell.xib */; };
 		4D5C0AA5213A317F00E8B5D5 /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AA3213A317F00E8B5D5 /* MineHeaderView.m */; };
@@ -319,6 +345,47 @@
 		4D2E81C6214E56AA003D67B5 /* MaiRuUnselectResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuUnselectResponse.m; sourceTree = "<group>"; };
 		4D2E81C8214E56C3003D67B5 /* MaiRuUnSelectListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiRuUnSelectListModel.h; sourceTree = "<group>"; };
 		4D2E81C9214E56C3003D67B5 /* MaiRuUnSelectListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiRuUnSelectListModel.m; sourceTree = "<group>"; };
+		4D2E81CB214F2CBF003D67B5 /* MaiChuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuViewController.h; sourceTree = "<group>"; };
+		4D2E81CC214F2CBF003D67B5 /* MaiChuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuViewController.m; sourceTree = "<group>"; };
+		4D2E81CD214F2CBF003D67B5 /* MaiChuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiChuViewController.xib; sourceTree = "<group>"; };
+		4D2E81D0214F5827003D67B5 /* MaiChuBankTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuBankTableViewCell.h; sourceTree = "<group>"; };
+		4D2E81D1214F5827003D67B5 /* MaiChuBankTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuBankTableViewCell.m; sourceTree = "<group>"; };
+		4D2E81D2214F5827003D67B5 /* MaiChuBankTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiChuBankTableViewCell.xib; sourceTree = "<group>"; };
+		4D2E81D5214F5CE7003D67B5 /* MaiChuVipInfoResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuVipInfoResponse.h; sourceTree = "<group>"; };
+		4D2E81D6214F5CE7003D67B5 /* MaiChuVipInfoResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuVipInfoResponse.m; sourceTree = "<group>"; };
+		4D2E81D8214F5CF6003D67B5 /* MaiChuVipInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuVipInfoModel.h; sourceTree = "<group>"; };
+		4D2E81D9214F5CF6003D67B5 /* MaiChuVipInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuVipInfoModel.m; sourceTree = "<group>"; };
+		4D2E81DF214F8006003D67B5 /* MiaChuOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiaChuOrderViewController.h; sourceTree = "<group>"; };
+		4D2E81E0214F8006003D67B5 /* MiaChuOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiaChuOrderViewController.m; sourceTree = "<group>"; };
+		4D2E81E1214F8006003D67B5 /* MiaChuOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiaChuOrderViewController.xib; sourceTree = "<group>"; };
+		4D2E81E4214F801A003D67B5 /* MaiChuSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuSelectViewController.h; sourceTree = "<group>"; };
+		4D2E81E5214F801A003D67B5 /* MaiChuSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuSelectViewController.m; sourceTree = "<group>"; };
+		4D2E81E6214F801A003D67B5 /* MaiChuSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiChuSelectViewController.xib; sourceTree = "<group>"; };
+		4D2E81E9214F8029003D67B5 /* MaiChuUnselectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuUnselectViewController.h; sourceTree = "<group>"; };
+		4D2E81EA214F8029003D67B5 /* MaiChuUnselectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuUnselectViewController.m; sourceTree = "<group>"; };
+		4D2E81EB214F8029003D67B5 /* MaiChuUnselectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiChuUnselectViewController.xib; sourceTree = "<group>"; };
+		4D2E8205214F8C23003D67B5 /* MaiChuFinishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuFinishViewController.h; sourceTree = "<group>"; };
+		4D2E8206214F8C23003D67B5 /* MaiChuFinishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuFinishViewController.m; sourceTree = "<group>"; };
+		4D2E8207214F8C23003D67B5 /* MaiChuFinishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiChuFinishViewController.xib; sourceTree = "<group>"; };
+		4D2E820B214F8CCE003D67B5 /* MaiChuSureOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaiChuSureOrderViewController.xib; sourceTree = "<group>"; };
+		4D2E820C214F8CCE003D67B5 /* MaiChuSureOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaiChuSureOrderCell.xib; sourceTree = "<group>"; };
+		4D2E820D214F8CCE003D67B5 /* MaiChuSureOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaiChuSureOrderViewController.h; sourceTree = "<group>"; };
+		4D2E820E214F8CCE003D67B5 /* MaiChuSureOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaiChuSureOrderCell.h; sourceTree = "<group>"; };
+		4D2E820F214F8CCE003D67B5 /* MaiChuSureOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaiChuSureOrderCell.m; sourceTree = "<group>"; };
+		4D2E8210214F8CCE003D67B5 /* MaiChuSureOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaiChuSureOrderViewController.m; sourceTree = "<group>"; };
+		4D2E8216214F8FE3003D67B5 /* MaiChuListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuListViewController.h; sourceTree = "<group>"; };
+		4D2E8217214F8FE3003D67B5 /* MaiChuListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuListViewController.m; sourceTree = "<group>"; };
+		4D2E8218214F8FE3003D67B5 /* MaiChuListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiChuListViewController.xib; sourceTree = "<group>"; };
+		4D2E821B214F90F9003D67B5 /* MaiChuCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuCenterViewController.h; sourceTree = "<group>"; };
+		4D2E821C214F90F9003D67B5 /* MaiChuCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuCenterViewController.m; sourceTree = "<group>"; };
+		4D2E821D214F90F9003D67B5 /* MaiChuCenterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiChuCenterViewController.xib; sourceTree = "<group>"; };
+		4D2E8220214F92A8003D67B5 /* MaiChuCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuCenterCell.h; sourceTree = "<group>"; };
+		4D2E8221214F92A8003D67B5 /* MaiChuCenterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuCenterCell.m; sourceTree = "<group>"; };
+		4D2E8222214F92A8003D67B5 /* MaiChuCenterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaiChuCenterCell.xib; sourceTree = "<group>"; };
+		4D2E8225214F954A003D67B5 /* MaiChuCenterResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuCenterResponse.h; sourceTree = "<group>"; };
+		4D2E8226214F954A003D67B5 /* MaiChuCenterResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuCenterResponse.m; sourceTree = "<group>"; };
+		4D2E8228214F9558003D67B5 /* MaiChuCenterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaiChuCenterModel.h; sourceTree = "<group>"; };
+		4D2E8229214F9558003D67B5 /* MaiChuCenterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaiChuCenterModel.m; sourceTree = "<group>"; };
 		4D5C0A9D213A302300E8B5D5 /* MineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
 		4D5C0A9E213A302300E8B5D5 /* MineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineCell.m; sourceTree = "<group>"; };
 		4D5C0A9F213A302300E8B5D5 /* MineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineCell.xib; sourceTree = "<group>"; };
@@ -813,6 +880,79 @@
 			path = Next;
 			sourceTree = "<group>";
 		};
+		4D2E81DB214F7F9F003D67B5 /* unfinishOrder */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E81DE214F7FEA003D67B5 /* MaiChuOrder */,
+				4D2E81DD214F7FEA003D67B5 /* MaiChuUnselect */,
+				4D2E81DC214F7FEA003D67B5 /* MaiChuSelect */,
+			);
+			path = unfinishOrder;
+			sourceTree = "<group>";
+		};
+		4D2E81DC214F7FEA003D67B5 /* MaiChuSelect */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E81E4214F801A003D67B5 /* MaiChuSelectViewController.h */,
+				4D2E81E5214F801A003D67B5 /* MaiChuSelectViewController.m */,
+				4D2E81E6214F801A003D67B5 /* MaiChuSelectViewController.xib */,
+			);
+			path = MaiChuSelect;
+			sourceTree = "<group>";
+		};
+		4D2E81DD214F7FEA003D67B5 /* MaiChuUnselect */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E81E9214F8029003D67B5 /* MaiChuUnselectViewController.h */,
+				4D2E81EA214F8029003D67B5 /* MaiChuUnselectViewController.m */,
+				4D2E81EB214F8029003D67B5 /* MaiChuUnselectViewController.xib */,
+			);
+			path = MaiChuUnselect;
+			sourceTree = "<group>";
+		};
+		4D2E81DE214F7FEA003D67B5 /* MaiChuOrder */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E81DF214F8006003D67B5 /* MiaChuOrderViewController.h */,
+				4D2E81E0214F8006003D67B5 /* MiaChuOrderViewController.m */,
+				4D2E81E1214F8006003D67B5 /* MiaChuOrderViewController.xib */,
+			);
+			path = MaiChuOrder;
+			sourceTree = "<group>";
+		};
+		4D2E8204214F8C0E003D67B5 /* FinishOreder */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E8205214F8C23003D67B5 /* MaiChuFinishViewController.h */,
+				4D2E8206214F8C23003D67B5 /* MaiChuFinishViewController.m */,
+				4D2E8207214F8C23003D67B5 /* MaiChuFinishViewController.xib */,
+			);
+			path = FinishOreder;
+			sourceTree = "<group>";
+		};
+		4D2E820A214F8CA6003D67B5 /* SureOrder */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E820D214F8CCE003D67B5 /* MaiChuSureOrderViewController.h */,
+				4D2E8210214F8CCE003D67B5 /* MaiChuSureOrderViewController.m */,
+				4D2E820B214F8CCE003D67B5 /* MaiChuSureOrderViewController.xib */,
+				4D2E820E214F8CCE003D67B5 /* MaiChuSureOrderCell.h */,
+				4D2E820F214F8CCE003D67B5 /* MaiChuSureOrderCell.m */,
+				4D2E820C214F8CCE003D67B5 /* MaiChuSureOrderCell.xib */,
+			);
+			path = SureOrder;
+			sourceTree = "<group>";
+		};
+		4D2E8215214F8FD2003D67B5 /* MaiChuList */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E8216214F8FE3003D67B5 /* MaiChuListViewController.h */,
+				4D2E8217214F8FE3003D67B5 /* MaiChuListViewController.m */,
+				4D2E8218214F8FE3003D67B5 /* MaiChuListViewController.xib */,
+			);
+			path = MaiChuList;
+			sourceTree = "<group>";
+		};
 		4D5C0AA7213A676900E8B5D5 /* QKT */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,8 +984,12 @@
 			isa = PBXGroup;
 			children = (
 				4D5C0AF7213A8C0E00E8B5D5 /* MaiChu */,
-				4D5C0AF6213A8C0E00E8B5D5 /* AddBank */,
+				4D2E81DB214F7F9F003D67B5 /* unfinishOrder */,
+				4D2E820A214F8CA6003D67B5 /* SureOrder */,
+				4D2E8204214F8C0E003D67B5 /* FinishOreder */,
+				4D2E8215214F8FD2003D67B5 /* MaiChuList */,
 				4D5C0AF8213A8C0E00E8B5D5 /* MaiChuCenter */,
+				4D5C0AF6213A8C0E00E8B5D5 /* AddBank */,
 			);
 			path = MaiChu;
 			sourceTree = "<group>";
@@ -1001,6 +1145,16 @@
 		4D5C0AF7213A8C0E00E8B5D5 /* MaiChu */ = {
 			isa = PBXGroup;
 			children = (
+				4D2E81CB214F2CBF003D67B5 /* MaiChuViewController.h */,
+				4D2E81CC214F2CBF003D67B5 /* MaiChuViewController.m */,
+				4D2E81CD214F2CBF003D67B5 /* MaiChuViewController.xib */,
+				4D2E81D0214F5827003D67B5 /* MaiChuBankTableViewCell.h */,
+				4D2E81D1214F5827003D67B5 /* MaiChuBankTableViewCell.m */,
+				4D2E81D2214F5827003D67B5 /* MaiChuBankTableViewCell.xib */,
+				4D2E81D5214F5CE7003D67B5 /* MaiChuVipInfoResponse.h */,
+				4D2E81D6214F5CE7003D67B5 /* MaiChuVipInfoResponse.m */,
+				4D2E81D8214F5CF6003D67B5 /* MaiChuVipInfoModel.h */,
+				4D2E81D9214F5CF6003D67B5 /* MaiChuVipInfoModel.m */,
 			);
 			path = MaiChu;
 			sourceTree = "<group>";
@@ -1008,6 +1162,16 @@
 		4D5C0AF8213A8C0E00E8B5D5 /* MaiChuCenter */ = {
 			isa = PBXGroup;
 			children = (
+				4D2E821B214F90F9003D67B5 /* MaiChuCenterViewController.h */,
+				4D2E821C214F90F9003D67B5 /* MaiChuCenterViewController.m */,
+				4D2E821D214F90F9003D67B5 /* MaiChuCenterViewController.xib */,
+				4D2E8220214F92A8003D67B5 /* MaiChuCenterCell.h */,
+				4D2E8221214F92A8003D67B5 /* MaiChuCenterCell.m */,
+				4D2E8222214F92A8003D67B5 /* MaiChuCenterCell.xib */,
+				4D2E8225214F954A003D67B5 /* MaiChuCenterResponse.h */,
+				4D2E8226214F954A003D67B5 /* MaiChuCenterResponse.m */,
+				4D2E8228214F9558003D67B5 /* MaiChuCenterModel.h */,
+				4D2E8229214F9558003D67B5 /* MaiChuCenterModel.m */,
 			);
 			path = MaiChuCenter;
 			sourceTree = "<group>";
@@ -1568,6 +1732,7 @@
 			files = (
 				4D2E8158214BAB0A003D67B5 /* TuiGuangCell.xib in Resources */,
 				4D5C0C03214A832100E8B5D5 /* TuiGuangViewController.xib in Resources */,
+				4D2E81CF214F2CBF003D67B5 /* MaiChuViewController.xib in Resources */,
 				4D5C0AC1213A700400E8B5D5 /* ZhuanRuViewController.xib in Resources */,
 				4D5C0BB8214641F400E8B5D5 /* LiangZiTaoLiViewController.xib in Resources */,
 				4D258F7F2137E17700943AD1 /* ConfigNicknameViewController.xib in Resources */,
@@ -1575,7 +1740,9 @@
 				4D258FB12137E22800943AD1 /* AddressManagerCell.xib in Resources */,
 				4D258F452133838500943AD1 /* LoginViewController.xib in Resources */,
 				4D5C0AE6213A7D9900E8B5D5 /* MaiRuUnSelectViewController.xib in Resources */,
+				4D2E8224214F92A8003D67B5 /* MaiChuCenterCell.xib in Resources */,
 				4D2E818A214DDAB5003D67B5 /* XiaoXiViewController.xib in Resources */,
+				4D2E81E3214F8006003D67B5 /* MiaChuOrderViewController.xib in Resources */,
 				4D5C0AA6213A317F00E8B5D5 /* MineHeaderView.xib in Resources */,
 				4D5C0BCC2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.xib in Resources */,
 				4D89353E21302A03004B7518 /* EmptyView.xib in Resources */,
@@ -1583,6 +1750,7 @@
 				4D258F9A2137E1F400943AD1 /* AddAddressTextFieldCell.xib in Resources */,
 				4D5C0AC6213A701A00E8B5D5 /* ZhuanChuViewController.xib in Resources */,
 				4D5C0BC22146422100E8B5D5 /* KuangChiViewController.xib in Resources */,
+				4D2E81D4214F5827003D67B5 /* MaiChuBankTableViewCell.xib in Resources */,
 				4D258F892137E1CC00943AD1 /* MyQRCodeViewController.xib in Resources */,
 				4D5C0BE821465AD100E8B5D5 /* SelectMoneyTipsView.xib in Resources */,
 				4D5C0AB2213A683D00E8B5D5 /* LiangZiBiTeCell.xib in Resources */,
@@ -1592,12 +1760,16 @@
 				4D258FA02137E1F400943AD1 /* AddAddressLabelCell.xib in Resources */,
 				4D89356B21302A03004B7518 /* ChooseCityViewController.xib in Resources */,
 				4D258F9C2137E1F400943AD1 /* AddAddressDefaultCell.xib in Resources */,
+				4D2E821A214F8FE3003D67B5 /* MaiChuListViewController.xib in Resources */,
 				4D5C0AFD213A8C2B00E8B5D5 /* AddBankViewController.xib in Resources */,
 				4D89349A213026E5004B7518 /* Assets.xcassets in Resources */,
+				4D2E8211214F8CCE003D67B5 /* MaiChuSureOrderViewController.xib in Resources */,
+				4D2E81E8214F801A003D67B5 /* MaiChuSelectViewController.xib in Resources */,
 				4D5C0AF0213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.xib in Resources */,
 				4D5C0BFB214A758500E8B5D5 /* MaiRuFooterView.xib in Resources */,
 				4D5C0AD7213A780C00E8B5D5 /* MaiRuListCell.xib in Resources */,
 				4D2E816B214C9D9B003D67B5 /* ShiMingViewController.xib in Resources */,
+				4D2E821F214F90F9003D67B5 /* MaiChuCenterViewController.xib in Resources */,
 				4D2E81B3214E2DE7003D67B5 /* MuBiMaiRuViewController.xib in Resources */,
 				4D5C0ADC213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib in Resources */,
 				4D2E81AD214DFDE3003D67B5 /* XiaoXiListCell.xib in Resources */,
@@ -1607,14 +1779,17 @@
 				4D2E81C0214E3107003D67B5 /* MuBiNextViewController.xib in Resources */,
 				4D258FA12137E1F400943AD1 /* AddAddressViewController.xib in Resources */,
 				4D258FB02137E22800943AD1 /* AddressManagerViewController.xib in Resources */,
+				4D2E8212214F8CCE003D67B5 /* MaiChuSureOrderCell.xib in Resources */,
 				4D258F782137E05B00943AD1 /* SettingViewController.xib in Resources */,
 				4D5C0C0C214A92F800E8B5D5 /* fragment_one_bg.gif in Resources */,
 				4D5C0BC72146478B00E8B5D5 /* JiaoYiSuoHeaderView.xib in Resources */,
 				4D5C0BE321465A6900E8B5D5 /* MaiRuProjectButtonCell.xib in Resources */,
+				4D2E8209214F8C23003D67B5 /* MaiChuFinishViewController.xib in Resources */,
 				4D89356821302A03004B7518 /* CompanyChooseResultCell.xib in Resources */,
 				4D89357F21303A43004B7518 /* MineViewController.xib in Resources */,
 				4D5C0BD1214649AE00E8B5D5 /* JiaoYiSuoLineCell.xib in Resources */,
 				4D258F762137E05B00943AD1 /* SettingHeaderCell.xib in Resources */,
+				4D2E81ED214F8029003D67B5 /* MaiChuUnselectViewController.xib in Resources */,
 				4D5C0AB7213A6CEE00E8B5D5 /* QKTViewController.xib in Resources */,
 				4D5C0BD621464FD600E8B5D5 /* MaiRuViewController.xib in Resources */,
 				4D5C0AD2213A75FA00E8B5D5 /* MaiRuListViewController.xib in Resources */,
@@ -1714,11 +1889,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2E8208214F8C23003D67B5 /* MaiChuFinishViewController.m in Sources */,
 				4D89355521302A03004B7518 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
+				4D2E81E7214F801A003D67B5 /* MaiChuSelectViewController.m in Sources */,
 				4D89355A21302A03004B7518 /* LBXPermissionHealth.m in Sources */,
 				4D5C0AA0213A302300E8B5D5 /* MineCell.m in Sources */,
 				4D258FB22137E22800943AD1 /* AddressListResponse.m in Sources */,
 				4D89354021302A03004B7518 /* EmptyView.m in Sources */,
+				4D2E821E214F90F9003D67B5 /* MaiChuCenterViewController.m in Sources */,
 				4D2E8157214BAB0A003D67B5 /* TuiGuangCell.m in Sources */,
 				4D89353B21302A03004B7518 /* GLTextField.m in Sources */,
 				4D89355821302A03004B7518 /* LBXPermissionCalendar.m in Sources */,
@@ -1746,6 +1924,7 @@
 				4D258FAE2137E22800943AD1 /* AddressManagerViewController.m in Sources */,
 				4D89356921302A03004B7518 /* CityModel.m in Sources */,
 				4D8934B121302916004B7518 /* BaseViewController.m in Sources */,
+				4D2E8227214F954A003D67B5 /* MaiChuCenterResponse.m in Sources */,
 				4D2E816E214CA50A003D67B5 /* ShiMingResponse.m in Sources */,
 				4D8934B021302916004B7518 /* BaseNavViewController.m in Sources */,
 				4D89355021302A03004B7518 /* ScanResultViewController.m in Sources */,
@@ -1766,6 +1945,7 @@
 				4D258F422133838500943AD1 /* UserManager.m in Sources */,
 				4D89355B21302A03004B7518 /* LBXPermissionSetting.m in Sources */,
 				4D5C0AB6213A6CEE00E8B5D5 /* QKTViewController.m in Sources */,
+				4D2E81E2214F8006003D67B5 /* MiaChuOrderViewController.m in Sources */,
 				4D8934B221302916004B7518 /* TabBarViewController.m in Sources */,
 				4D89354221302A03004B7518 /* Reachability.m in Sources */,
 				4D5C0BD521464FD600E8B5D5 /* MaiRuViewController.m in Sources */,
@@ -1789,14 +1969,19 @@
 				4D89355921302A03004B7518 /* LBXPermissionReminders.m in Sources */,
 				4D258F8C2137E1CC00943AD1 /* QRCodeModel.m in Sources */,
 				4D5C0AC5213A701A00E8B5D5 /* ZhuanChuViewController.m in Sources */,
+				4D2E8223214F92A8003D67B5 /* MaiChuCenterCell.m in Sources */,
 				4D2E8189214DDAB5003D67B5 /* XiaoXiViewController.m in Sources */,
 				4D89356021302A03004B7518 /* LBXPermission.m in Sources */,
 				4D258F402133838500943AD1 /* RegisterViewController.m in Sources */,
 				4D5C0AFC213A8C2B00E8B5D5 /* AddBankViewController.m in Sources */,
 				4D5C0AC0213A700400E8B5D5 /* ZhuanRuViewController.m in Sources */,
+				4D2E81EC214F8029003D67B5 /* MaiChuUnselectViewController.m in Sources */,
+				4D2E822A214F9558003D67B5 /* MaiChuCenterModel.m in Sources */,
 				4D2E81B9214E2F8F003D67B5 /* MuBiMaiRuModel.m in Sources */,
 				4D5C0AD1213A75FA00E8B5D5 /* MaiRuListViewController.m in Sources */,
 				4D258F772137E05B00943AD1 /* SettingHeaderCell.m in Sources */,
+				4D2E8214214F8CCE003D67B5 /* MaiChuSureOrderViewController.m in Sources */,
+				4D2E81D3214F5827003D67B5 /* MaiChuBankTableViewCell.m in Sources */,
 				4D2E81A6214DEE2F003D67B5 /* FMDatabase.m in Sources */,
 				4D89355321302A03004B7518 /* UIActionSheet+LBXAlertAction.m in Sources */,
 				4D89354521302A03004B7518 /* NetWorkingPopManager.m in Sources */,
@@ -1821,6 +2006,8 @@
 				4D89356121302A03004B7518 /* CQScrollMenuView.m in Sources */,
 				4D893492213026E4004B7518 /* AppDelegate.m in Sources */,
 				4D89355421302A03004B7518 /* UIAlertView+LBXAlertAction.m in Sources */,
+				4D2E81CE214F2CBF003D67B5 /* MaiChuViewController.m in Sources */,
+				4D2E81DA214F5CF6003D67B5 /* MaiChuVipInfoModel.m in Sources */,
 				4D89354921302A03004B7518 /* ScanResultModel.m in Sources */,
 				4D258FB92137E2AF00943AD1 /* HttpsRequestTool.m in Sources */,
 				4D89356621302A03004B7518 /* CityResponse.m in Sources */,
@@ -1843,7 +2030,9 @@
 				4D5C0AB1213A683D00E8B5D5 /* LiangZiBiTeCell.m in Sources */,
 				4D89355E21302A03004B7518 /* LBXPermissionContacts.m in Sources */,
 				4D5C0BC12146422100E8B5D5 /* KuangChiViewController.m in Sources */,
+				4D2E81D7214F5CE7003D67B5 /* MaiChuVipInfoResponse.m in Sources */,
 				4D5C0AEF213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.m in Sources */,
+				4D2E8213214F8CCE003D67B5 /* MaiChuSureOrderCell.m in Sources */,
 				4D258F742137E05B00943AD1 /* SettingResponse.m in Sources */,
 				4D258F8B2137E1CC00943AD1 /* MyQRCodeViewController.m in Sources */,
 				4D5C0BCB2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.m in Sources */,
@@ -1851,6 +2040,7 @@
 				4D258F5D2137914500943AD1 /* UIImage+Color.m in Sources */,
 				4D89355D21302A03004B7518 /* LBXPermissionLocation.m in Sources */,
 				4D89353D21302A03004B7518 /* IMJIETagFrame.m in Sources */,
+				4D2E8219214F8FE3003D67B5 /* MaiChuListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

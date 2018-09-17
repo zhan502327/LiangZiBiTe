@@ -82,7 +82,7 @@
             
         }else{
             
-            PopInfo(response.msg);
+            PopInfo(failMsg);
             
         }
         
@@ -142,7 +142,7 @@
             
             [SVProgressHUDManager popTostSuccessWithString:@"恭喜您注册成功"];
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
     } failure:^(NSError *error) {

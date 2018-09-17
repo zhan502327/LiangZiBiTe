@@ -47,7 +47,7 @@
                 self.refreshDataBlock();
             }
         }else{
-            [SVProgressHUDManager popTostErrorWithString:response.msg];
+            PopInfo(failMsg);
         }
        
         

@@ -80,7 +80,7 @@ static NSString *cnUrl = @"http://115.47.126.105:10010";
 #define loading @"加载中"
 #define netError @"网络链接失败，请检查您的网络"
 #define dataError @"数据加载失败，请重新加载"
-
+#define failMsg responseObject[@"msg"]
 
 
 //弱指针（仅支持调用方法时使用）

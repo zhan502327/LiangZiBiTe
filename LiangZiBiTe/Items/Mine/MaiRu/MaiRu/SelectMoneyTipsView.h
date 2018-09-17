@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SelectMoneyTipsView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *tipsLabel;
 
 @end

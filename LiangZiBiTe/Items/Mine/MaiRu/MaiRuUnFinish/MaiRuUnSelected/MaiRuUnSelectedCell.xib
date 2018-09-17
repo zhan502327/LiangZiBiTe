@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信用：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FV5-Nn-3Fj">
-                                <rect key="frame" x="213" y="15" width="42" height="20"/>
+                                <rect key="frame" x="283" y="15" width="42" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="NM2-Nf-TCz"/>
                                 </constraints>
@@ -54,10 +54,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRo-ar-fdf">
-                                <rect key="frame" x="255" y="10" width="100" height="30"/>
+                                <rect key="frame" x="325" y="10" width="30" height="30"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Syv-Xj-9tU">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Mine_Header_star" translatesAutoresizingMaskIntoConstraints="NO" id="eIE-5x-Z42">
                                                 <rect key="frame" x="0.0" y="7.5" width="15" height="15"/>
@@ -87,7 +87,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="AwR-og-SB0"/>
+                                    <constraint firstAttribute="width" constant="30" id="AwR-og-SB0"/>
                                     <constraint firstAttribute="bottom" secondItem="Syv-Xj-9tU" secondAttribute="bottom" id="EVW-AU-Rox"/>
                                     <constraint firstItem="Syv-Xj-9tU" firstAttribute="top" secondItem="mRo-ar-fdf" secondAttribute="top" id="ISF-Fi-FOb"/>
                                     <constraint firstAttribute="trailing" secondItem="Syv-Xj-9tU" secondAttribute="trailing" id="cC0-Cr-SN9"/>

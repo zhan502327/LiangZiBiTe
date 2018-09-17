@@ -159,6 +159,8 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
 {
     if (section == 1) {
         SelectMoneyTipsView *view = [[SelectMoneyTipsView alloc] initWithFrame:CGRectMake(0, 0, Current_Width, 50)];
+        
+        view.tipsLabel.text = @"选择买入金额";
         return view;
     }else{
         UIView *backView = [[UIView alloc]init];
@@ -309,7 +311,7 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
             [self createOrder];
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
     } failure:^(NSError *error) {
@@ -328,7 +330,7 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
             PopSuccess(str);
             
         }else{
-            PopInfo(respoinse.msg);
+            PopInfo(failMsg);
         }
         
         

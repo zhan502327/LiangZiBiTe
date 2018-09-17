@@ -77,7 +77,7 @@
             [(AppDelegate *)[UIApplication sharedApplication].delegate relinkToRootVC];
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
     } failure:^(NSError *error) {

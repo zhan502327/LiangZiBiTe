@@ -26,6 +26,7 @@
 #import "DBDataBaseManager.h"
 #import "MuBiMaiRuViewController.h"
 #import "UserInfoResponse.h"
+#import "MaiChuViewController.h"
 
 
 static NSString *headerViewID = @"MineHeaderView";
@@ -151,8 +152,7 @@ static NSString *itemcellID = @"MineCell";
             
             
         }else{
-            PopInfo(response.msg);
-            
+            PopInfo(failMsg);
         }
         
     } failure:^(NSError *error) {
@@ -186,7 +186,8 @@ static NSString *itemcellID = @"MineCell";
             }
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
+
         }
         
     } failure:^(NSError *error) {
@@ -231,7 +232,8 @@ static NSString *itemcellID = @"MineCell";
             
             [self.collectionView reloadData];
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
+
         }
         
         
@@ -260,7 +262,8 @@ static NSString *itemcellID = @"MineCell";
             [self.collectionView reloadData];
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
+
         }
         
         
@@ -494,7 +497,8 @@ static NSString *itemcellID = @"MineCell";
             [self showAlertViewWithType:AlertTypeNum title:@"请输入复投数量"];
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
+
         }
         
     } failure:^(NSError *error) {
@@ -519,8 +523,8 @@ static NSString *itemcellID = @"MineCell";
             [self configXiaoXiList];
             
         }else{
-            PopInfo(response.msg);
-            
+            PopInfo(failMsg);
+
         }
         
     } failure:^(NSError *error) {
@@ -561,8 +565,8 @@ static NSString *itemcellID = @"MineCell";
     
     if (indexPath.row == 3) {//卖出
         
-        //        AddBankViewController *vc = [[AddBankViewController alloc] init];
-        //        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+        MaiChuViewController *vc = [[MaiChuViewController alloc] init];
+        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
     }
     
     if (indexPath.row == 4) {//推广链接

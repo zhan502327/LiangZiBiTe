@@ -141,15 +141,58 @@ typedef void (^getFailBlock)(NSError *error);
 // ---- 买入 - 未完成订单 - 未选择收款人
 - (void)mineMaiRuUnfinishOrderUnSelectOrderWithSuccess:(getBackBlock)success failure:(getFailBlock)failur;
 
+
+// ---- 卖出 - 未完成订单 - 未选择收款人
+- (void)maichuUnfinshUnselectOrderWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+
 // ---- 买入 - 未完成订单 - 未选择收款人 - 取消订单
 - (void)mineMaiRuUnselectOrderCancelWithOrderID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+// ---- 卖出 - 未完成订单 - 未选择收款人 - 取消订单
+- (void)mineMaiChuUnselectOrderCancelWithOrderID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 // ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成
 - (void)mineMaiRuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure;
 
+// ---- 卖出 - 未完成订单 - 已选择收款人  已选择、确认、完成
+- (void)mineMaiChuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 // ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成  - 取消订单
 - (void)mineMaiRuUnfinishSelectOrderCanceWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+// ---- 卖出 - 未完成订单 - 已选择收款人  已选择、确认、完成  - 取消订单
+- (void)mineMaiChuUnfinishSelectOrderCanceWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+// ---- 卖出 - 创建订单
+- (void)maichuCreateOrderWithjye:(NSString *)jye Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+// ----- 卖出 - 会员信息
+- (void)maichuVIPinfoWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+// ---- 卖出中心 列表
+- (void)mineMaiChuCenterListWithjine:(NSString *)jine Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark - **************** 商城
 // ------ 商城首页-banner

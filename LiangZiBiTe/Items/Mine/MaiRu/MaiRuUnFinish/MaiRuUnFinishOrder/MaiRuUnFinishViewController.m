@@ -8,8 +8,8 @@
 
 #import "MaiRuUnFinishViewController.h"
 #import "SGPagingView.h"
-#import "MaiRuSelectViewController.h"
 #import "MaiRuUnSelectViewController.h"
+#import "MaiRuSelectViewController.h"
 
 
 @interface MaiRuUnFinishViewController ()<SGPageTitleViewDelegate, SGPageContentScrollViewDelegate>

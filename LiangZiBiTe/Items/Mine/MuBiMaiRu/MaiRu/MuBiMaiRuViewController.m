@@ -36,7 +36,7 @@
             [self.logImageView sd_setImageWithURL:[NSURL URLWithString:response.data.qbskm] placeholderImage:UseImage(@"")];
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
         }
         
     } failure:^(NSError *error) {

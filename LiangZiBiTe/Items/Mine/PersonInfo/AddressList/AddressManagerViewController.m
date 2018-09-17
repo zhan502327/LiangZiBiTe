@@ -46,6 +46,9 @@ static NSString *addressCell = @"AddressManagerCell";
             
             [self.dataSource addObjectsFromArray:response.result];
             [self.tableView reloadData];
+        }else{
+            PopInfo(failMsg);
+
         }
         
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@"请添加收货地址"];

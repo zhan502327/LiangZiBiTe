@@ -548,6 +548,22 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
     }];
 }
 
+// ---- 卖出 - 未完成订单 - 未选择收款人
+- (void)maichuUnfinshUnselectOrderWithSuccess:(getBackBlock)success failure:(getFailBlock)failure {
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/mrddlist");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+
 // ---- 买入 - 未完成订单 - 未选择收款人 - 取消订单
 - (void)mineMaiRuUnselectOrderCancelWithOrderID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure {
     
@@ -562,6 +578,23 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
         failure(error);
     }];
 }
+
+// ---- 卖出 - 未完成订单 - 未选择收款人 - 取消订单
+- (void)mineMaiChuUnselectOrderCancelWithOrderID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure {
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/qxwxzshr");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderid forKey:@"id"];
+    
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+}
+
+
 
 // ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成
 - (void)mineMaiRuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure{
@@ -583,6 +616,28 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 }
 
 
+// ---- 卖出 - 未完成订单 - 已选择收款人  已选择、确认、完成
+- (void)mineMaiChuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/mryqwlist");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    [dic setValue:type forKey:@"type"];
+    
+    
+//type    是    string    列表类型， 2已选择打款人（等待对方打款），3待确认收款（确认收款），4已完成订单（确认完成）
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+
+
+
 
 // ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成  - 取消订单
 - (void)mineMaiRuUnfinishSelectOrderCanceWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
@@ -599,6 +654,94 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
     }];
     
 }
+
+// ---- 卖出 - 未完成订单 - 已选择收款人  已选择、确认、完成  - 取消订单
+- (void)mineMaiChuUnfinishSelectOrderCanceWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/qxhf1");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderid forKey:@"id"];
+    
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+
+
+// ---- 卖出 - 创建订单
+- (void)maichuCreateOrderWithjye:(NSString *)jye Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/createdd");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    [dic setValue:jye forKey:@"jye"];
+
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+
+// ----- 卖出 - 会员信息
+- (void)maichuVIPinfoWithSuccess:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/zhanghumsg");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+    
+}
+
+
+
+// ---- 卖出中心 列表
+- (void)mineMaiChuCenterListWithjine:(NSString *)jine Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/mrzxlist");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:jine forKey:@"jine"];
+    
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

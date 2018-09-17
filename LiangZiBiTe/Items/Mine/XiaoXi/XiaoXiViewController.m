@@ -74,7 +74,7 @@ static NSString *cellID = @"XiaoXiListCell";
             }
             
         }else{
-            PopInfo(response.msg);
+            PopInfo(failMsg);
             
         }
         
