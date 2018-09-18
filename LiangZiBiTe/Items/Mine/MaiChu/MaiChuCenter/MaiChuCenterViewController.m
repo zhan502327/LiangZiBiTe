@@ -9,6 +9,7 @@
 #import "MaiChuCenterViewController.h"
 #import "MaiChuCenterCell.h"
 #import "MaiChuCenterResponse.h"
+#import "UserInfoResponse.h"
 
 static NSString *cellID = @"MaiChuCenterCell";
 
@@ -21,6 +22,8 @@ static NSString *cellID = @"MaiChuCenterCell";
 
 @property (nonatomic, copy) NSString *selectMoney;
 
+@property (nonatomic, strong) MaiChuCenterModel *selectModel;
+
 @end
 
 @implementation MaiChuCenterViewController
@@ -29,20 +32,25 @@ static NSString *cellID = @"MaiChuCenterCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.selectMoney = @"500";
+
     
     [self setNavgiationBarTitle:@"卖出记录"];
     
     [self configTableView];
     
-    [self loadData];
+    
+    self.selectMoney = @"500";
+
+    [self loadDataWithMoney:self.selectMoney];
 }
 
 - (void)setButtonView:(UIView *)buttonView{
     _buttonView = buttonView;
     
+    
+    
     for (UIButton  *button in buttonView.subviews) {
-        
+    
         [button addTarget:self action:@selector(selectMoneyButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     }
@@ -56,6 +64,8 @@ static NSString *cellID = @"MaiChuCenterCell";
         case 1:
             
             self.selectMoney = @"500";
+            
+            
             break;
         case 2:
             
@@ -82,6 +92,8 @@ static NSString *cellID = @"MaiChuCenterCell";
         default:
             break;
     }
+    
+    [self loadDataWithMoney:self.selectMoney];
     
     if (button.isSelected == NO) {
         
@@ -114,27 +126,31 @@ static NSString *cellID = @"MaiChuCenterCell";
     [self.tableView registerNib:[UINib nibWithNibName:cellID bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [self loadData];
+        [self loadDataWithMoney:self.selectMoney];
     }];
+    
 }
 
-- (void)loadData{
+- (void)loadDataWithMoney:(NSString *)selectMoney{
     
-    [App_HttpsRequestTool  mineMaiChuCenterListWithjine:self.selectMoney Success:^(id responseObject) {
+    [self.dataSource removeAllObjects];
+
+    
+    [App_HttpsRequestTool  mineMaiChuCenterListWithjine:selectMoney Success:^(id responseObject) {
         
         [self endRefresh];
         
         MaiChuCenterResponse *response = [[MaiChuCenterResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
             
-            [self.dataSource removeAllObjects];
             [self.dataSource addObjectsFromArray:response.data];
-            [self.tableView reloadData];
             
         }else{
             
             PopInfo(failMsg);
         }
+        [self.tableView reloadData];
+
         
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
         
@@ -170,16 +186,22 @@ static NSString *cellID = @"MaiChuCenterCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    MaiRuUnSelectListModel *model = self.dataSource[indexPath.row];
+    MaiChuCenterModel *model = self.dataSource[indexPath.row];
     
     MaiChuCenterCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     cell.model = model;
     [cell setSellButtonBlock:^{
         
+        self.selectModel = model;
+        
+        [self showAlertViewWithType:AlertTypePassword title:@"请输入登录密码"];
     }];
     
     return cell;
 }
+
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -223,6 +245,116 @@ static NSString *cellID = @"MaiChuCenterCell";
     return _dataSource;
 }
 
+#pragma mark -- 显示弹框
+- (void)showAlertViewWithType:(AlertType)type title:(NSString *)title{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:title preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        UITextField *userNameTextField = alertController.textFields.firstObject;
+        
+        if (userNameTextField.text.length == 0) {
+            return ;
+        }
+        
+        switch (type) {
+            case AlertTypePassword:
+                
+                [self configPasswordWithText:userNameTextField.text];
+                
+                
+                break;
+                
+            case AlertTypeNum:
+                
+                //                [self configFuTouNumWithNum:userNameTextField.text];
+                
+                
+                break;
+                
+                
+                
+                
+            default:
+                break;
+        }
+        
+        
+        
+    }]];
+    
+    
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField*_Nonnull textField) {
+        
+        textField.placeholder = title;
+        switch (type) {
+            case AlertTypePassword:
+                
+                textField.secureTextEntry=YES;
+                
+                break;
+                
+                
+            case AlertTypeNum:
+                
+                textField.keyboardType = UIKeyboardTypeNumberPad;
+                
+                break;
+            default:
+                break;
+        }
+        
+        
+    }];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+
+
+#pragma mark -- 验证支付密码
+- (void)configPasswordWithText:(NSString *)text{
+    [App_HttpsRequestTool loginLoginRequestMobile:[App_UserManager phone] password:text withSuccess:^(id responseObject) {
+        
+        UserInfoResponse *response = [[UserInfoResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            [self sellAction];
+            
+        }else{
+            PopInfo(failMsg);
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+}
+
+
+- (void)sellAction{
+    
+    [App_HttpsRequestTool mineMaiChuListMaiChuActionWithuid:self.selectModel.uid orerID:self.selectModel.id Success:^(id responseObject) {
+        
+        BaseResponse *response = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            PopSuccess(@"出售成功");
+            
+            [self loadDataWithMoney:self.selectMoney];
+        }else{
+            PopInfo(failMsg);
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
+    
+}
 
 
 @end

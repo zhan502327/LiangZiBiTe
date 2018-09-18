@@ -176,7 +176,8 @@ typedef void (^getFailBlock)(NSError *error);
 - (void)mineMaiChuCenterListWithjine:(NSString *)jine Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 
-
+// ---- 卖出中心 -- 出售
+- (void)mineMaiChuListMaiChuActionWithuid:(NSString *)uid orerID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 
 

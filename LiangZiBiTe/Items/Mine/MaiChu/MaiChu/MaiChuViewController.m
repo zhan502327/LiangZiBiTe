@@ -201,10 +201,6 @@ static NSString *bankCell = @"MaiChuBankTableViewCell";
 
     }
     
-    
-    
-    
-    
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -351,8 +347,7 @@ static NSString *bankCell = @"MaiChuBankTableViewCell";
     }];
     
     [self presentViewController:alertController animated:YES completion:nil];
-    
-    
+
 }
 
 

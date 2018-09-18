@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MaiRuUnSelectListModel.h"
+#import "MaiChuCenterModel.h"
 
 @interface MaiChuCenterCell : UITableViewCell
 
@@ -23,7 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *sellButton;
 
-@property (nonatomic, strong) MaiRuUnSelectListModel *model;
+@property (nonatomic, strong) MaiChuCenterModel *model;
 
 
 @end

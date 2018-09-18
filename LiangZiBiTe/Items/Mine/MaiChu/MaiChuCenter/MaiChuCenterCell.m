@@ -15,7 +15,7 @@
     }
 }
 
-- (void)setModel:(MaiRuUnSelectListModel *)model{
+- (void)setModel:(MaiChuCenterModel *)model{
     _model = model;
     
     //    @property (weak, nonatomic) IBOutlet UIImageView *logImageView;

@@ -730,6 +730,26 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 }
 
 
+// ---- 卖出中心 -- 出售
+- (void)mineMaiChuListMaiChuActionWithuid:(NSString *)uid orerID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/mrzxmr");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:uid forKey:@"uid"];
+    [dic setValue:orderid forKey:@"id"];
+
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+    
+}
+
+
 
 
 
