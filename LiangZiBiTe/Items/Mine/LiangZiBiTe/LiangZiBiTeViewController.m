@@ -27,7 +27,11 @@ static NSString *cellID = @"LiangZiBiTeCell";
     [self setNavgiationBarTitle:@"量子比特"];
     
     [self configTableView];
+    
+    self.tableView.backgroundColor = LightHexColcor;
+
 }
+
 
 - (void)configTableView{
     
@@ -38,24 +42,24 @@ static NSString *cellID = @"LiangZiBiTeCell";
 }
 
 - (void)loadData{
-    
+    [self.dataSource removeAllObjects];
+
     [App_HttpsRequestTool mineQKTAndLiangZiBiTeWithtype:@"1" success:^(id responseObject) {
         
         QKDResponse *response = [[QKDResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
             
-            [self.dataSource removeAllObjects];
             
             [self.dataSource addObjectsFromArray:response.data];
             
-            [self.tableView reloadData];
             
         }else{
             PopInfo(failMsg);
         }
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
 
-        
+        [self.tableView reloadData];
+
     } failure:^(NSError *error) {
         PopError(netError);
     }];

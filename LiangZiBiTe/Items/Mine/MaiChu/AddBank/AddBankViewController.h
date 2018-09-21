@@ -10,4 +10,6 @@
 
 @interface AddBankViewController : BaseViewController
 
+@property (nonatomic, copy) void(^refreshDataAfterBankInfoBlock)();
+
 @end

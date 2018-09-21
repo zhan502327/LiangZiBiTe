@@ -7,11 +7,11 @@
 //
 
 #import "MaiChuSelectViewController.h"
-#import "MaiRuSelectedCell.h"
+#import "MaiChuSelectCell.h"
 #import "MaiRuUnselectResponse.h"
 
 
-static NSString *cellID = @"MaiRuSelectedCell";
+static NSString *cellID = @"MaiChuSelectCell";
 
 @interface MaiChuSelectViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -25,6 +25,8 @@ static NSString *cellID = @"MaiRuSelectedCell";
 @implementation MaiChuSelectViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.backgroundColor = LightHexColcor;
+
     
     [self setNavgiationBarTitle:@"已选择收款人"];
     
@@ -39,25 +41,28 @@ static NSString *cellID = @"MaiRuSelectedCell";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self loadData];
     }];
+    
+    [self.tableView.mj_header beginRefreshing];
+
 }
 
 - (void)loadData{
-    
+    [self.dataSource removeAllObjects];
+
     [App_HttpsRequestTool mineMaiChuUnfinishOrderSelectSureFinishOrderWithType:@"2" Success:^(id responseObject) {
         [self endRefresh];
         
         MaiRuUnselectResponse *response = [[MaiRuUnselectResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
             
-            [self.dataSource removeAllObjects];
             [self.dataSource addObjectsFromArray:response.data];
-            [self.tableView reloadData];
             
         }else{
             
-            PopInfo(failMsg);
+//            PopInfo(failMsg);
         }
-        
+        [self.tableView reloadData];
+
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
         
         
@@ -94,7 +99,7 @@ static NSString *cellID = @"MaiRuSelectedCell";
     
     MaiRuUnSelectListModel *model = self.dataSource[indexPath.row];
     
-    MaiRuSelectedCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    MaiChuSelectCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     cell.model = model;
     
     [cell setCancelButtonBlock:^{

@@ -10,4 +10,8 @@
 
 @interface ShouKuanInfoViewController : BaseViewController
 
+@property (nonatomic, copy) NSString *orderid;
+
+@property (nonatomic, copy) void(^refreshDataSureBlock)();
+
 @end

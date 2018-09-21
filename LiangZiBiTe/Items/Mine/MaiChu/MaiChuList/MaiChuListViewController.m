@@ -22,6 +22,9 @@ static NSString *cellID = @"MaiChuSureOrderCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
+
+    
     [self setNavgiationBarTitle:@"卖出记录"];
     
     [self configTableView];
@@ -38,25 +41,25 @@ static NSString *cellID = @"MaiChuSureOrderCell";
 }
 
 - (void)loadData{
-    
+    [self.dataSource removeAllObjects];
+
     [App_HttpsRequestTool mineMaiChuUnfinishOrderSelectSureFinishOrderWithType:@"4" Success:^(id responseObject) {
         [self endRefresh];
         
         MaiRuUnselectResponse *response = [[MaiRuUnselectResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
             
-            [self.dataSource removeAllObjects];
             [self.dataSource addObjectsFromArray:response.data];
-            [self.tableView reloadData];
             
         }else{
             
-            PopInfo(failMsg);
+//            PopInfo(failMsg);
         }
         
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
         
-        
+        [self.tableView reloadData];
+
         
     } failure:^(NSError *error) {
         [self endRefresh];

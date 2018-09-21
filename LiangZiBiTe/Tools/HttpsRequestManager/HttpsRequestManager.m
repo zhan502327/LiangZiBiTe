@@ -98,6 +98,28 @@ static HttpsRequestManager *shareHttpsRequestManager = nil;
     }];
 }
 
+
+/** 买入 - 未完成订单 - 已选择 - 付款 - 提交信息 */
+- (void)mairuUnfinishSelectPayCommitWithUrl:(NSString *)url imageData:(NSData *)imageData andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = DEFAULT_REQUEST_TIME_OUT;
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", nil];
+    
+    [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:imageData name:@"pztp" fileName:@"image.png" mimeType:@"image/png"];
+    } progress:^(NSProgress * uploadProgress) {
+        // ------ 数据请求的进度
+        // ******************
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(error);
+    }];
+}
+
+
+
 /** 上传身份证  */
 - (void)upLoadShenFenZhengWithurl:(NSString *)url card_face:(NSData *)card_face card_back:(NSData *)card_back andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure{
     
@@ -146,6 +168,31 @@ static HttpsRequestManager *shareHttpsRequestManager = nil;
 }
 
 
+/** 意见反馈 */
+- (void)yijianfankuiWithurl:(NSString *)url std_face:(NSData *)std_face andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure{
+    
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = DEFAULT_REQUEST_TIME_OUT;
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", nil];
+    
+    [manager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:std_face name:@"fkpic" fileName:@"image.png" mimeType:@"image/png"];
+        
+        
+    } progress:^(NSProgress * uploadProgress) {
+        // ------ 数据请求的进度
+        // ******************
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        failure(error);
+    }];
+    
+    
+    
+    
+}
 
 
 

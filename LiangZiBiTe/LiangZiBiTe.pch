@@ -33,8 +33,8 @@
 
 //正式服务器
 //static NSString *cnUrl = @"http://223.201.0.227";
-static NSString *cnUrl = @"http://115.47.126.105:10010";
-
+//static NSString *cnUrl = @"http://115.47.126.105:10010";
+static NSString *cnUrl = @"http://114.202.245.33";
 
 
 
@@ -99,9 +99,9 @@ static NSString *cnUrl = @"http://115.47.126.105:10010";
 
 
 //深色主色调
-#define DeepHexColcor HexColor(0X5EB06D)
+#define DeepHexColcor HexColor(0X111111)
 //浅色主色调
-#define LightHexColcor HexColor(0XBEDEC4)
+#define LightHexColcor HexColor(0X07182A)
 
 
 //数据库 表名

@@ -1,14 +1,14 @@
 //
-//  MaiRuListCell.m
+//  MaiRuGoPayCommitCell.m
 //  LiangZiBiTe
 //
-//  Created by zhandb on 2018/9/1.
+//  Created by zhandb on 2018/9/21.
 //  Copyright © 2018年 zhandb. All rights reserved.
 //
 
-#import "MaiRuListCell.h"
+#import "MaiRuGoPayCommitCell.h"
 
-@implementation MaiRuListCell
+@implementation MaiRuGoPayCommitCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -18,7 +18,13 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+}
+- (IBAction)commitButtonCLicked:(id)sender {
+    
+    if (_commitButtonBlock) {
+        _commitButtonBlock();
+    }
+    
 }
 
 @end

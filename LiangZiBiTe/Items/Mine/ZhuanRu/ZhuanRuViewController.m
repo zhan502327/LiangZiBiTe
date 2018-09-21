@@ -25,6 +25,9 @@
 
     [self createQRCode];
     
+    self.view.backgroundColor = LightHexColcor;
+
+    
 }
 
 - (void)createQRCode{

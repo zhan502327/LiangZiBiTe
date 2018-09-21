@@ -8,7 +8,7 @@
 
 #import "TabBarViewController.h"
 #import "BaseNavViewController.h"
-#import "LiangZiTaoLiViewController.h"
+//#import "LiangZiTaoLiViewController.h"
 #import "JiaoYiSuoViewController.h"
 #import "KuangChiViewController.h"
 #import "MineViewController.h"
@@ -22,12 +22,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [UITabBar appearance].barTintColor = [UIColor whiteColor];
+//    [UITabBar appearance].barTintColor = [UIColor whiteColor];
+    [UITabBar appearance].barTintColor = DeepHexColcor;
 
     self.delegate = self;
  
-    LiangZiTaoLiViewController *one = [[LiangZiTaoLiViewController alloc] init];
-    [self setRootNavBarViewController:one withBarTitle:@"量子套利" unselectImage:@"App_Tabbar_LiangZiTaoLi_unselected" andSelectImage:@"App_Tabbar_LiangZiTaoLi_selected"];
+//    LiangZiTaoLiViewController *one = [[LiangZiTaoLiViewController alloc] init];
+//    [self setRootNavBarViewController:one withBarTitle:@"量子套利" unselectImage:@"App_Tabbar_LiangZiTaoLi_unselected" andSelectImage:@"App_Tabbar_LiangZiTaoLi_selected"];
     
     JiaoYiSuoViewController *two = [[JiaoYiSuoViewController alloc] init];
     [self setRootNavBarViewController:two withBarTitle:@"交易所" unselectImage:@"App_Tabbar_JiaoYiSuo_unselected" andSelectImage:@"App_Tabbar_JiaoYiSuo_selected"];
@@ -41,7 +42,7 @@
     
     
     
-    self.selectedIndex = 3;
+    self.selectedIndex = 2;
 
 }
 
@@ -53,7 +54,7 @@
     childController.title = title;
     
     // ------全局设置TabBar图标显示原图
-    [childController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexColor(0X333333), NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
+    [childController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexColor(0X989898), NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
     [childController.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexColor(0X115BBB), NSForegroundColorAttributeName,nil] forState:UIControlStateSelected];
     
     childController.tabBarItem.image = [[UIImage imageNamed:unselectImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

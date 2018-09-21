@@ -38,6 +38,9 @@ static NSString *headerCell = @"SettingHeaderCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
+
+    
     [self setNavgiationBarTitle:@"个人资料"];
     
     [self configTableView];
@@ -64,12 +67,12 @@ static NSString *headerCell = @"SettingHeaderCell";
             [array addObject:ADDOBJECT(model.username)];
             [self.resultArray addObjectsFromArray:array];
             
-            [self.tableView reloadData];
             
         }else{
             PopInfo(failMsg);
         }
-        
+        [self.tableView reloadData];
+
         
     } failure:^(NSError *error) {
         PopError(netError);
@@ -168,9 +171,11 @@ static NSString *headerCell = @"SettingHeaderCell";
         if (self.resultArray.count > 0) {
             vc.nickname = self.resultArray[indexPath.row];
         }
-        [vc setRefreshDataBlock:^{
+     
+        [vc setRefreshDataAfterEditBlock:^{
             [self loadData];
         }];
+        
         [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
         
     }

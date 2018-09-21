@@ -7,9 +7,12 @@
 //
 
 #import "MaiRuListViewController.h"
-#import "MaiRuListCell.h"
+#import "MaiRuFinishCell.h"
 
-static NSString *cellID = @"MaiRuListCell";
+#import "MaiRuUnselectResponse.h"
+
+
+static NSString *cellID = @"MaiRuFinishCell";
 
 @interface MaiRuListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -22,20 +25,57 @@ static NSString *cellID = @"MaiRuListCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.backgroundColor = LightHexColcor;
+
     
     [self setNavgiationBarTitle:@"买入记录"];
     
     
     [self configTableView];
     
+    [self loadData];
 }
 
 - (void)configTableView{
     [self.tableView registerNib:[UINib nibWithNibName:cellID bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
     
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self loadData];
+    }];
+}
+
+- (void)loadData{
+    [self.dataSource removeAllObjects];
+    
+    [App_HttpsRequestTool mineMaiRuUnfinishOrderSelectSureFinishOrderWithType:@"4" Success:^(id responseObject) {
+        [self endRefresh];
+        
+        MaiRuUnselectResponse *response = [[MaiRuUnselectResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            [self.dataSource addObjectsFromArray:response.data];
+            
+        }else{
+            
+            PopInfo(failMsg);
+        }
+        
+        [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
+        
+        [self.tableView reloadData];
+        
+        
+    } failure:^(NSError *error) {
+        [self endRefresh];
+        PopError(netError);
+    }];
     
 }
 
+- (void)endRefresh{
+    
+    [self.tableView.mj_header endRefreshing];
+}
 
 #pragma mark - tableView delegate and tableView dataSource
 
@@ -46,18 +86,25 @@ static NSString *cellID = @"MaiRuListCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 11;
+    return self.dataSource.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50;
+    return 110;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MaiRuListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    return cell;
     
+    MaiRuUnSelectListModel *model = self.dataSource[indexPath.row];
+    
+    MaiRuFinishCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    cell.model = model;
+    
+    return cell;
 }
+
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //消除cell选择痕迹
@@ -99,5 +146,6 @@ static NSString *cellID = @"MaiRuListCell";
     }
     return _dataSource;
 }
+
 
 @end

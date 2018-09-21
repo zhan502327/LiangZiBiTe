@@ -27,7 +27,7 @@
 #import "MuBiMaiRuViewController.h"
 #import "UserInfoResponse.h"
 #import "MaiChuViewController.h"
-
+#import "YiJianFanKuiViewController.h"
 
 static NSString *headerViewID = @"MineHeaderView";
 static NSString *footerViewID = @"MineFooterView";
@@ -78,6 +78,7 @@ static NSString *itemcellID = @"MineCell";
     [super viewDidLoad];
     
     self.navigationController.navigationBar.hidden = YES;
+    
     
     self.isHiddenPTMR = YES;
     
@@ -148,12 +149,14 @@ static NSString *itemcellID = @"MineCell";
                 self.isHiddenXiaoXiRedTips = YES;
             }
             
-            [self.collectionView reloadData];
             
             
         }else{
-            PopInfo(failMsg);
+//            PopInfo(failMsg);
         }
+        
+        [self.collectionView reloadData];
+
         
     } failure:^(NSError *error) {
         PopError(netError);
@@ -197,7 +200,7 @@ static NSString *itemcellID = @"MineCell";
 }
 
 - (void)configCollectionView{
-    self.collectionView.backgroundColor = HexColor(0XF5F5F5);
+    self.collectionView.backgroundColor = LightHexColcor;
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.headerReferenceSize = CGSizeMake(Current_Width, 280);
@@ -230,12 +233,12 @@ static NSString *itemcellID = @"MineCell";
                 self.isHiddenPTMR = NO;
             }
             
-            [self.collectionView reloadData];
         }else{
             PopInfo(failMsg);
 
         }
-        
+        [self.collectionView reloadData];
+
         
     } failure:^(NSError *error) {
         PopError(netError);
@@ -259,13 +262,13 @@ static NSString *itemcellID = @"MineCell";
                 self.isHiddenFuTou = YES;
             }
             
-            [self.collectionView reloadData];
             
         }else{
             PopInfo(failMsg);
 
         }
-        
+        [self.collectionView reloadData];
+
         
     } failure:^(NSError *error) {
         PopError(netError);
@@ -577,6 +580,8 @@ static NSString *itemcellID = @"MineCell";
     
     if (indexPath.row == 5) {//意见反馈
         
+        YiJianFanKuiViewController *vc = [[YiJianFanKuiViewController alloc] init];
+        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
         
     }
     

@@ -29,6 +29,9 @@ static NSString *addressCell = @"AddressManagerCell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.backgroundColor = LightHexColcor;
+
     [self setNavgiationBarTitle:@"地址管理"];
     
     [self configTableView];
@@ -45,12 +48,12 @@ static NSString *addressCell = @"AddressManagerCell";
         if ([response isSuccess]) {
             
             [self.dataSource addObjectsFromArray:response.result];
-            [self.tableView reloadData];
         }else{
             PopInfo(failMsg);
 
         }
-        
+        [self.tableView reloadData];
+
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@"请添加收货地址"];
         
     } failure:^(NSError *error) {

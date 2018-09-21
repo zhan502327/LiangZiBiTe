@@ -13,4 +13,7 @@
 
 @property (nonatomic, copy) NSString *nickname;
 
+
+@property (nonatomic, copy) void(^refreshDataAfterEditBlock)();
+
 @end

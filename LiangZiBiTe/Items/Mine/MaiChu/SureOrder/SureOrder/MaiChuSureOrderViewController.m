@@ -9,6 +9,7 @@
 #import "MaiChuSureOrderViewController.h"
 #import "MaiChuSureOrderCell.h"
 #import "MaiRuUnselectResponse.h"
+#import "ShouKuanInfoViewController.h"
 
 static NSString *cellID = @"MaiChuSureOrderCell";
 
@@ -24,6 +25,9 @@ static NSString *cellID = @"MaiChuSureOrderCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.backgroundColor = LightHexColcor;
+
     
     [self setNavgiationBarTitle:@"确认订单"];
     
@@ -41,21 +45,22 @@ static NSString *cellID = @"MaiChuSureOrderCell";
 }
 
 - (void)loadData{
-    
+    [self.dataSource removeAllObjects];
+
     [App_HttpsRequestTool mineMaiChuUnfinishOrderSelectSureFinishOrderWithType:@"3" Success:^(id responseObject) {
         [self endRefresh];
         
         MaiRuUnselectResponse *response = [[MaiRuUnselectResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
             
-            [self.dataSource removeAllObjects];
             [self.dataSource addObjectsFromArray:response.data];
-            [self.tableView reloadData];
             
         }else{
             
-            PopInfo(failMsg);
+//            PopInfo(failMsg);
         }
+        [self.tableView reloadData];
+
         
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
         
@@ -97,6 +102,16 @@ static NSString *cellID = @"MaiChuSureOrderCell";
     cell.model = model;
     
     [cell setShouKuanInfoButtonBlock:^{
+        
+        ShouKuanInfoViewController *vc = [[ShouKuanInfoViewController alloc] init];
+        vc.orderid = model.id;
+        [vc setRefreshDataSureBlock:^{
+           
+            [self.tableView.mj_header beginRefreshing];
+            
+        }];
+        
+        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
         
     }];
     

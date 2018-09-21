@@ -26,6 +26,9 @@ static NSString *cellID = @"TuiGuangCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
+
+    
     [self setNavgiationBarTitle:@"推广"];
     
     [self configTableView];

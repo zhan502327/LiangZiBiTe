@@ -27,6 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = LightHexColcor;
+
+    
     [self setNavgiationBarTitle:@"未完成订单"];
     
     [self pageTitleView];

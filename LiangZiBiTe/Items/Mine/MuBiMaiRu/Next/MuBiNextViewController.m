@@ -8,6 +8,7 @@
 
 #import "MuBiNextViewController.h"
 #import "ZZYPhotoHelper.h"
+#import "MineViewController.h"
 
 @interface MuBiNextViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *mairuNumTextField;
@@ -37,6 +38,9 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(logImageViewClicked)];
     
     [self.logImageView addGestureRecognizer:tap];
+    
+    self.view.backgroundColor = LightHexColcor;
+
     
 }
 
@@ -90,7 +94,16 @@
         PopDismiss;
         BaseResponse *response =[[BaseResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
+            
             PopSuccess(@"母币买入成功");
+            for (UIViewController *vc in self.navigationController.viewControllers) {
+                
+                if ([vc isKindOfClass:[MineViewController class]]) {
+                    
+                    [self.rt_navigationController popToViewController:vc animated:YES complete:nil];
+                }
+                
+            }
             
         }else{
             PopInfo(failMsg);

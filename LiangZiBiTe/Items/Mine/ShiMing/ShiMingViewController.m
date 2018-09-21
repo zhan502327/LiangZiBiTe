@@ -24,6 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = LightHexColcor;
+
+    
     [self setNavgiationBarTitle:@"实名认证"];
     
     

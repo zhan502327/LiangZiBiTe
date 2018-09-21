@@ -132,6 +132,31 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 
 
 
+
+
+#pragma mark - **************** 矿池
+// ----- 矿池
+- (void)kuangchiCountwithSuccess:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/sjpz/yonghukc");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+    
+}
+
+
+
+
+
+
+
 #pragma mark - **************** 首页
 // ----- 首页
 - (void)appShouyewithSuccess:(getBackBlock)success failure:(getFailBlock)failure{
@@ -494,7 +519,7 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 // ----- 母币买入
 - (void)muBiMaiRuCommitWithqbdzje:(NSString *)qbdzje jtpz:(NSData *)jtpz bzpz:(NSString *)bzpz Success:(getBackBlock)success failure:(getFailBlock)failure{
     
-    NSString *url = App_Api_Base_Url(@"/index.php/api/myindex/usermessage");
+    NSString *url = App_Api_Base_Url(@"/index.php/api/lzbtjy/tjlzbgdd");
     NSMutableDictionary *dic = [NSMutableDictionary new];
     [dic setValue:[App_UserManager uid] forKey:@"id"];
     [dic setValue:qbdzje forKey:@"qbdzje"];
@@ -615,6 +640,44 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
     
 }
 
+// ------ 买入 - 未完成 - 已选择 - 付款信息
+- (void)mineMaiRuUnfinishSelectPayInfoWithOrderID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmr/qdkskrmsg");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderid forKey:@"id"];
+    
+    
+    //    type    是    string    列表类型， 2已选择收款人，3待确认打款（等待对方确认收款），4已完成订单（确认完成）
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+
+// ------ 买入 - 未完成 - 已选择 - 付款 - 提交付款信息
+- (void)mineMaiRuUnfinishSelectPayInfoCommitWithorderid:(NSString *)orderid beizhu:(NSString *)beizhu pztp:(NSData *)pztp Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmr/qdkqkdmr");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderid forKey:@"id"];
+    [dic setValue:beizhu forKey:@"beizhu"];
+
+    [App_HttpsRequestManager mairuUnfinishSelectPayCommitWithUrl:url imageData:pztp andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+
+    } failure:^(NSError *error) {
+        failure(error);
+
+    }];
+    
+}
+
+
 
 // ---- 卖出 - 未完成订单 - 已选择收款人  已选择、确认、完成
 - (void)mineMaiChuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure{
@@ -623,7 +686,7 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
     NSMutableDictionary *dic = [NSMutableDictionary new];
     [dic setValue:[App_UserManager uid] forKey:@"id"];
     [dic setValue:type forKey:@"type"];
-    
+
     
 //type    是    string    列表类型， 2已选择打款人（等待对方打款），3待确认收款（确认收款），4已完成订单（确认完成）
     
@@ -635,7 +698,53 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
     
 }
 
+// ------ 卖出 - 确认收款-  付款凭证
+- (void)maichuSureOrderShouKuanInfoWithorderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/dkrpzxx");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderid forKey:@"id"];
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
 
+// ----- 卖出 - 确认收款 - 收款信息 - 收款操作
+- (void)mineSureOrderInfoSureShouKuanActionWithOrderid:(NSString *)orderi Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/qdkqkdmr");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderi forKey:@"id"];
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+
+
+
+// ---- 卖出 - 确认订单 - 收款信息
+- (void)mineShoukuanInfoWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/qdkskrmsg");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:orderid forKey:@"id"];
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
 
 
 
@@ -730,6 +839,7 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 }
 
 
+
 // ---- 卖出中心 -- 出售
 - (void)mineMaiChuListMaiChuActionWithuid:(NSString *)uid orerID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
     
@@ -750,8 +860,98 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 }
 
 
+// ----- 意见反馈
+- (void)yiJianFanKuiWithcontent:(NSString *)content fklxr:(NSString *)fklxr fklxfs:(NSString *)fklxfs fkpic:(NSData *)fkpic Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/huiyuan/fankui");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    [dic setValue:content forKey:@"content"];
+    [dic setValue:fklxr forKey:@"fklxr"];
+    [dic setValue:fklxfs forKey:@"fklxfs"];
+//    id    是    string    用户id
+//    content    是    string    反馈的内容
+//    fklxr    是    string    联系人
+//    fklxfs    是    string    联系方式
+//    fkpic    是    string    反馈图片
+    
+    
+    [App_HttpsRequestManager yijianfankuiWithurl:url std_face:fkpic andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+
+    } failure:^(NSError *error) {
+        failure(error);
+
+    }];
+    
+    
+}
 
 
+// ---- 添加银行卡
+- (void)addBankListWithzzname:(NSString *)zzname kaihh:(NSString *)kaihh ckr:(NSString *)ckr kahao:(NSString *)kahao sjhm:(NSString *)sjhm zfbzh:(NSString *)zfbzh wxzh:(NSString *)wxzh Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmc/addzhanghu");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    [dic setValue:zzname forKey:@"zzname"];
+    [dic setValue:kaihh forKey:@"kaihh"];
+    [dic setValue:ckr forKey:@"ckr"];
+    [dic setValue:kahao forKey:@"kahao"];
+    [dic setValue:sjhm forKey:@"sjhm"];
+    [dic setValue:zfbzh forKey:@"zfbzh"];
+    [dic setValue:wxzh forKey:@"wxzh"];
+
+
+    //id    类型    用户id
+    //zzname    类型    银行名称
+    //kaihh    类型    开户行
+    //ckr    类型    收款人姓名
+    //kahao    类型    银行卡账号
+    //sjhm    类型    收款人手机号码
+    //zfbzh    类型    支付宝账号
+    //wxzh    类型    微信账号
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+    
+}
+
+// ----- 买入中心列表
+- (void)mairuCenterListWithjine:(NSString *)jine Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmr/mrzxlist");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:jine forKey:@"jine"];
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+
+}
+
+// --- 买入中心 - 去购买
+- (void)mineMaiRuCenterGoBuyWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/qkdmr/mrzxmr");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"uid"];
+    [dic setValue:orderid forKey:@"id"];
+
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
 
 
 

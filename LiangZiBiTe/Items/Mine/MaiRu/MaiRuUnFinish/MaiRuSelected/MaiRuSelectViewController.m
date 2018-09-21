@@ -9,6 +9,7 @@
 #import "MaiRuSelectViewController.h"
 #import "MaiRuSelectedCell.h"
 #import "MaiRuUnselectResponse.h"
+#import "MaiRuGoPayViewController.h"
 
 
 static NSString *cellID = @"MaiRuSelectedCell";
@@ -25,11 +26,12 @@ static NSString *cellID = @"MaiRuSelectedCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
+
     [self setNavgiationBarTitle:@"已选择收款人"];
     
     [self configTableView];
     
-    [self loadData];
 }
 
 - (void)configTableView{
@@ -38,9 +40,15 @@ static NSString *cellID = @"MaiRuSelectedCell";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self loadData];
     }];
+    
+    [self.tableView.mj_header beginRefreshing];
+
 }
 
 - (void)loadData{
+    
+    [self.dataSource removeAllObjects];
+
     
     [App_HttpsRequestTool mineMaiRuUnfinishOrderSelectSureFinishOrderWithType:@"2" Success:^(id responseObject) {
         [self endRefresh];
@@ -48,14 +56,14 @@ static NSString *cellID = @"MaiRuSelectedCell";
         MaiRuUnselectResponse *response = [[MaiRuUnselectResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
             
-            [self.dataSource removeAllObjects];
             [self.dataSource addObjectsFromArray:response.data];
-            [self.tableView reloadData];
             
         }else{
             
-            PopInfo(failMsg);
+//            PopInfo(failMsg);
         }
+        [self.tableView reloadData];
+
         
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
 
@@ -98,6 +106,20 @@ static NSString *cellID = @"MaiRuSelectedCell";
     
     [cell setCancelButtonBlock:^{
         [self cancelOrder:model.id];
+    }];
+    
+    
+    [cell setPayButtonBlock:^{
+        MaiRuGoPayViewController *vc = [[MaiRuGoPayViewController alloc] init];
+        vc.orderid = model.id;
+        
+        [vc setRefreshDataAfterPay:^{
+           
+            [self.tableView.mj_header beginRefreshing];
+            
+        }];
+        
+        [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
     }];
     
     return cell;

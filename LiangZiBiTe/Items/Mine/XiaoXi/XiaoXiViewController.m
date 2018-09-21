@@ -30,6 +30,9 @@ static NSString *cellID = @"XiaoXiListCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
+
+    
     [self setNavgiationBarTitle:@"消息"];
     
     [self configXiaoXiList];

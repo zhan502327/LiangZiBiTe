@@ -23,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = LightHexColcor;
+
+    
     [self setNavgiationBarTitle:@"我的二维码"];
     
     [self loadData];

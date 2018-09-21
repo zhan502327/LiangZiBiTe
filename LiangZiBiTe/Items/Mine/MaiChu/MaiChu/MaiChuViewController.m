@@ -18,6 +18,7 @@
 #import "MaiChuFinishViewController.h"
 #import "MaiChuListViewController.h"
 #import "MaiChuCenterViewController.h"
+#import "AddBankViewController.h"
 
 
 static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
@@ -39,6 +40,8 @@ static NSString *bankCell = @"MaiChuBankTableViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
+
     self.selectMoneyStr = self.moneyArray[0];
     
     [self setNavgiationBarTitle:@"卖出"];
@@ -57,14 +60,14 @@ static NSString *bankCell = @"MaiChuBankTableViewCell";
             MaiChuVipInfoModel *bankModel = response.data;
             self.bankModel = bankModel;
             
-            [self.tableView reloadData];
             
         }else{
             
             self.bankModel = nil;
             
         }
-        
+        [self.tableView reloadData];
+
         
     } failure:^(NSError *error) {
         PopError(netError);
@@ -159,8 +162,6 @@ static NSString *bankCell = @"MaiChuBankTableViewCell";
         MaiChuVipInfoModel *model = self.bankModel;
         MaiChuBankTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:bankCell];
         cell.model = model;
-        
-        
         return cell;
         
         
@@ -206,6 +207,22 @@ static NSString *bankCell = @"MaiChuBankTableViewCell";
 {
     //消除cell选择痕迹
     [self performSelector:@selector(deselect) withObject:nil afterDelay:0.2];
+    
+    if (indexPath.section == 1) {
+        
+        if (self.bankModel == nil) {
+            
+            AddBankViewController *vc = [[AddBankViewController alloc] init];
+            [vc setRefreshDataAfterBankInfoBlock:^{
+               
+                [self loadData];
+            }];
+            
+            [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+            
+        }
+    }
+    
 }
 
 - (void)deselect
@@ -372,8 +389,10 @@ static NSString *bankCell = @"MaiChuBankTableViewCell";
 
 - (void)createOrder{
     
+    PopLoading(@"卖出中");
+    
     [App_HttpsRequestTool maichuCreateOrderWithjye:self.selectMoneyStr Success:^(id responseObject) {
-        
+        PopDismiss;
         BaseResponse * respoinse = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
         if ([respoinse isSuccess]) {
             
@@ -385,6 +404,7 @@ static NSString *bankCell = @"MaiChuBankTableViewCell";
         }
     } failure:^(NSError *error) {
         PopError(netError);
+        PopDismiss;
 
     }];
     

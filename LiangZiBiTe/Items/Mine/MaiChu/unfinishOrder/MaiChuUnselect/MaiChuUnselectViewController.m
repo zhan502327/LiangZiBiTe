@@ -24,15 +24,19 @@ static NSString *cellID = @"MaiRuUnSelectedCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
+
     
     [self setNavgiationBarTitle:@"未选择收款人"];
     
     [self configTableView];
     
-    [self loadData];
 }
 
 - (void)loadData{
+    
+    [self.dataSource removeAllObjects];
+
     
     [App_HttpsRequestTool maichuUnfinshUnselectOrderWithSuccess:^(id responseObject) {
         [self endRefresh];
@@ -40,15 +44,15 @@ static NSString *cellID = @"MaiRuUnSelectedCell";
         MaiRuUnselectResponse *response = [[MaiRuUnselectResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
             
-            [self.dataSource removeAllObjects];
             [self.dataSource addObjectsFromArray:response.data];
-            [self.tableView reloadData];
             
         }else{
             
-            PopInfo(failMsg);
+//            PopInfo(failMsg);
         }
         
+        [self.tableView reloadData];
+
         [self.tableView setEmptyViewWithArray:self.dataSource withMargin:0 withTitle:@""];
         
     } failure:^(NSError *error) {
@@ -69,6 +73,8 @@ static NSString *cellID = @"MaiRuUnSelectedCell";
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self loadData];
     }];
+    
+    [self.tableView.mj_header beginRefreshing];
     
 }
 

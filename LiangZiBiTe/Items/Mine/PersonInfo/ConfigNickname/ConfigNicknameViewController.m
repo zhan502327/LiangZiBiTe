@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = LightHexColcor;
+
     [self setNavgiationBarTitle:@"修改昵称"];
     
     
@@ -43,9 +45,10 @@
             [SVProgressHUDManager popTostSuccessWithString:@"修改昵称成功"];
             [self.rt_navigationController popViewControllerAnimated:YES complete:nil];
             
-            if (self.refreshDataBlock) {
-                self.refreshDataBlock();
+            if (self->_refreshDataAfterEditBlock) {
+                self->_refreshDataAfterEditBlock();
             }
+           
         }else{
             PopInfo(failMsg);
         }

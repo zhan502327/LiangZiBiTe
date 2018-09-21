@@ -13,6 +13,9 @@
 #import "MaiRuUnFinishViewController.h"
 #import "MaiRuFooterView.h"
 #import "UserInfoResponse.h"
+#import "MaiRuSureOrderViewController.h"
+#import "MaiRuFinishViewController.h"
+#import "MaiRuCenterViewController.h"
 
 
 static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
@@ -33,6 +36,9 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.tableView.backgroundColor = LightHexColcor;
+
     self.selectMoneyStr = self.moneyArray[0];
     
     [self setNavgiationBarTitle:@"买入"];
@@ -84,13 +90,15 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
         //确认打款
         [cell.selectView setThreeButtonBlock:^{
             
-            
+            MaiRuSureOrderViewController *vc = [[MaiRuSureOrderViewController alloc] init];
+            [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
             
         }];
         //已完成订单
         [cell.selectView setFourButtonBlock:^{
             
-            
+            MaiRuFinishViewController *vc = [[MaiRuFinishViewController alloc] init];
+            [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
             
         }];
         //买入记录
@@ -103,7 +111,8 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
         //买入中心
         [cell.selectView setSixButtonBlock:^{
             
-            
+            MaiRuCenterViewController *vc = [[MaiRuCenterViewController alloc] init];
+            [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
             
         }];
         
@@ -321,8 +330,10 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
 
 
 - (void)createOrder{
+    
+    PopLoading(@"买入中");
     [App_HttpsRequestTool mineMaiRuCreateOrderjye:self.selectMoneyStr success:^(id responseObject) {
-        
+        PopDismiss;
         BaseResponse * respoinse = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
         if ([respoinse isSuccess]) {
             
@@ -336,6 +347,7 @@ static NSString *maiRuProjectCell = @"MaiRuProjectButtonCell";
         
     } failure:^(NSError *error) {
         PopError(netError);
+        PopDismiss;
     }];
 }
 

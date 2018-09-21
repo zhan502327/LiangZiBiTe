@@ -28,6 +28,11 @@
 /** 母币买入 */
 - (void)mubimairuCommitWithUrl:(NSString *)url imageData:(NSData *)imageData andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
+
+/** 买入 - 未完成订单 - 已选择 - 付款 - 提交信息 */
+- (void)mairuUnfinishSelectPayCommitWithUrl:(NSString *)url imageData:(NSData *)imageData andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
+
+
 /** 上传身份证  */
 - (void)upLoadShenFenZhengWithurl:(NSString *)url card_face:(NSData *)card_face card_back:(NSData *)card_back andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
@@ -36,7 +41,8 @@
 
 
 
-
+/** 意见反馈 */
+- (void)yijianfankuiWithurl:(NSString *)url std_face:(NSData *)std_face andParameterDictionary:(id)parameters withSuccess:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 
 
 

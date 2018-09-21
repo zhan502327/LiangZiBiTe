@@ -27,6 +27,7 @@ static NSString *jiaoyiLineCell = @"JiaoYiSuoLineCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
     
     [self setNavgiationBarTitle:@"交易所"];
     

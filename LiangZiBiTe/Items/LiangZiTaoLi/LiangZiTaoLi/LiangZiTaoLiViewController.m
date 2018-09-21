@@ -22,6 +22,7 @@
     
     self.navigationController.navigationBar.hidden = YES;
     
+    
 //    self.webView.backgroundColor = [UIColor redColor];
 //
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"fragment_one_bg" ofType:@"gif"];

@@ -23,6 +23,9 @@
     [self setNavgiationBarTitle:@"买入"];
 
     [self loadData];
+    
+    self.view.backgroundColor = LightHexColcor;
+
 
 }
 

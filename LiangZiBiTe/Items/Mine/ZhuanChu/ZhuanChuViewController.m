@@ -25,6 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = LightHexColcor;
+
 
     [self setNavgiationBarTitle:@"转出"];
 
@@ -41,7 +44,9 @@
     
     [vc setRefreshZhuanChuBlock:^(NSString *scanResult) {
        
-        self.textField.text = scanResult;
+        NSString *result = [scanResult stringByReplacingOccurrencesOfString:@"qkd" withString:@""];
+        
+        self.textField.text = result;
         
     }];
     
@@ -61,8 +66,17 @@
         return;
     }
     
+    
     [App_HttpsRequestTool mineZhuanChuWithphone:self.textField.text qkd:self.numTextField.text success:^(id responseObject) {
         
+        BaseResponse *response = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            PopSuccess(@"转出成功");
+            [self.rt_navigationController popViewControllerAnimated:YES complete:nil];
+            
+        }else{
+            PopInfo(failMsg);
+        }
         
         
     } failure:^(NSError *error) {

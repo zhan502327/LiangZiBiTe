@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="111" id="KGk-i7-Jjw" customClass="MaiRuGoPayCommitCell">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="110.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZH-3x-syz">
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="110.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOv-Tl-BM4">
+                                <rect key="frame" x="20" y="20" width="309" height="70.5"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.35686274509999999" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                                <state key="normal" title="提交"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="commitButtonCLicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fdc-4h-1xm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QOv-Tl-BM4" firstAttribute="leading" secondItem="LZH-3x-syz" secondAttribute="leading" constant="20" id="4lE-6z-Uk5"/>
+                            <constraint firstAttribute="bottom" secondItem="QOv-Tl-BM4" secondAttribute="bottom" constant="20" id="6ub-tJ-mn7"/>
+                            <constraint firstItem="QOv-Tl-BM4" firstAttribute="top" secondItem="LZH-3x-syz" secondAttribute="top" constant="20" id="TJK-qT-dtP"/>
+                            <constraint firstAttribute="trailing" secondItem="QOv-Tl-BM4" secondAttribute="trailing" constant="20" id="tU7-Cd-MR8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LZH-3x-syz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fr3-2S-Vcy"/>
+                    <constraint firstItem="LZH-3x-syz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="P88-J4-2KT"/>
+                    <constraint firstAttribute="trailing" secondItem="LZH-3x-syz" secondAttribute="trailing" id="iZ2-WQ-z9O"/>
+                    <constraint firstAttribute="bottom" secondItem="LZH-3x-syz" secondAttribute="bottom" id="tiA-yW-uNQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="48.5" y="87.5"/>
+        </tableViewCell>
+    </objects>
+</document>

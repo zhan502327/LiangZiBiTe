@@ -70,6 +70,8 @@ static NSString *defaultCell = @"AddAddressDefaultCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.backgroundColor = LightHexColcor;
+
     
     [self setNavgiationBarTitle:@"添加新地址"];
     

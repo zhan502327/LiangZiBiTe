@@ -15,12 +15,12 @@ static NSString *cellID = @"MaiChuCenterCell";
 
 @interface MaiChuCenterViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, copy) NSString *selectMoney;
 
 
 @property (weak, nonatomic) IBOutlet UIView *buttonView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, copy) NSString *selectMoney;
 
 @property (nonatomic, strong) MaiChuCenterModel *selectModel;
 
@@ -32,9 +32,10 @@ static NSString *cellID = @"MaiChuCenterCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = LightHexColcor;
 
     
-    [self setNavgiationBarTitle:@"卖出记录"];
+    [self setNavgiationBarTitle:@"卖出中心"];
     
     [self configTableView];
     
@@ -93,7 +94,7 @@ static NSString *cellID = @"MaiChuCenterCell";
             break;
     }
     
-    [self loadDataWithMoney:self.selectMoney];
+    [self.tableView.mj_header beginRefreshing];
     
     if (button.isSelected == NO) {
         
@@ -147,7 +148,7 @@ static NSString *cellID = @"MaiChuCenterCell";
             
         }else{
             
-            PopInfo(failMsg);
+//            PopInfo(failMsg);
         }
         [self.tableView reloadData];
 
@@ -337,14 +338,14 @@ static NSString *cellID = @"MaiChuCenterCell";
 
 - (void)sellAction{
     
-    [App_HttpsRequestTool mineMaiChuListMaiChuActionWithuid:self.selectModel.uid orerID:self.selectModel.id Success:^(id responseObject) {
+    [App_HttpsRequestTool mineMaiChuListMaiChuActionWithuid:[App_UserManager uid] orerID:self.selectModel.id Success:^(id responseObject) {
         
         BaseResponse *response = [[BaseResponse alloc] initWithDictionary:responseObject error:nil];
         if ([response isSuccess]) {
             
-            PopSuccess(@"出售成功");
+            PopSuccess(response.msg);
             
-            [self loadDataWithMoney:self.selectMoney];
+            [self.tableView.mj_header beginRefreshing];
         }else{
             PopInfo(failMsg);
         }

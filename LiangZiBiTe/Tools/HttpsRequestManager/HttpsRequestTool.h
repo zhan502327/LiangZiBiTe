@@ -45,9 +45,10 @@ typedef void (^getFailBlock)(NSError *error);
 - (void)configShiMingRenZhengWithID:(NSString *)user_id withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
-#pragma mark - **************** 首页
-// ----- 首页
-- (void)appShouyewithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+#pragma mark - **************** 矿池
+// ----- 矿池
+- (void)kuangchiCountwithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+
 
 
 
@@ -154,8 +155,23 @@ typedef void (^getFailBlock)(NSError *error);
 // ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成
 - (void)mineMaiRuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure;
 
+// ------ 买入 - 未完成 - 已选择 - 付款信息
+- (void)mineMaiRuUnfinishSelectPayInfoWithOrderID:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+// ------ 买入 - 未完成 - 已选择 - 付款 - 提交付款信息
+- (void)mineMaiRuUnfinishSelectPayInfoCommitWithorderid:(NSString *)orderid beizhu:(NSString *)beizhu pztp:(NSData *)pztp Success:(getBackBlock)success failure:(getFailBlock)failure;
+
 // ---- 卖出 - 未完成订单 - 已选择收款人  已选择、确认、完成
 - (void)mineMaiChuUnfinishOrderSelectSureFinishOrderWithType:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+// ------ 卖出 - 确认收款-  付款凭证
+- (void)maichuSureOrderShouKuanInfoWithorderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+// ----- 卖出 - 确认收款 - 收款信息 - 收款操作
+- (void)mineSureOrderInfoSureShouKuanActionWithOrderid:(NSString *)orderi Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+// ---- 卖出 - 确认订单 - 收款信息
+- (void)mineShoukuanInfoWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 // ---- 买入 - 未完成订单 - 已选择收款人  已选择、确认、完成  - 取消订单
 - (void)mineMaiRuUnfinishSelectOrderCanceWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
@@ -181,6 +197,19 @@ typedef void (^getFailBlock)(NSError *error);
 
 
 
+// ----- 意见反馈
+- (void)yiJianFanKuiWithcontent:(NSString *)content fklxr:(NSString *)fklxr fklxfs:(NSString *)fklxfs fkpic:(NSData *)fkpic Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+// ---- 添加银行卡
+- (void)addBankListWithzzname:(NSString *)zzname kaihh:(NSString *)kaihh ckr:(NSString *)ckr kahao:(NSString *)kahao sjhm:(NSString *)sjhm zfbzh:(NSString *)zfbzh wxzh:(NSString *)wxzh Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+// ----- 买入中心列表
+- (void)mairuCenterListWithjine:(NSString *)jine Success:(getBackBlock)success failure:(getFailBlock)failure;
+
+
+// --- 买入中心 - 去购买
+- (void)mineMaiRuCenterGoBuyWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 
 
@@ -191,80 +220,5 @@ typedef void (^getFailBlock)(NSError *error);
 
 
 
-
-
-
-
-#pragma mark - **************** 商城
-// ------ 商城首页-banner
-- (void)marketBannerRequestWithType:(NSString *)type WithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-//商品列表
-- (void)marketProductListWithpage:(int)page pagesize:(int)pagesize category:(NSString *)category WithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-// ------ 商城首页最新列表和热门列表
-- (void)marketHotListAndNewListRequestWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-// ------ 商品详情
-- (void)marketDetailWithgoods_id:(NSString *)goods_id tWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-
-// ----- 积分兑换
-- (void)jifenDuihuanWithgood_id:(NSString *)good_id WithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-
-// ------ 订单结算
-- (void)orderSureresult:(NSString *)result Success:(getBackBlock)success failure:(getFailBlock)failure;
-
-// ----- 立即购买 /order/add
-- (void)goBuyNowWithids:(NSString *)ids buynum:(NSString *)buynum address_id:(NSString *)address_id attrvalueid:(NSString *)attrvalueid paytype:(NSString *)paytype Success:(getBackBlock)success failure:(getFailBlock)failure;
-
-// ------ 点击规格 获取价格
-- (void)clickProductCategoryGetPriceWithgoods_id:(NSString *)goods_id attrvalue_id:(NSString *)attrvalue_id Success:(getBackBlock)success failure:(getFailBlock)failure;
-// ------添加购物车
-- (void)marketShoppingCarAddProductRequestDataForProduct_id:(NSString *)product_id buynum:(NSString *)buynum price:(NSString *)price goods_attr_store_id:(NSString *)goods_attr_store_id attrvalue_id:(NSString *)attrvalue_id remark:(NSString *)remark withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-// ----- 购物车列表
-- (void)carListwithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-
-
-
-// ------改变商品数量
-- (void)marketChangeProductNumRequestDataForProduct_id:(NSString *)product_id buyNum:(NSString *)buyNum withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-
-// ------删除购物车商品
-- (void)marketShoppingCarListDeleteProductWithproduct_sn:(NSString *)product_sn withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#pragma mark - **************** 福利
-// ------ 福利首页
-- (void)welfareListwithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
-
-
-
-
-
-
-#pragma mark - **************** 推广
-// ------  推广首页
-- (void)extentionwithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 @end
