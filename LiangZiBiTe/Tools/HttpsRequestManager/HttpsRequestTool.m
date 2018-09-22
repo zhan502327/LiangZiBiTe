@@ -954,6 +954,38 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 }
 
 
+// ----- 系统公告
+- (void)systemAdvSuccess:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/myindex/xtggs");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+// ----- 推广人员
+- (void)tuiguangPersonWithtype:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/sjpz/dqhytd");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:[App_UserManager uid] forKey:@"id"];
+    [dic setValue:type forKey:@"type"];
+    
+//type    是    int    1 主链 2侧链
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
 
 
 

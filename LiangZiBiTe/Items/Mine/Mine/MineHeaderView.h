@@ -27,5 +27,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *fuTouButton;
 @property (nonatomic, copy) void(^futouButtonBlock)(void);
 @property (weak, nonatomic) IBOutlet UILabel *redLabel;
+@property (weak, nonatomic) IBOutlet UIView *xinyongView;
+
+@property (nonatomic, copy) void(^xinyongViewBlock)();
 
 @end

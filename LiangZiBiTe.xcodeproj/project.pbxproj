@@ -256,6 +256,20 @@
 		4DE105C121550ED1001135FF /* ShouKuanInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105C021550ED1001135FF /* ShouKuanInfoModel.m */; };
 		4DE105C721551D5F001135FF /* KuangChiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105C621551D5F001135FF /* KuangChiModel.m */; };
 		4DE105CD21551E67001135FF /* KuangChiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105CC21551E67001135FF /* KuangChiResponse.m */; };
+		4DE105D82155D6FD001135FF /* CLRollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105D72155D6FD001135FF /* CLRollLabel.m */; };
+		4DE105DB2155D8A9001135FF /* SystemAdvResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105DA2155D8A9001135FF /* SystemAdvResponse.m */; };
+		4DE105DE2155D8B9001135FF /* SystemAdvModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105DD2155D8B9001135FF /* SystemAdvModel.m */; };
+		4DE105E32155E076001135FF /* XingJiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105E12155E076001135FF /* XingJiViewController.m */; };
+		4DE105E42155E076001135FF /* XingJiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE105E22155E076001135FF /* XingJiViewController.xib */; };
+		4DE105EB2155E0EE001135FF /* ZhuLianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105E92155E0EE001135FF /* ZhuLianViewController.m */; };
+		4DE105EC2155E0EE001135FF /* ZhuLianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE105EA2155E0EE001135FF /* ZhuLianViewController.xib */; };
+		4DE105F02155E0F8001135FF /* CeLianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105EE2155E0F8001135FF /* CeLianViewController.m */; };
+		4DE105F12155E0F8001135FF /* CeLianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE105EF2155E0F8001135FF /* CeLianViewController.xib */; };
+		4DE105F52155EC3B001135FF /* TuiGuangNormallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105F32155EC3B001135FF /* TuiGuangNormallCell.m */; };
+		4DE105F62155EC3B001135FF /* TuiGuangNormallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE105F42155EC3B001135FF /* TuiGuangNormallCell.xib */; };
+		4DE105F92155EFCD001135FF /* TuiGuangResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105F82155EFCD001135FF /* TuiGuangResponse.m */; };
+		4DE105FC2155EFD8001135FF /* TuiGuangModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105FB2155EFD8001135FF /* TuiGuangModel.m */; };
+		4DE105FF21561880001135FF /* TuiGuangData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105FE21561880001135FF /* TuiGuangData.m */; };
 		F12F625FB22E6EF6C8AF71EC /* Pods_LiangZiBiTe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D35946BA0CA72C1C7C2DF3 /* Pods_LiangZiBiTe.framework */; };
 /* End PBXBuildFile section */
 
@@ -685,6 +699,30 @@
 		4DE105C621551D5F001135FF /* KuangChiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KuangChiModel.m; sourceTree = "<group>"; };
 		4DE105CB21551E67001135FF /* KuangChiResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KuangChiResponse.h; sourceTree = "<group>"; };
 		4DE105CC21551E67001135FF /* KuangChiResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KuangChiResponse.m; sourceTree = "<group>"; };
+		4DE105D62155D6FD001135FF /* CLRollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLRollLabel.h; sourceTree = "<group>"; };
+		4DE105D72155D6FD001135FF /* CLRollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLRollLabel.m; sourceTree = "<group>"; };
+		4DE105D92155D8A9001135FF /* SystemAdvResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemAdvResponse.h; sourceTree = "<group>"; };
+		4DE105DA2155D8A9001135FF /* SystemAdvResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemAdvResponse.m; sourceTree = "<group>"; };
+		4DE105DC2155D8B9001135FF /* SystemAdvModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemAdvModel.h; sourceTree = "<group>"; };
+		4DE105DD2155D8B9001135FF /* SystemAdvModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemAdvModel.m; sourceTree = "<group>"; };
+		4DE105E02155E076001135FF /* XingJiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XingJiViewController.h; sourceTree = "<group>"; };
+		4DE105E12155E076001135FF /* XingJiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XingJiViewController.m; sourceTree = "<group>"; };
+		4DE105E22155E076001135FF /* XingJiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XingJiViewController.xib; sourceTree = "<group>"; };
+		4DE105E82155E0EE001135FF /* ZhuLianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuLianViewController.h; sourceTree = "<group>"; };
+		4DE105E92155E0EE001135FF /* ZhuLianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuLianViewController.m; sourceTree = "<group>"; };
+		4DE105EA2155E0EE001135FF /* ZhuLianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZhuLianViewController.xib; sourceTree = "<group>"; };
+		4DE105ED2155E0F8001135FF /* CeLianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeLianViewController.h; sourceTree = "<group>"; };
+		4DE105EE2155E0F8001135FF /* CeLianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeLianViewController.m; sourceTree = "<group>"; };
+		4DE105EF2155E0F8001135FF /* CeLianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CeLianViewController.xib; sourceTree = "<group>"; };
+		4DE105F22155EC3B001135FF /* TuiGuangNormallCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuiGuangNormallCell.h; sourceTree = "<group>"; };
+		4DE105F32155EC3B001135FF /* TuiGuangNormallCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuiGuangNormallCell.m; sourceTree = "<group>"; };
+		4DE105F42155EC3B001135FF /* TuiGuangNormallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TuiGuangNormallCell.xib; sourceTree = "<group>"; };
+		4DE105F72155EFCD001135FF /* TuiGuangResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuiGuangResponse.h; sourceTree = "<group>"; };
+		4DE105F82155EFCD001135FF /* TuiGuangResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuiGuangResponse.m; sourceTree = "<group>"; };
+		4DE105FA2155EFD8001135FF /* TuiGuangModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuiGuangModel.h; sourceTree = "<group>"; };
+		4DE105FB2155EFD8001135FF /* TuiGuangModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuiGuangModel.m; sourceTree = "<group>"; };
+		4DE105FD21561880001135FF /* TuiGuangData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuiGuangData.h; sourceTree = "<group>"; };
+		4DE105FE21561880001135FF /* TuiGuangData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuiGuangData.m; sourceTree = "<group>"; };
 		AD71B2E26AA92ED447F8284B /* Pods-LiangZiBiTe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiangZiBiTe.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiangZiBiTe/Pods-LiangZiBiTe.release.xcconfig"; sourceTree = "<group>"; };
 		E6D35946BA0CA72C1C7C2DF3 /* Pods_LiangZiBiTe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiangZiBiTe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1651,6 +1689,7 @@
 		4D89351A21302A03004B7518 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				4DE105D52155D6FD001135FF /* CLRollLabel */,
 				4D2E8191214DDEDB003D67B5 /* DBDataBaseManager */,
 				4D2E8159214BBD9A003D67B5 /* QRCode */,
 				4D258FB42137E2AF00943AD1 /* HttpsRequestManager */,
@@ -1746,6 +1785,7 @@
 				4D258F642137E05B00943AD1 /* PersonInfo */,
 				4D258F272132A47200943AD1 /* one */,
 				4D2E8166214C9D84003D67B5 /* ShiMing */,
+				4DE105DF2155E05C001135FF /* XingJi */,
 				4D2E8185214DDAA2003D67B5 /* XiaoXi */,
 			);
 			path = Mine;
@@ -1774,6 +1814,10 @@
 				4D5C0BFD214A811700E8B5D5 /* ConfigPTMRResponse.m */,
 				4D2E816C214CA50A003D67B5 /* ShiMingResponse.h */,
 				4D2E816D214CA50A003D67B5 /* ShiMingResponse.m */,
+				4DE105D92155D8A9001135FF /* SystemAdvResponse.h */,
+				4DE105DA2155D8A9001135FF /* SystemAdvResponse.m */,
+				4DE105DC2155D8B9001135FF /* SystemAdvModel.h */,
+				4DE105DD2155D8B9001135FF /* SystemAdvModel.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1835,6 +1879,64 @@
 				4DE105B52154F6DE001135FF /* MaiRuGoPayModel.m */,
 			);
 			path = MaiRuGoPay;
+			sourceTree = "<group>";
+		};
+		4DE105D52155D6FD001135FF /* CLRollLabel */ = {
+			isa = PBXGroup;
+			children = (
+				4DE105D62155D6FD001135FF /* CLRollLabel.h */,
+				4DE105D72155D6FD001135FF /* CLRollLabel.m */,
+			);
+			path = CLRollLabel;
+			sourceTree = "<group>";
+		};
+		4DE105DF2155E05C001135FF /* XingJi */ = {
+			isa = PBXGroup;
+			children = (
+				4DE105E72155E09A001135FF /* XingJi */,
+				4DE105E62155E09A001135FF /* ZhuLian */,
+				4DE105E52155E09A001135FF /* CeLian */,
+			);
+			path = XingJi;
+			sourceTree = "<group>";
+		};
+		4DE105E52155E09A001135FF /* CeLian */ = {
+			isa = PBXGroup;
+			children = (
+				4DE105ED2155E0F8001135FF /* CeLianViewController.h */,
+				4DE105EE2155E0F8001135FF /* CeLianViewController.m */,
+				4DE105EF2155E0F8001135FF /* CeLianViewController.xib */,
+			);
+			path = CeLian;
+			sourceTree = "<group>";
+		};
+		4DE105E62155E09A001135FF /* ZhuLian */ = {
+			isa = PBXGroup;
+			children = (
+				4DE105E82155E0EE001135FF /* ZhuLianViewController.h */,
+				4DE105E92155E0EE001135FF /* ZhuLianViewController.m */,
+				4DE105EA2155E0EE001135FF /* ZhuLianViewController.xib */,
+				4DE105F22155EC3B001135FF /* TuiGuangNormallCell.h */,
+				4DE105F32155EC3B001135FF /* TuiGuangNormallCell.m */,
+				4DE105F42155EC3B001135FF /* TuiGuangNormallCell.xib */,
+				4DE105F72155EFCD001135FF /* TuiGuangResponse.h */,
+				4DE105F82155EFCD001135FF /* TuiGuangResponse.m */,
+				4DE105FD21561880001135FF /* TuiGuangData.h */,
+				4DE105FE21561880001135FF /* TuiGuangData.m */,
+				4DE105FA2155EFD8001135FF /* TuiGuangModel.h */,
+				4DE105FB2155EFD8001135FF /* TuiGuangModel.m */,
+			);
+			path = ZhuLian;
+			sourceTree = "<group>";
+		};
+		4DE105E72155E09A001135FF /* XingJi */ = {
+			isa = PBXGroup;
+			children = (
+				4DE105E02155E076001135FF /* XingJiViewController.h */,
+				4DE105E12155E076001135FF /* XingJiViewController.m */,
+				4DE105E22155E076001135FF /* XingJiViewController.xib */,
+			);
+			path = XingJi;
 			sourceTree = "<group>";
 		};
 		9414A38D267F1B9B41F02429 /* Frameworks */ = {
@@ -1917,6 +2019,7 @@
 				4D2E8158214BAB0A003D67B5 /* TuiGuangCell.xib in Resources */,
 				4D5C0C03214A832100E8B5D5 /* TuiGuangViewController.xib in Resources */,
 				4D2E81CF214F2CBF003D67B5 /* MaiChuViewController.xib in Resources */,
+				4DE105F62155EC3B001135FF /* TuiGuangNormallCell.xib in Resources */,
 				4D8B6C902151D9CD006F5B57 /* YiJianFanKuiViewController.xib in Resources */,
 				4D5C0AC1213A700400E8B5D5 /* ZhuanRuViewController.xib in Resources */,
 				4D5C0BB8214641F400E8B5D5 /* LiangZiTaoLiViewController.xib in Resources */,
@@ -1950,6 +2053,7 @@
 				4DE105B02154F34E001135FF /* MaiRuGoPayCommitCell.xib in Resources */,
 				4D258F9C2137E1F400943AD1 /* AddAddressDefaultCell.xib in Resources */,
 				4D2E821A214F8FE3003D67B5 /* MaiChuListViewController.xib in Resources */,
+				4DE105F12155E0F8001135FF /* CeLianViewController.xib in Resources */,
 				4D5C0AFD213A8C2B00E8B5D5 /* AddBankViewController.xib in Resources */,
 				4D89349A213026E5004B7518 /* Assets.xcassets in Resources */,
 				4D2E8211214F8CCE003D67B5 /* MaiChuSureOrderViewController.xib in Resources */,
@@ -1960,6 +2064,7 @@
 				4D5C0BFB214A758500E8B5D5 /* MaiRuFooterView.xib in Resources */,
 				4D2E816B214C9D9B003D67B5 /* ShiMingViewController.xib in Resources */,
 				4D2E821F214F90F9003D67B5 /* MaiChuCenterViewController.xib in Resources */,
+				4DE105EC2155E0EE001135FF /* ZhuLianViewController.xib in Resources */,
 				4D2E81B3214E2DE7003D67B5 /* MuBiMaiRuViewController.xib in Resources */,
 				4D5C0ADC213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.xib in Resources */,
 				4D2E81AD214DFDE3003D67B5 /* XiaoXiListCell.xib in Resources */,
@@ -1991,6 +2096,7 @@
 				4D5C0AD2213A75FA00E8B5D5 /* MaiRuListViewController.xib in Resources */,
 				4D5C0AA1213A302300E8B5D5 /* MineCell.xib in Resources */,
 				4D258F722137E05B00943AD1 /* SettingNormalCell.xib in Resources */,
+				4DE105E42155E076001135FF /* XingJiViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2093,6 +2199,7 @@
 				4D258FB22137E22800943AD1 /* AddressListResponse.m in Sources */,
 				4D89354021302A03004B7518 /* EmptyView.m in Sources */,
 				4D2E821E214F90F9003D67B5 /* MaiChuCenterViewController.m in Sources */,
+				4DE105D82155D6FD001135FF /* CLRollLabel.m in Sources */,
 				4D2E8157214BAB0A003D67B5 /* TuiGuangCell.m in Sources */,
 				4D89353B21302A03004B7518 /* GLTextField.m in Sources */,
 				4D89355821302A03004B7518 /* LBXPermissionCalendar.m in Sources */,
@@ -2123,6 +2230,7 @@
 				4D89356321302A03004B7518 /* SVProgressHUDManager.m in Sources */,
 				4D89354F21302A03004B7518 /* UIImageView+CornerRadius.m in Sources */,
 				4D258FAE2137E22800943AD1 /* AddressManagerViewController.m in Sources */,
+				4DE105FF21561880001135FF /* TuiGuangData.m in Sources */,
 				4D89356921302A03004B7518 /* CityModel.m in Sources */,
 				4D8934B121302916004B7518 /* BaseViewController.m in Sources */,
 				4D2E8227214F954A003D67B5 /* MaiChuCenterResponse.m in Sources */,
@@ -2132,6 +2240,7 @@
 				4D89355021302A03004B7518 /* ScanResultViewController.m in Sources */,
 				4D2E818D214DDB20003D67B5 /* XiaoXiResponse.m in Sources */,
 				4D8934A0213026E5004B7518 /* main.m in Sources */,
+				4DE105F02155E0F8001135FF /* CeLianViewController.m in Sources */,
 				4D89355721302A03004B7518 /* LBXPermissionNetwork.m in Sources */,
 				4D89354321302A03004B7518 /* NetWorkingTool.m in Sources */,
 				4D89354A21302A03004B7518 /* ScanResultResponse.m in Sources */,
@@ -2141,6 +2250,7 @@
 				4DE105B62154F6DE001135FF /* MaiRuGoPayModel.m in Sources */,
 				4D5C0C02214A832100E8B5D5 /* TuiGuangViewController.m in Sources */,
 				4D89356721302A03004B7518 /* ChooseCityViewController.m in Sources */,
+				4DE105EB2155E0EE001135FF /* ZhuLianViewController.m in Sources */,
 				4D893574213031B9004B7518 /* AppDelegate+UI.m in Sources */,
 				4D2E816A214C9D9B003D67B5 /* ShiMingViewController.m in Sources */,
 				4D89353F21302A03004B7518 /* UITableView+EmptyFooterView.m in Sources */,
@@ -2173,6 +2283,7 @@
 				4DE105AF2154F34E001135FF /* MaiRuGoPayCommitCell.m in Sources */,
 				4D89356A21302A03004B7518 /* CompanyChooseResultCell.m in Sources */,
 				4D89355921302A03004B7518 /* LBXPermissionReminders.m in Sources */,
+				4DE105E32155E076001135FF /* XingJiViewController.m in Sources */,
 				4D258F8C2137E1CC00943AD1 /* QRCodeModel.m in Sources */,
 				4D5C0AC5213A701A00E8B5D5 /* ZhuanChuViewController.m in Sources */,
 				4D2E8223214F92A8003D67B5 /* MaiChuCenterCell.m in Sources */,
@@ -2189,8 +2300,10 @@
 				4D2E81B9214E2F8F003D67B5 /* MuBiMaiRuModel.m in Sources */,
 				4DE105CD21551E67001135FF /* KuangChiResponse.m in Sources */,
 				4D5C0AD1213A75FA00E8B5D5 /* MaiRuListViewController.m in Sources */,
+				4DE105F52155EC3B001135FF /* TuiGuangNormallCell.m in Sources */,
 				4D258F772137E05B00943AD1 /* SettingHeaderCell.m in Sources */,
 				4D2E8214214F8CCE003D67B5 /* MaiChuSureOrderViewController.m in Sources */,
+				4DE105DB2155D8A9001135FF /* SystemAdvResponse.m in Sources */,
 				4D2E81D3214F5827003D67B5 /* MaiChuBankTableViewCell.m in Sources */,
 				4DE105A02154CF11001135FF /* MaiRuGoPayViewController.m in Sources */,
 				4D2E81A6214DEE2F003D67B5 /* FMDatabase.m in Sources */,
@@ -2223,6 +2336,7 @@
 				4D2E81DA214F5CF6003D67B5 /* MaiChuVipInfoModel.m in Sources */,
 				4D89354921302A03004B7518 /* ScanResultModel.m in Sources */,
 				4D258FB92137E2AF00943AD1 /* HttpsRequestTool.m in Sources */,
+				4DE105F92155EFCD001135FF /* TuiGuangResponse.m in Sources */,
 				4D89356621302A03004B7518 /* CityResponse.m in Sources */,
 				4D89355C21302A03004B7518 /* LBXPermissionPhotos.m in Sources */,
 				4D258FAD2137E22800943AD1 /* AddressListModel.m in Sources */,
@@ -2254,6 +2368,8 @@
 				4D5C0BC52146478300E8B5D5 /* JiaoYiSuoHeaderView.m in Sources */,
 				4D258F5D2137914500943AD1 /* UIImage+Color.m in Sources */,
 				4D89355D21302A03004B7518 /* LBXPermissionLocation.m in Sources */,
+				4DE105DE2155D8B9001135FF /* SystemAdvModel.m in Sources */,
+				4DE105FC2155EFD8001135FF /* TuiGuangModel.m in Sources */,
 				4D89353D21302A03004B7518 /* IMJIETagFrame.m in Sources */,
 				4D2E8219214F8FE3003D67B5 /* MaiChuListViewController.m in Sources */,
 				4DE105982154C6D9001135FF /* MaiRuCenterResponse.m in Sources */,

@@ -343,6 +343,7 @@
                 <outlet property="rightNumLabel" destination="kJU-x8-Oka" id="9X5-O7-y6l"/>
                 <outlet property="starLabel" destination="P7K-wh-WrF" id="fiT-FY-cxO"/>
                 <outlet property="starView" destination="LPK-05-DQY" id="qEu-5D-pgw"/>
+                <outlet property="xinyongView" destination="SjC-lD-fJd" id="034-Uw-YRD"/>
             </connections>
             <point key="canvasLocation" x="111.5" y="273.5"/>
         </collectionReusableView>

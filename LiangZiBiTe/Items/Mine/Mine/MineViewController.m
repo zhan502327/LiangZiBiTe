@@ -28,6 +28,9 @@
 #import "UserInfoResponse.h"
 #import "MaiChuViewController.h"
 #import "YiJianFanKuiViewController.h"
+#import "CLRollLabel.h"
+#import "SystemAdvResponse.h"
+#import "XingJiViewController.h"
 
 static NSString *headerViewID = @"MineHeaderView";
 static NSString *footerViewID = @"MineFooterView";
@@ -53,6 +56,8 @@ static NSString *itemcellID = @"MineCell";
 
 @property (nonatomic, strong) NSMutableArray *xiaoxiDataSource;
 
+@property (nonatomic, weak) CLRollLabel *cycleLabel;
+
 @end
 
 @implementation MineViewController
@@ -69,6 +74,7 @@ static NSString *itemcellID = @"MineCell";
     
     //加载数据
     [self loadData];
+    
 }
 
 
@@ -88,10 +94,41 @@ static NSString *itemcellID = @"MineCell";
     
     [self configCollectionView];
     
-    
     //判断是否显示 平台买入
     [self fonfigIsShowPingTaiMaiRu];
+    
+    //加载广告数据
+    [self loadAdvData];
+    
 }
+
+
+
+#pragma mark -- 加载系统公告
+- (void)loadAdvData{
+    
+    [App_HttpsRequestTool systemAdvSuccess:^(id responseObject) {
+        
+        SystemAdvResponse *response = [[SystemAdvResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response  isSuccess]) {
+    
+            SystemAdvModel *model = response.data;
+            //不可注释
+            NSString *spaceText = @"                                                    ";
+            
+            self.cycleLabel.text = [NSString stringWithFormat:@"%@%@%@%@%@", spaceText, spaceText, model.text, spaceText, spaceText];
+            
+        }else{
+            
+        }
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
+    
+}
+
 #pragma mark -- 判断消息列表
 - (void)configXiaoXiList{
     [self.xiaoxiDataSource removeAllObjects];
@@ -389,6 +426,12 @@ static NSString *itemcellID = @"MineCell";
             [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
         }];
         
+        //信用
+        [header setXinyongViewBlock:^{
+            XingJiViewController *vc = [[XingJiViewController alloc] init];
+            [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+        }];
+        
         
         return header;
         
@@ -610,6 +653,23 @@ static NSString *itemcellID = @"MineCell";
         _xiaoxiDataSource = array;
     }
     return _xiaoxiDataSource;
+}
+
+- (CLRollLabel *)cycleLabel{
+    if (_cycleLabel == nil) {
+        
+        CGFloat height = 50;
+        
+        CLRollLabel *label = [[CLRollLabel alloc] initWithFrame:CGRectMake(10,Current_Height - TabBar_Height - height , Current_Width - 20, height) font:[UIFont systemFontOfSize:14] textColor:HexColor(0X989898)];
+        label.backgroundColor = [UIColor clearColor];
+        label.text = @"";
+        label.rollSpeed = 0.3;
+        [self.view addSubview:label];
+        [self.view bringSubviewToFront:label];
+        _cycleLabel = label;
+        
+    }
+    return _cycleLabel;
 }
 
 

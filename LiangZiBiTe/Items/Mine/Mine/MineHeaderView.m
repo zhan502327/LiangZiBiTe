@@ -20,6 +20,17 @@
     
     [self.fuTouButton setTitle:@"QKD\n复投" forState:UIControlStateNormal];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(xinyongViewClicked)];
+    [_xinyongView addGestureRecognizer:tap];
+    
+}
+
+- (void)xinyongViewClicked{
+    
+    if (_xinyongViewBlock) {
+        _xinyongViewBlock();
+    }
+    
 }
 
 

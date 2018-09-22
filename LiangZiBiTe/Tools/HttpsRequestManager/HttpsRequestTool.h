@@ -212,9 +212,12 @@ typedef void (^getFailBlock)(NSError *error);
 - (void)mineMaiRuCenterGoBuyWithOrderid:(NSString *)orderid Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 
+// ----- 系统公告
+- (void)systemAdvSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
-
+// ----- 推广人员
+- (void)tuiguangPersonWithtype:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure;
 
 
 
