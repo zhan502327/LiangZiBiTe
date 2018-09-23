@@ -140,7 +140,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.027450980390000001" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Z4V-37-hzf" firstAttribute="top" secondItem="ucv-iM-dQ6" secondAttribute="top" constant="20" id="0nV-KF-Afv"/>
                         <constraint firstItem="Cny-1q-zK5" firstAttribute="top" secondItem="Z4V-37-hzf" secondAttribute="bottom" constant="20" id="2Pe-M1-7RF"/>

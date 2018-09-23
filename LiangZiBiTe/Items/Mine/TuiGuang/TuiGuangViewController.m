@@ -73,7 +73,7 @@ static NSString *cellID = @"TuiGuangCell";
     cell.zhuTuiLabel.text = [App_UserManager zltg];
     cell.ceTuiLabel.text = [App_UserManager cltg];
     
-    cell.codeImageView.image = [CreateQRCode createQRCodeWithString:@"www.baidu.con" withLength:200];
+    cell.codeImageView.image = [CreateQRCode createQRCodeWithString:@"https://fir.im/8t51" withLength:200];
     
     __weak typeof(cell) weakcell = cell;
     
@@ -87,7 +87,7 @@ static NSString *cellID = @"TuiGuangCell";
     }];
     
     [cell setCeTuiBlock:^{
-        weakcell.yaoQingCodeLabel.text = [NSString stringWithFormat:@"邀请码：%@",[App_UserManager zltg]];
+        weakcell.yaoQingCodeLabel.text = [NSString stringWithFormat:@"邀请码：%@",[App_UserManager cltg]];
 
         [self savePhotoWithView:weakcell.resultView];
         PopSuccess(@"成功保存侧链推广码\n请在相册中查看");

@@ -142,7 +142,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.027450980390000001" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="csp-2w-9Ym" firstAttribute="top" secondItem="Bz1-pi-i6D" secondAttribute="bottom" id="16g-Dk-it5"/>
                         <constraint firstItem="csp-2w-9Ym" firstAttribute="leading" secondItem="xR0-Xw-AFK" secondAttribute="leading" constant="20" id="Cai-vg-5bu"/>

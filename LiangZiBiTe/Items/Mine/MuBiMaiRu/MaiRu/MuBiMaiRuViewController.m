@@ -12,6 +12,7 @@
 
 @interface MuBiMaiRuViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logImageView;
+@property (weak, nonatomic) IBOutlet UILabel *beizhuLabel;
 
 @end
 
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setNavgiationBarTitle:@"买入"];
+    [self setNavgiationBarTitle:@"母币买入"];
 
     [self loadData];
     
@@ -37,6 +38,8 @@
         if ([response  isSuccess]) {
             
             [self.logImageView sd_setImageWithURL:[NSURL URLWithString:response.data.qbskm] placeholderImage:UseImage(@"")];
+            
+            self.beizhuLabel.text = response.data.tgmbeiz;
             
         }else{
             PopInfo(failMsg);

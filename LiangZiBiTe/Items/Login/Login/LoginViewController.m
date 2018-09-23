@@ -12,6 +12,7 @@
 #import "AppDelegate+UI.h"
 #import "AppDelegate.h"
 #import "UIImage+Color.h"
+#import "ForgetPasswordViewController.h"
 
 
 @interface LoginViewController ()
@@ -45,7 +46,7 @@
     
  
     
-    if (App_UserManager.userModel.username.length > 0) {
+    if (App_UserManager.userModel.phone.length > 0) {
         self.mobileTextField.text = App_UserManager.userModel.username;
     }
     
@@ -99,5 +100,9 @@
 
 #pragma mark -- 忘记密码
 - (IBAction)forgetPasswordButtonClicked:(id)sender {
+    
+    ForgetPasswordViewController *vc = [[ForgetPasswordViewController alloc] init];
+    [self.rt_navigationController pushViewController:vc animated:YES complete:nil];
+    
 }
 @end

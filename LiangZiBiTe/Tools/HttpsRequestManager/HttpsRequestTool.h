@@ -32,6 +32,10 @@ typedef void (^getFailBlock)(NSError *error);
 - (void)registerUserWithphone:(NSString *)phone code:(NSString *)code pwd:(NSString *)pwd repwd:(NSString *)repwd yqm:(NSString *)yqm withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
+// --- 忘记密码
+- (void)forgetPasswordWithphone:(NSString *)phone code:(NSString *)code pwd:(NSString *)pwd repwd:(NSString *)repwd withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+
+
 //------ 发送验证码
 -(void) sendCodeWithphone:(NSString *)phone withSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 

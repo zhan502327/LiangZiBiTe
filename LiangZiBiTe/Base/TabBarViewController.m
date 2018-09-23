@@ -15,6 +15,10 @@
 
 @interface TabBarViewController ()<UITabBarControllerDelegate>
 
+{
+    NSInteger _currentIndex;
+}
+
 @end
 
 @implementation TabBarViewController
@@ -41,8 +45,8 @@
     [self setRootNavBarViewController:four withBarTitle:@"我的" unselectImage:@"App_Tabbar_Mine_unselected" andSelectImage:@"App_Tabbar_Mine_selected"];
     
     
-    
     self.selectedIndex = 2;
+    _currentIndex = self.selectedIndex;
 
 }
 
@@ -66,15 +70,23 @@
 #pragma mark - **************** UITabBarControllerDelegate
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     
-    if (tabBarController.selectedIndex == 1) {
-
-//        if (![App_UserManager isLogin]) {
-//            DBLoginViewController *loginVC = [[DBLoginViewController alloc] init];
-//            BaseNavViewController *loginNav = [[BaseNavViewController alloc] initWithRootViewController:loginVC];
-//            loginNav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18.0f]};
-//            [self presentViewController:loginNav animated:YES completion:nil];
-//        }
+    
+    
+    if (tabBarController.selectedIndex == 0) {
+        self.selectedIndex = _currentIndex;
+        PopInfo(@"暂未开放 敬请期待");
+        
+    }else{
+        _currentIndex = tabBarController.selectedIndex;
+        
     }
+    
+    //        if (![App_UserManager isLogin]) {
+    //            DBLoginViewController *loginVC = [[DBLoginViewController alloc] init];
+    //            BaseNavViewController *loginNav = [[BaseNavViewController alloc] initWithRootViewController:loginVC];
+    //            loginNav.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:18.0f]};
+    //            [self presentViewController:loginNav animated:YES completion:nil];
+    //        }
 }
 
 

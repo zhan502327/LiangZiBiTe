@@ -28,8 +28,8 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Login_BG" translatesAutoresizingMaskIntoConstraints="NO" id="yUn-bI-gt4">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rad-UO-S7t">
-                            <rect key="frame" x="140" y="60" width="80" height="80"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Public_Log" translatesAutoresizingMaskIntoConstraints="NO" id="Rad-UO-S7t">
+                            <rect key="frame" x="147.5" y="60" width="80" height="80"/>
                             <color key="backgroundColor" red="0.25490196079999999" green="0.53725490200000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="NqQ-dd-y9c"/>
@@ -59,7 +59,7 @@
                                             <rect key="frame" x="60" y="5" width="215" height="40"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         </textField>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-WG-0rl">
                                             <rect key="frame" x="20" y="49" width="255" height="1"/>
@@ -98,7 +98,7 @@
                                             <rect key="frame" x="60" y="5" width="215" height="40"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         </textField>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5T-hG-m6O">
                                             <rect key="frame" x="20" y="49" width="255" height="1"/>
@@ -147,7 +147,7 @@
                                         <constraint firstAttribute="height" constant="40" id="z1R-AC-Fcf"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
-                                    <state key="normal" title="注册"/>
+                                    <state key="normal" title="立即注册"/>
                                     <connections>
                                         <action selector="registerButtonClicked:" destination="-1" eventType="touchUpInside" id="D0q-sC-ddb"/>
                                     </connections>
@@ -197,8 +197,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="yUn-bI-gt4" firstAttribute="leading" secondItem="as6-Zb-nbO" secondAttribute="leading" id="1Zk-hI-jGs"/>
-                        <constraint firstItem="Rad-UO-S7t" firstAttribute="leading" secondItem="as6-Zb-nbO" secondAttribute="leading" constant="140" id="5Jj-Ry-Iij"/>
-                        <constraint firstAttribute="trailing" secondItem="Rad-UO-S7t" secondAttribute="trailing" constant="140" id="JIN-9C-8Ai"/>
+                        <constraint firstItem="Rad-UO-S7t" firstAttribute="centerX" secondItem="as6-Zb-nbO" secondAttribute="centerX" id="EtN-mt-EfD"/>
                         <constraint firstItem="yUn-bI-gt4" firstAttribute="top" secondItem="as6-Zb-nbO" secondAttribute="top" id="KE7-dD-CeN"/>
                         <constraint firstAttribute="trailing" secondItem="MiL-fv-e6b" secondAttribute="trailing" constant="40" id="PvC-0d-oD6"/>
                         <constraint firstItem="Rad-UO-S7t" firstAttribute="top" secondItem="as6-Zb-nbO" secondAttribute="top" constant="60" id="WRj-xF-pEu"/>
@@ -223,5 +222,6 @@
         <image name="App_Login_BG" width="375" height="667"/>
         <image name="App_Login_password" width="22" height="22"/>
         <image name="App_Login_username" width="22" height="22"/>
+        <image name="App_Public_Log" width="256" height="256"/>
     </resources>
 </document>

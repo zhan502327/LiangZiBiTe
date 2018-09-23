@@ -77,6 +77,33 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
 }
 
 
+// --- 忘记密码
+- (void)forgetPasswordWithphone:(NSString *)phone code:(NSString *)code pwd:(NSString *)pwd repwd:(NSString *)repwd withSuccess:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/index/repassword");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [dic setValue:phone forKey:@"phone"];
+    [dic setValue:code forKey:@"code"];
+    [dic setValue:pwd forKey:@"pwd"];
+    [dic setValue:repwd forKey:@"repwd"];
+    
+    //phone    是    string    手机号码
+    //code    是    string    短信验证码
+    //pwd    是    string    密码
+    //repwd    是    string    重复密码
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+
+
+
+
 //发送验证码
 -(void) sendCodeWithphone:(NSString *)phone withSuccess:(getBackBlock)success failure:(getFailBlock)failure {
     

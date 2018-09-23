@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MuBiMaiRuViewController">
             <connections>
+                <outlet property="beizhuLabel" destination="mAX-Ky-TPZ" id="Yv6-Tk-1ZV"/>
                 <outlet property="logImageView" destination="Em6-ec-Swo" id="PT6-zu-1mI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -43,19 +44,10 @@
                                 <constraint firstAttribute="width" secondItem="Em6-ec-Swo" secondAttribute="height" multiplier="1:1" id="enu-KC-TK0"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购买量子比特钱包二维码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAX-Ky-TPZ">
-                            <rect key="frame" x="111" y="335" width="154" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAX-Ky-TPZ">
+                            <rect key="frame" x="50" y="335" width="275" height="20"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="20" id="FpY-TL-W6c"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="转账成功后 请点击下一步" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dY-mS-hCg">
-                            <rect key="frame" x="108.5" y="375" width="159" height="20"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="20" id="XBl-FE-HJk"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="FpY-TL-W6c"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,20 +72,19 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.027450980390000001" green="0.094117647060000004" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mAX-Ky-TPZ" secondAttribute="trailing" constant="50" id="36F-Sl-P3e"/>
                         <constraint firstAttribute="trailing" secondItem="7C2-uT-0tL" secondAttribute="trailing" constant="30" id="CMx-Y5-YGd"/>
-                        <constraint firstItem="mAX-Ky-TPZ" firstAttribute="centerX" secondItem="Em6-ec-Swo" secondAttribute="centerX" id="D1u-Fq-gRD"/>
                         <constraint firstItem="6VG-NU-L5u" firstAttribute="top" secondItem="UN1-nh-twR" secondAttribute="top" constant="30" id="ECC-7V-7rf"/>
                         <constraint firstItem="6VG-NU-L5u" firstAttribute="leading" secondItem="UN1-nh-twR" secondAttribute="leading" constant="30" id="Hag-vk-keH"/>
+                        <constraint firstItem="mAX-Ky-TPZ" firstAttribute="leading" secondItem="UN1-nh-twR" secondAttribute="leading" constant="50" id="Nvi-Ad-qPq"/>
                         <constraint firstItem="mAX-Ky-TPZ" firstAttribute="top" secondItem="Em6-ec-Swo" secondAttribute="bottom" constant="20" id="TPn-cg-gLQ"/>
                         <constraint firstItem="7C2-uT-0tL" firstAttribute="top" secondItem="6VG-NU-L5u" secondAttribute="bottom" constant="30" id="aRe-bB-wFO"/>
                         <constraint firstAttribute="trailing" secondItem="Em6-ec-Swo" secondAttribute="trailing" constant="60" id="eAj-x0-Ynp"/>
-                        <constraint firstItem="0dY-mS-hCg" firstAttribute="top" secondItem="mAX-Ky-TPZ" secondAttribute="bottom" constant="20" id="kBc-ld-oo4"/>
                         <constraint firstAttribute="trailing" secondItem="6VG-NU-L5u" secondAttribute="trailing" constant="30" id="kSb-Hs-2sy"/>
                         <constraint firstItem="Em6-ec-Swo" firstAttribute="leading" secondItem="UN1-nh-twR" secondAttribute="leading" constant="60" id="l4D-BL-jwW"/>
                         <constraint firstItem="Em6-ec-Swo" firstAttribute="top" secondItem="UN1-nh-twR" secondAttribute="top" constant="60" id="pep-Ei-Rky"/>
-                        <constraint firstItem="0dY-mS-hCg" firstAttribute="centerX" secondItem="6VG-NU-L5u" secondAttribute="centerX" id="wMc-kv-1M5"/>
                         <constraint firstItem="7C2-uT-0tL" firstAttribute="leading" secondItem="UN1-nh-twR" secondAttribute="leading" constant="30" id="waT-PU-UeZ"/>
                     </constraints>
                 </view>

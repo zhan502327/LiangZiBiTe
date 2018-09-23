@@ -270,6 +270,8 @@
 		4DE105F92155EFCD001135FF /* TuiGuangResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105F82155EFCD001135FF /* TuiGuangResponse.m */; };
 		4DE105FC2155EFD8001135FF /* TuiGuangModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105FB2155EFD8001135FF /* TuiGuangModel.m */; };
 		4DE105FF21561880001135FF /* TuiGuangData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE105FE21561880001135FF /* TuiGuangData.m */; };
+		4DE1060421572AD0001135FF /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1060221572AD0001135FF /* ForgetPasswordViewController.m */; };
+		4DE1060521572AD0001135FF /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE1060321572AD0001135FF /* ForgetPasswordViewController.xib */; };
 		F12F625FB22E6EF6C8AF71EC /* Pods_LiangZiBiTe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6D35946BA0CA72C1C7C2DF3 /* Pods_LiangZiBiTe.framework */; };
 /* End PBXBuildFile section */
 
@@ -723,6 +725,9 @@
 		4DE105FB2155EFD8001135FF /* TuiGuangModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuiGuangModel.m; sourceTree = "<group>"; };
 		4DE105FD21561880001135FF /* TuiGuangData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuiGuangData.h; sourceTree = "<group>"; };
 		4DE105FE21561880001135FF /* TuiGuangData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuiGuangData.m; sourceTree = "<group>"; };
+		4DE1060121572AD0001135FF /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		4DE1060221572AD0001135FF /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		4DE1060321572AD0001135FF /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
 		AD71B2E26AA92ED447F8284B /* Pods-LiangZiBiTe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiangZiBiTe.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiangZiBiTe/Pods-LiangZiBiTe.release.xcconfig"; sourceTree = "<group>"; };
 		E6D35946BA0CA72C1C7C2DF3 /* Pods_LiangZiBiTe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiangZiBiTe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -753,6 +758,7 @@
 			children = (
 				4D258F362133838500943AD1 /* Login */,
 				4D258F322133838500943AD1 /* Register */,
+				4DE1060021572A9D001135FF /* ForgetPassword */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1939,6 +1945,16 @@
 			path = XingJi;
 			sourceTree = "<group>";
 		};
+		4DE1060021572A9D001135FF /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				4DE1060121572AD0001135FF /* ForgetPasswordViewController.h */,
+				4DE1060221572AD0001135FF /* ForgetPasswordViewController.m */,
+				4DE1060321572AD0001135FF /* ForgetPasswordViewController.xib */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
 		9414A38D267F1B9B41F02429 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2046,6 +2062,7 @@
 				4D5C0AF5213A7EAF00E8B5D5 /* MaiRuSelectedCell.xib in Resources */,
 				4D5C0AEB213A7DAA00E8B5D5 /* MaiRuSelectViewController.xib in Resources */,
 				4DE105BB21550BC9001135FF /* MaiChuSelectCell.xib in Resources */,
+				4DE1060521572AD0001135FF /* ForgetPasswordViewController.xib in Resources */,
 				4DE105A12154CF11001135FF /* MaiRuGoPayViewController.xib in Resources */,
 				4D258F412133838500943AD1 /* RegisterViewController.xib in Resources */,
 				4D258FA02137E1F400943AD1 /* AddAddressLabelCell.xib in Resources */,
@@ -2244,6 +2261,7 @@
 				4D89355721302A03004B7518 /* LBXPermissionNetwork.m in Sources */,
 				4D89354321302A03004B7518 /* NetWorkingTool.m in Sources */,
 				4D89354A21302A03004B7518 /* ScanResultResponse.m in Sources */,
+				4DE1060421572AD0001135FF /* ForgetPasswordViewController.m in Sources */,
 				4D258F792137E05B00943AD1 /* SettingViewController.m in Sources */,
 				4D89354C21302A03004B7518 /* LBXAlertAction.m in Sources */,
 				4D89353A21302A03004B7518 /* UIView+category.m in Sources */,
@@ -2494,6 +2512,8 @@
 			baseConfigurationReference = 14D9BE924EED9C6F7301A9C8 /* Pods-LiangZiBiTe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2Q6596EW3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2504,8 +2524,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = LiangZiBiTe.LiangZiBiTe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liangzibite.qkd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2515,6 +2537,8 @@
 			baseConfigurationReference = AD71B2E26AA92ED447F8284B /* Pods-LiangZiBiTe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P2Q6596EW3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2525,8 +2549,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = LiangZiBiTe.LiangZiBiTe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liangzibite.qkd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
