@@ -36,13 +36,13 @@
 
 
     
-    UIColor *topColor = HexColor(0X7099FE);
+//    UIColor *topColor = HexColor(0X7099FE);
+//    
+//    UIColor *bottomColor = HexColor(0X3171FE);
+//    
+//    UIImage *bgImg = [UIImage gradientColorImageFromColors:@[topColor, bottomColor] gradientType:GradientTypeLeftToRight imgSize:self.loginButton.frame.size];
     
-    UIColor *bottomColor = HexColor(0X3171FE);
-    
-    UIImage *bgImg = [UIImage gradientColorImageFromColors:@[topColor, bottomColor] gradientType:GradientTypeLeftToRight imgSize:self.loginButton.frame.size];
-    
-    [self.loginButton  setBackgroundColor:[UIColor colorWithPatternImage:bgImg]];
+//    [self.loginButton  setBackgroundColor:[UIColor colorWithPatternImage:bgImg]];
     
  
     
