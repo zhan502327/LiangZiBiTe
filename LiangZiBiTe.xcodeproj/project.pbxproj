@@ -102,6 +102,30 @@
 		4D2E822A214F9558003D67B5 /* MaiChuCenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8229214F9558003D67B5 /* MaiChuCenterModel.m */; };
 		4D2E82602150E043003D67B5 /* ShouKuanInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E825E2150E043003D67B5 /* ShouKuanInfoViewController.m */; };
 		4D2E82612150E043003D67B5 /* ShouKuanInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E825F2150E043003D67B5 /* ShouKuanInfoViewController.xib */; };
+		4D41A2F0217AFD9F008ED06A /* DBOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A2EE217AFD9F008ED06A /* DBOrderViewController.m */; };
+		4D41A2F1217AFD9F008ED06A /* DBOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D41A2EF217AFD9F008ED06A /* DBOrderViewController.xib */; };
+		4D41A2F5217AFE31008ED06A /* DBOrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D41A2F3217AFE30008ED06A /* DBOrderListCell.xib */; };
+		4D41A2F6217AFE31008ED06A /* DBOrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A2F4217AFE30008ED06A /* DBOrderListCell.m */; };
+		4D41A2FF217AFE80008ED06A /* MarketOrderProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A2F7217AFE80008ED06A /* MarketOrderProductModel.m */; };
+		4D41A300217AFE80008ED06A /* MarketOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A2F8217AFE80008ED06A /* MarketOrderModel.m */; };
+		4D41A301217AFE80008ED06A /* MarketOrderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A2F9217AFE80008ED06A /* MarketOrderResponse.m */; };
+		4D41A302217AFE80008ED06A /* MarketOrderPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A2FB217AFE80008ED06A /* MarketOrderPageModel.m */; };
+		4D41A316217B0135008ED06A /* DBProductListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A307217B0134008ED06A /* DBProductListCell.m */; };
+		4D41A317217B0135008ED06A /* DBProductListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A30B217B0134008ED06A /* DBProductListResponse.m */; };
+		4D41A318217B0135008ED06A /* DBSellerIndentificationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A30D217B0134008ED06A /* DBSellerIndentificationResponse.m */; };
+		4D41A319217B0135008ED06A /* DBProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A30E217B0134008ED06A /* DBProductViewController.m */; };
+		4D41A31A217B0135008ED06A /* DBProductListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D41A30F217B0134008ED06A /* DBProductListCell.xib */; };
+		4D41A31B217B0135008ED06A /* DBProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D41A310217B0134008ED06A /* DBProductViewController.xib */; };
+		4D41A31C217B0135008ED06A /* DBProductListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A312217B0134008ED06A /* DBProductListModel.m */; };
+		4D41A31D217B0135008ED06A /* DBSellerIdentificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A314217B0134008ED06A /* DBSellerIdentificationModel.m */; };
+		4D41A31E217B0135008ED06A /* DBProductListPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A315217B0135008ED06A /* DBProductListPageModel.m */; };
+		4D41A322217B0142008ED06A /* DBProductOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A320217B0142008ED06A /* DBProductOneViewController.m */; };
+		4D41A323217B0142008ED06A /* DBProductOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D41A321217B0142008ED06A /* DBProductOneViewController.xib */; };
+		4D41A327217B014B008ED06A /* DBProductTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D41A324217B014B008ED06A /* DBProductTwoViewController.xib */; };
+		4D41A328217B014B008ED06A /* DBProductTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A326217B014B008ED06A /* DBProductTwoViewController.m */; };
+		4D41A3BC217B06C9008ED06A /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A3BB217B06C9008ED06A /* HCSStarRatingView.m */; };
+		4D41A3ED217B1188008ED06A /* SHMindeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41A3EB217B1188008ED06A /* SHMindeViewController.m */; };
+		4D41A3EE217B1188008ED06A /* SHMindeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D41A3EC217B1188008ED06A /* SHMindeViewController.xib */; };
 		4D5C0AA0213A302300E8B5D5 /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0A9E213A302300E8B5D5 /* MineCell.m */; };
 		4D5C0AA1213A302300E8B5D5 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D5C0A9F213A302300E8B5D5 /* MineCell.xib */; };
 		4D5C0AA5213A317F00E8B5D5 /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C0AA3213A317F00E8B5D5 /* MineHeaderView.m */; };
@@ -437,6 +461,47 @@
 		4D2E825D2150E043003D67B5 /* ShouKuanInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShouKuanInfoViewController.h; sourceTree = "<group>"; };
 		4D2E825E2150E043003D67B5 /* ShouKuanInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShouKuanInfoViewController.m; sourceTree = "<group>"; };
 		4D2E825F2150E043003D67B5 /* ShouKuanInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShouKuanInfoViewController.xib; sourceTree = "<group>"; };
+		4D41A2ED217AFD9F008ED06A /* DBOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBOrderViewController.h; sourceTree = "<group>"; };
+		4D41A2EE217AFD9F008ED06A /* DBOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBOrderViewController.m; sourceTree = "<group>"; };
+		4D41A2EF217AFD9F008ED06A /* DBOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DBOrderViewController.xib; sourceTree = "<group>"; };
+		4D41A2F2217AFE30008ED06A /* DBOrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderListCell.h; sourceTree = "<group>"; };
+		4D41A2F3217AFE30008ED06A /* DBOrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBOrderListCell.xib; sourceTree = "<group>"; };
+		4D41A2F4217AFE30008ED06A /* DBOrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderListCell.m; sourceTree = "<group>"; };
+		4D41A2F7217AFE80008ED06A /* MarketOrderProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketOrderProductModel.m; sourceTree = "<group>"; };
+		4D41A2F8217AFE80008ED06A /* MarketOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketOrderModel.m; sourceTree = "<group>"; };
+		4D41A2F9217AFE80008ED06A /* MarketOrderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketOrderResponse.m; sourceTree = "<group>"; };
+		4D41A2FA217AFE80008ED06A /* MarketOrderPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketOrderPageModel.h; sourceTree = "<group>"; };
+		4D41A2FB217AFE80008ED06A /* MarketOrderPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketOrderPageModel.m; sourceTree = "<group>"; };
+		4D41A2FC217AFE80008ED06A /* MarketOrderProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketOrderProductModel.h; sourceTree = "<group>"; };
+		4D41A2FD217AFE80008ED06A /* MarketOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketOrderModel.h; sourceTree = "<group>"; };
+		4D41A2FE217AFE80008ED06A /* MarketOrderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketOrderResponse.h; sourceTree = "<group>"; };
+		4D41A306217B0133008ED06A /* DBProductListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProductListResponse.h; sourceTree = "<group>"; };
+		4D41A307217B0134008ED06A /* DBProductListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProductListCell.m; sourceTree = "<group>"; };
+		4D41A308217B0134008ED06A /* DBProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProductViewController.h; sourceTree = "<group>"; };
+		4D41A309217B0134008ED06A /* DBProductListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProductListModel.h; sourceTree = "<group>"; };
+		4D41A30A217B0134008ED06A /* DBProductListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProductListCell.h; sourceTree = "<group>"; };
+		4D41A30B217B0134008ED06A /* DBProductListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProductListResponse.m; sourceTree = "<group>"; };
+		4D41A30C217B0134008ED06A /* DBSellerIndentificationResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSellerIndentificationResponse.h; sourceTree = "<group>"; };
+		4D41A30D217B0134008ED06A /* DBSellerIndentificationResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSellerIndentificationResponse.m; sourceTree = "<group>"; };
+		4D41A30E217B0134008ED06A /* DBProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProductViewController.m; sourceTree = "<group>"; };
+		4D41A30F217B0134008ED06A /* DBProductListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBProductListCell.xib; sourceTree = "<group>"; };
+		4D41A310217B0134008ED06A /* DBProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBProductViewController.xib; sourceTree = "<group>"; };
+		4D41A311217B0134008ED06A /* DBSellerIdentificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSellerIdentificationModel.h; sourceTree = "<group>"; };
+		4D41A312217B0134008ED06A /* DBProductListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProductListModel.m; sourceTree = "<group>"; };
+		4D41A313217B0134008ED06A /* DBProductListPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProductListPageModel.h; sourceTree = "<group>"; };
+		4D41A314217B0134008ED06A /* DBSellerIdentificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSellerIdentificationModel.m; sourceTree = "<group>"; };
+		4D41A315217B0135008ED06A /* DBProductListPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProductListPageModel.m; sourceTree = "<group>"; };
+		4D41A31F217B0142008ED06A /* DBProductOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProductOneViewController.h; sourceTree = "<group>"; };
+		4D41A320217B0142008ED06A /* DBProductOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProductOneViewController.m; sourceTree = "<group>"; };
+		4D41A321217B0142008ED06A /* DBProductOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBProductOneViewController.xib; sourceTree = "<group>"; };
+		4D41A324217B014B008ED06A /* DBProductTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBProductTwoViewController.xib; sourceTree = "<group>"; };
+		4D41A325217B014B008ED06A /* DBProductTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBProductTwoViewController.h; sourceTree = "<group>"; };
+		4D41A326217B014B008ED06A /* DBProductTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBProductTwoViewController.m; sourceTree = "<group>"; };
+		4D41A3BA217B06C9008ED06A /* HCSStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSStarRatingView.h; sourceTree = "<group>"; };
+		4D41A3BB217B06C9008ED06A /* HCSStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSStarRatingView.m; sourceTree = "<group>"; };
+		4D41A3EA217B1188008ED06A /* SHMindeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHMindeViewController.h; sourceTree = "<group>"; };
+		4D41A3EB217B1188008ED06A /* SHMindeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHMindeViewController.m; sourceTree = "<group>"; };
+		4D41A3EC217B1188008ED06A /* SHMindeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHMindeViewController.xib; sourceTree = "<group>"; };
 		4D5C0A9D213A302300E8B5D5 /* MineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
 		4D5C0A9E213A302300E8B5D5 /* MineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineCell.m; sourceTree = "<group>"; };
 		4D5C0A9F213A302300E8B5D5 /* MineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineCell.xib; sourceTree = "<group>"; };
@@ -1107,6 +1172,117 @@
 			path = PayInfo;
 			sourceTree = "<group>";
 		};
+		4D419F63217AFA55008ED06A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A2A0217AFBEC008ED06A /* Home */,
+				4D41A29E217AFBEC008ED06A /* Mine */,
+				4D41A29F217AFBEC008ED06A /* Prodcut */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4D41A29E217AFBEC008ED06A /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A3E9217B1177008ED06A /* Mine */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		4D41A29F217AFBEC008ED06A /* Prodcut */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A305217B00F5008ED06A /* Product */,
+				4D41A303217B00F4008ED06A /* ProductOne */,
+				4D41A304217B00F4008ED06A /* ProductTwo */,
+			);
+			path = Prodcut;
+			sourceTree = "<group>";
+		};
+		4D41A2A0217AFBEC008ED06A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A2FD217AFE80008ED06A /* MarketOrderModel.h */,
+				4D41A2F8217AFE80008ED06A /* MarketOrderModel.m */,
+				4D41A2FA217AFE80008ED06A /* MarketOrderPageModel.h */,
+				4D41A2FB217AFE80008ED06A /* MarketOrderPageModel.m */,
+				4D41A2FC217AFE80008ED06A /* MarketOrderProductModel.h */,
+				4D41A2F7217AFE80008ED06A /* MarketOrderProductModel.m */,
+				4D41A2FE217AFE80008ED06A /* MarketOrderResponse.h */,
+				4D41A2F9217AFE80008ED06A /* MarketOrderResponse.m */,
+				4D41A2F2217AFE30008ED06A /* DBOrderListCell.h */,
+				4D41A2F4217AFE30008ED06A /* DBOrderListCell.m */,
+				4D41A2F3217AFE30008ED06A /* DBOrderListCell.xib */,
+				4D41A2ED217AFD9F008ED06A /* DBOrderViewController.h */,
+				4D41A2EE217AFD9F008ED06A /* DBOrderViewController.m */,
+				4D41A2EF217AFD9F008ED06A /* DBOrderViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4D41A303217B00F4008ED06A /* ProductOne */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A31F217B0142008ED06A /* DBProductOneViewController.h */,
+				4D41A320217B0142008ED06A /* DBProductOneViewController.m */,
+				4D41A321217B0142008ED06A /* DBProductOneViewController.xib */,
+			);
+			path = ProductOne;
+			sourceTree = "<group>";
+		};
+		4D41A304217B00F4008ED06A /* ProductTwo */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A325217B014B008ED06A /* DBProductTwoViewController.h */,
+				4D41A326217B014B008ED06A /* DBProductTwoViewController.m */,
+				4D41A324217B014B008ED06A /* DBProductTwoViewController.xib */,
+			);
+			path = ProductTwo;
+			sourceTree = "<group>";
+		};
+		4D41A305217B00F5008ED06A /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A30A217B0134008ED06A /* DBProductListCell.h */,
+				4D41A307217B0134008ED06A /* DBProductListCell.m */,
+				4D41A30F217B0134008ED06A /* DBProductListCell.xib */,
+				4D41A309217B0134008ED06A /* DBProductListModel.h */,
+				4D41A312217B0134008ED06A /* DBProductListModel.m */,
+				4D41A313217B0134008ED06A /* DBProductListPageModel.h */,
+				4D41A315217B0135008ED06A /* DBProductListPageModel.m */,
+				4D41A306217B0133008ED06A /* DBProductListResponse.h */,
+				4D41A30B217B0134008ED06A /* DBProductListResponse.m */,
+				4D41A308217B0134008ED06A /* DBProductViewController.h */,
+				4D41A30E217B0134008ED06A /* DBProductViewController.m */,
+				4D41A310217B0134008ED06A /* DBProductViewController.xib */,
+				4D41A311217B0134008ED06A /* DBSellerIdentificationModel.h */,
+				4D41A314217B0134008ED06A /* DBSellerIdentificationModel.m */,
+				4D41A30C217B0134008ED06A /* DBSellerIndentificationResponse.h */,
+				4D41A30D217B0134008ED06A /* DBSellerIndentificationResponse.m */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		4D41A3B9217B06C9008ED06A /* HCSStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A3BA217B06C9008ED06A /* HCSStarRatingView.h */,
+				4D41A3BB217B06C9008ED06A /* HCSStarRatingView.m */,
+			);
+			path = HCSStarRatingView;
+			sourceTree = "<group>";
+		};
+		4D41A3E9217B1177008ED06A /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				4D41A3EA217B1188008ED06A /* SHMindeViewController.h */,
+				4D41A3EB217B1188008ED06A /* SHMindeViewController.m */,
+				4D41A3EC217B1188008ED06A /* SHMindeViewController.xib */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
 		4D5C0AA7213A676900E8B5D5 /* QKT */ = {
 			isa = PBXGroup;
 			children = (
@@ -1436,6 +1612,7 @@
 		4D89348F213026E4004B7518 /* LiangZiBiTe */ = {
 			isa = PBXGroup;
 			children = (
+				4D419F63217AFA55008ED06A /* Other */,
 				4D258FB32137E26600943AD1 /* AppDelegate */,
 				4D8935712130312E004B7518 /* Items */,
 				4D8934A821302916004B7518 /* Base */,
@@ -1495,6 +1672,7 @@
 		4D8934BB21302A03004B7518 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				4D41A3B9217B06C9008ED06A /* HCSStarRatingView */,
 				4D2E8198214DEE2F003D67B5 /* fmdb */,
 				4D8934BC21302A03004B7518 /* ConfigPassword */,
 				4D8934C121302A03004B7518 /* IMJIETagView */,
@@ -2052,6 +2230,7 @@
 				4D5C0BCC2146487F00E8B5D5 /* JiaoYiSuoJiaoYiLiangCell.xib in Resources */,
 				4D89353E21302A03004B7518 /* EmptyView.xib in Resources */,
 				4D89355121302A03004B7518 /* ScanResultViewController.xib in Resources */,
+				4D41A2F1217AFD9F008ED06A /* DBOrderViewController.xib in Resources */,
 				4D258F9A2137E1F400943AD1 /* AddAddressTextFieldCell.xib in Resources */,
 				4D5C0AC6213A701A00E8B5D5 /* ZhuanChuViewController.xib in Resources */,
 				4D5C0BC22146422100E8B5D5 /* KuangChiViewController.xib in Resources */,
@@ -2067,8 +2246,10 @@
 				4D258F412133838500943AD1 /* RegisterViewController.xib in Resources */,
 				4D258FA02137E1F400943AD1 /* AddAddressLabelCell.xib in Resources */,
 				4D89356B21302A03004B7518 /* ChooseCityViewController.xib in Resources */,
+				4D41A31A217B0135008ED06A /* DBProductListCell.xib in Resources */,
 				4DE105B02154F34E001135FF /* MaiRuGoPayCommitCell.xib in Resources */,
 				4D258F9C2137E1F400943AD1 /* AddAddressDefaultCell.xib in Resources */,
+				4D41A2F5217AFE31008ED06A /* DBOrderListCell.xib in Resources */,
 				4D2E821A214F8FE3003D67B5 /* MaiChuListViewController.xib in Resources */,
 				4DE105F12155E0F8001135FF /* CeLianViewController.xib in Resources */,
 				4D5C0AFD213A8C2B00E8B5D5 /* AddBankViewController.xib in Resources */,
@@ -2076,6 +2257,7 @@
 				4D2E8211214F8CCE003D67B5 /* MaiChuSureOrderViewController.xib in Resources */,
 				4D2E81E8214F801A003D67B5 /* MaiChuSelectViewController.xib in Resources */,
 				4D5C0AF0213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.xib in Resources */,
+				4D41A327217B014B008ED06A /* DBProductTwoViewController.xib in Resources */,
 				4D2E82612150E043003D67B5 /* ShouKuanInfoViewController.xib in Resources */,
 				4DE105AB2154CFE6001135FF /* MaiRuGoPayPhotoCell.xib in Resources */,
 				4D5C0BFB214A758500E8B5D5 /* MaiRuFooterView.xib in Resources */,
@@ -2093,6 +2275,7 @@
 				4D2E81C0214E3107003D67B5 /* MuBiNextViewController.xib in Resources */,
 				4DE105952154A40B001135FF /* MaiRuCenterCell.xib in Resources */,
 				4D258FA12137E1F400943AD1 /* AddAddressViewController.xib in Resources */,
+				4D41A31B217B0135008ED06A /* DBProductViewController.xib in Resources */,
 				4DE105A62154CFCE001135FF /* MaiRuGoPayNormallCell.xib in Resources */,
 				4D8B6C972151F516006F5B57 /* MaiRuSureOrderViewController.xib in Resources */,
 				4D258FB02137E22800943AD1 /* AddressManagerViewController.xib in Resources */,
@@ -2106,8 +2289,10 @@
 				4D89357F21303A43004B7518 /* MineViewController.xib in Resources */,
 				4D5C0BD1214649AE00E8B5D5 /* JiaoYiSuoLineCell.xib in Resources */,
 				4D258F762137E05B00943AD1 /* SettingHeaderCell.xib in Resources */,
+				4D41A3EE217B1188008ED06A /* SHMindeViewController.xib in Resources */,
 				4D2E81ED214F8029003D67B5 /* MaiChuUnselectViewController.xib in Resources */,
 				4D5C0AB7213A6CEE00E8B5D5 /* QKTViewController.xib in Resources */,
+				4D41A323217B0142008ED06A /* DBProductOneViewController.xib in Resources */,
 				4D5C0BD621464FD600E8B5D5 /* MaiRuViewController.xib in Resources */,
 				4D8B6C9C2151F525006F5B57 /* MaiRuFinishViewController.xib in Resources */,
 				4D5C0AD2213A75FA00E8B5D5 /* MaiRuListViewController.xib in Resources */,
@@ -2219,7 +2404,9 @@
 				4DE105D82155D6FD001135FF /* CLRollLabel.m in Sources */,
 				4D2E8157214BAB0A003D67B5 /* TuiGuangCell.m in Sources */,
 				4D89353B21302A03004B7518 /* GLTextField.m in Sources */,
+				4D41A2F0217AFD9F008ED06A /* DBOrderViewController.m in Sources */,
 				4D89355821302A03004B7518 /* LBXPermissionCalendar.m in Sources */,
+				4D41A302217AFE80008ED06A /* MarketOrderPageModel.m in Sources */,
 				4DE105942154A40B001135FF /* MaiRuCenterCell.m in Sources */,
 				4D89354121302A03004B7518 /* ZZYPhotoHelper.m in Sources */,
 				4D5C0BF6214A668F00E8B5D5 /* ZhuanRuResponse.m in Sources */,
@@ -2231,6 +2418,7 @@
 				4D89354621302A03004B7518 /* CreateBarCodeViewController.m in Sources */,
 				4D2E81B6214E2F7E003D67B5 /* MuBiMaiRuResponse.m in Sources */,
 				4D89354D21302A03004B7518 /* DIYScanViewController.m in Sources */,
+				4D41A316217B0135008ED06A /* DBProductListCell.m in Sources */,
 				4D5C0ADB213A7D2B00E8B5D5 /* MaiRuUnFinishViewController.m in Sources */,
 				4D2E81A4214DEE2F003D67B5 /* FMDatabaseQueue.m in Sources */,
 				4DE105C121550ED1001135FF /* ShouKuanInfoModel.m in Sources */,
@@ -2260,6 +2448,8 @@
 				4DE105F02155E0F8001135FF /* CeLianViewController.m in Sources */,
 				4D89355721302A03004B7518 /* LBXPermissionNetwork.m in Sources */,
 				4D89354321302A03004B7518 /* NetWorkingTool.m in Sources */,
+				4D41A31C217B0135008ED06A /* DBProductListModel.m in Sources */,
+				4D41A31E217B0135008ED06A /* DBProductListPageModel.m in Sources */,
 				4D89354A21302A03004B7518 /* ScanResultResponse.m in Sources */,
 				4DE1060421572AD0001135FF /* ForgetPasswordViewController.m in Sources */,
 				4D258F792137E05B00943AD1 /* SettingViewController.m in Sources */,
@@ -2277,7 +2467,9 @@
 				4D89355B21302A03004B7518 /* LBXPermissionSetting.m in Sources */,
 				4D5C0AB6213A6CEE00E8B5D5 /* QKTViewController.m in Sources */,
 				4D2E81E2214F8006003D67B5 /* MiaChuOrderViewController.m in Sources */,
+				4D41A2FF217AFE80008ED06A /* MarketOrderProductModel.m in Sources */,
 				4D8934B221302916004B7518 /* TabBarViewController.m in Sources */,
+				4D41A31D217B0135008ED06A /* DBSellerIdentificationModel.m in Sources */,
 				4D89354221302A03004B7518 /* Reachability.m in Sources */,
 				4D5C0BD521464FD600E8B5D5 /* MaiRuViewController.m in Sources */,
 				4DE1058F2154A21F001135FF /* MaiRuCenterViewController.m in Sources */,
@@ -2297,6 +2489,8 @@
 				4D258F462133838500943AD1 /* UserInfoResponse.m in Sources */,
 				4D89354B21302A03004B7518 /* StyleDIY.m in Sources */,
 				4D5C0BF3214A53FD00E8B5D5 /* MineInfoModel.m in Sources */,
+				4D41A301217AFE80008ED06A /* MarketOrderResponse.m in Sources */,
+				4D41A322217B0142008ED06A /* DBProductOneViewController.m in Sources */,
 				4D2E82602150E043003D67B5 /* ShouKuanInfoViewController.m in Sources */,
 				4DE105AF2154F34E001135FF /* MaiRuGoPayCommitCell.m in Sources */,
 				4D89356A21302A03004B7518 /* CompanyChooseResultCell.m in Sources */,
@@ -2315,8 +2509,11 @@
 				4D5C0AC0213A700400E8B5D5 /* ZhuanRuViewController.m in Sources */,
 				4D2E81EC214F8029003D67B5 /* MaiChuUnselectViewController.m in Sources */,
 				4D2E822A214F9558003D67B5 /* MaiChuCenterModel.m in Sources */,
+				4D41A319217B0135008ED06A /* DBProductViewController.m in Sources */,
+				4D41A318217B0135008ED06A /* DBSellerIndentificationResponse.m in Sources */,
 				4D2E81B9214E2F8F003D67B5 /* MuBiMaiRuModel.m in Sources */,
 				4DE105CD21551E67001135FF /* KuangChiResponse.m in Sources */,
+				4D41A317217B0135008ED06A /* DBProductListResponse.m in Sources */,
 				4D5C0AD1213A75FA00E8B5D5 /* MaiRuListViewController.m in Sources */,
 				4DE105F52155EC3B001135FF /* TuiGuangNormallCell.m in Sources */,
 				4D258F772137E05B00943AD1 /* SettingHeaderCell.m in Sources */,
@@ -2333,8 +2530,10 @@
 				4D2E81A8214DEE2F003D67B5 /* FMResultSet.m in Sources */,
 				4D89354721302A03004B7518 /* ScanResultData.m in Sources */,
 				4D2E8171214CAACC003D67B5 /* QKDResponse.m in Sources */,
+				4D41A3ED217B1188008ED06A /* SHMindeViewController.m in Sources */,
 				4D258F9F2137E1F400943AD1 /* AddAddressViewController.m in Sources */,
 				4D2E81A5214DEE2F003D67B5 /* FMDatabaseAdditions.m in Sources */,
+				4D41A328217B014B008ED06A /* DBProductTwoViewController.m in Sources */,
 				4D8934B92130297D004B7518 /* UIBarButtonItem+Badge.m in Sources */,
 				4D89356521302A03004B7518 /* BaseResponse.m in Sources */,
 				4D2E8174214CAADA003D67B5 /* QKDModel.m in Sources */,
@@ -2368,11 +2567,13 @@
 				4D5C0BF9214A757B00E8B5D5 /* MaiRuFooterView.m in Sources */,
 				4DE105C721551D5F001135FF /* KuangChiModel.m in Sources */,
 				4D258F9D2137E1F400943AD1 /* AddAddressDefaultCell.m in Sources */,
+				4D41A300217AFE80008ED06A /* MarketOrderModel.m in Sources */,
 				4D258F752137E05B00943AD1 /* SettingInfoModel.m in Sources */,
 				4D258FBA2137E2AF00943AD1 /* HttpsRequestManager.m in Sources */,
 				4D89353C21302A03004B7518 /* IMJIETagView.m in Sources */,
 				4D5C0BE621465AC800E8B5D5 /* SelectMoneyTipsView.m in Sources */,
 				4D89355F21302A03004B7518 /* LBXPermissionCamera.m in Sources */,
+				4D41A2F6217AFE31008ED06A /* DBOrderListCell.m in Sources */,
 				4D5C0AB1213A683D00E8B5D5 /* LiangZiBiTeCell.m in Sources */,
 				4DE105A52154CFCE001135FF /* MaiRuGoPayNormallCell.m in Sources */,
 				4D89355E21302A03004B7518 /* LBXPermissionContacts.m in Sources */,
@@ -2390,6 +2591,7 @@
 				4DE105FC2155EFD8001135FF /* TuiGuangModel.m in Sources */,
 				4D89353D21302A03004B7518 /* IMJIETagFrame.m in Sources */,
 				4D2E8219214F8FE3003D67B5 /* MaiChuListViewController.m in Sources */,
+				4D41A3BC217B06C9008ED06A /* HCSStarRatingView.m in Sources */,
 				4DE105982154C6D9001135FF /* MaiRuCenterResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2513,9 +2715,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2Q6596EW3;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 65SM2GB678;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LiangZiBiTe/LiangZiBiTe.pch;
 				INFOPLIST_FILE = LiangZiBiTe/Info.plist;
@@ -2524,10 +2726,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.liangzibite.qkd;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liangzibite.new;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "1f92d524-e0fd-4aee-9891-d28196e50af0";
+				PROVISIONING_PROFILE_SPECIFIER = NewQKD_dis;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2538,9 +2740,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P2Q6596EW3;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 65SM2GB678;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = LiangZiBiTe/LiangZiBiTe.pch;
 				INFOPLIST_FILE = LiangZiBiTe/Info.plist;
@@ -2549,10 +2751,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.liangzibite.qkd;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liangzibite.new;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "1f92d524-e0fd-4aee-9891-d28196e50af0";
+				PROVISIONING_PROFILE_SPECIFIER = NewQKD_dis;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

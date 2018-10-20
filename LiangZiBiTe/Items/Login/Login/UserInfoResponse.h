@@ -15,4 +15,7 @@
 
 @property (nonatomic, strong) UserInfoModel <Optional> *data;
 
+@property (nonatomic, copy) NSString <Optional> *status;
+
+
 @end

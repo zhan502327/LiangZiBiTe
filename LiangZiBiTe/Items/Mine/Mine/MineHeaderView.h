@@ -29,6 +29,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *redLabel;
 @property (weak, nonatomic) IBOutlet UIView *xinyongView;
 
+@property (weak, nonatomic) IBOutlet UIView *leftView;
 @property (nonatomic, copy) void(^xinyongViewBlock)();
+@property (weak, nonatomic) IBOutlet UIButton *xiaoxiButton;
+@property (weak, nonatomic) IBOutlet UIView *rightView;
 
 @end

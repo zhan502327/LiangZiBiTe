@@ -13,7 +13,7 @@
 #import "BaseNavViewController.h"
 
 
-#define kStoreAppId @"1425551373"
+#define kStoreAppId @"1439674774"
 
 @implementation AppDelegate (UI)
 
@@ -60,9 +60,6 @@
 
         self.window.rootViewController = childController;
     }
-
-    
-    
 }
 
 

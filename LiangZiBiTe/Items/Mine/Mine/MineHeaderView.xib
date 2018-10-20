@@ -336,13 +336,16 @@
                 <outlet property="fuTouButton" destination="y4o-dD-8Tc" id="wo2-bJ-6KT"/>
                 <outlet property="headerImageView" destination="wVC-dJ-30V" id="q9b-QG-KiH"/>
                 <outlet property="leftNumLabel" destination="4SN-LH-jLC" id="oZc-0V-dAM"/>
+                <outlet property="leftView" destination="1C4-Fb-VJU" id="mWy-To-09P"/>
                 <outlet property="mairuButton" destination="yaQ-Oa-Pmw" id="pcc-Ho-KMK"/>
                 <outlet property="mobileLabel" destination="mEy-jv-9lg" id="ReM-eF-6Ju"/>
                 <outlet property="nameLabel" destination="9mv-wf-mpY" id="Nqp-69-JYB"/>
                 <outlet property="redLabel" destination="lF8-ZG-MXk" id="hZn-Ns-Phk"/>
                 <outlet property="rightNumLabel" destination="kJU-x8-Oka" id="9X5-O7-y6l"/>
+                <outlet property="rightView" destination="hZR-MI-Chb" id="tqg-Ki-Wbu"/>
                 <outlet property="starLabel" destination="P7K-wh-WrF" id="fiT-FY-cxO"/>
                 <outlet property="starView" destination="LPK-05-DQY" id="qEu-5D-pgw"/>
+                <outlet property="xiaoxiButton" destination="fLj-EF-Jlx" id="M8R-Ov-8OX"/>
                 <outlet property="xinyongView" destination="SjC-lD-fJd" id="034-Uw-YRD"/>
             </connections>
             <point key="canvasLocation" x="111.5" y="273.5"/>

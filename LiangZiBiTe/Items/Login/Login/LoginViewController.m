@@ -74,6 +74,7 @@
         if ([response isSuccess]) {
             
             App_UserManager.userModel = response.data;
+            App_UserManager.status = response.status;
             
             [(AppDelegate *)[UIApplication sharedApplication].delegate relinkToRootVC];
             

@@ -9,6 +9,8 @@
 #import "UserManager.h"
 #import "AppDelegate+UI.h"
 
+
+#define kUserStatus @"status"
 #define kUserInfoKey @"UserInfo"
 #define kUploadIdCardStatus @"kUploadIdCardStatus"
 #define kUploadStudentStatus @"kUploadStudentStatus"
@@ -33,6 +35,8 @@ static UserManager *_userManager;
     self = [super init];
     if (self) {
         _userModel = [[UserInfoModel alloc] initWithString:[[NSUserDefaults standardUserDefaults] objectForKey:kUserInfoKey] error:nil];
+        
+        _status = [[NSUserDefaults standardUserDefaults] objectForKey:kUserStatus];
 
     }
     return self;
@@ -47,6 +51,13 @@ static UserManager *_userManager;
     [[NSUserDefaults standardUserDefaults] setObject:[userModel toJSONString] forKey:kUserInfoKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+}
+
+- (void)setStatus:(NSString *)status{
+    _status = status;
+    
+    [[NSUserDefaults standardUserDefaults] setObject:status forKey:kUserStatus];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 
@@ -96,7 +107,9 @@ static UserManager *_userManager;
     _userModel = nil;
     // ------清除保存的用户数据
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserInfoKey];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserStatus];
 
+    
     // ------ 清除身份证上传状态
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUploadIdCardStatus];
     
@@ -112,7 +125,9 @@ static UserManager *_userManager;
     _userModel = nil;
     // ------清除保存的用户数据
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserInfoKey];
-    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUserStatus];
+
+
     // ------ 清除身份证上传状态
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUploadIdCardStatus];
     

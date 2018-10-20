@@ -40,13 +40,13 @@
 
     
     
-    UIColor *topColor = HexColor(0X7099FE);
-    
-    UIColor *bottomColor = HexColor(0X3171FE);
-    
-    UIImage *bgImg = [UIImage gradientColorImageFromColors:@[topColor, bottomColor] gradientType:GradientTypeLeftToRight imgSize:self.registerButton.frame.size];
-    
-    [self.registerButton  setBackgroundColor:[UIColor colorWithPatternImage:bgImg]];
+//    UIColor *topColor = HexColor(0X7099FE);
+//    
+//    UIColor *bottomColor = HexColor(0X3171FE);
+//    
+//    UIImage *bgImg = [UIImage gradientColorImageFromColors:@[topColor, bottomColor] gradientType:GradientTypeLeftToRight imgSize:self.registerButton.frame.size];
+//    
+//    [self.registerButton  setBackgroundColor:[UIColor colorWithPatternImage:bgImg]];
     
 }
 

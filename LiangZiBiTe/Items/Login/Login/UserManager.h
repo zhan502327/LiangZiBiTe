@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) UserInfoModel *userModel;
 
+@property (nonatomic, copy) NSString *status;
+
 //创建单利
 + (UserManager *)shareUserManager;
 

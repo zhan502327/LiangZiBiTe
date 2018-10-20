@@ -34,7 +34,7 @@
 //正式服务器
 //static NSString *cnUrl = @"http://223.201.0.227";
 //static NSString *cnUrl = @"http://115.47.126.105:10010";
-static NSString *cnUrl = @"http://114.202.245.33";
+static NSString *cnUrl = @"http://114.202.245.34";
 
 
 
