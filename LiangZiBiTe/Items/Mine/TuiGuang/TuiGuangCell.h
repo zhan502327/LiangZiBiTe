@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface TuiGuangCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *zhuTuiLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ceTuiLabel;
-@property (weak, nonatomic) IBOutlet UILabel *yaoQingCodeLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *zhulianButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *celianButton;
+
 @property (weak, nonatomic) IBOutlet UIImageView *codeImageView;
 
 @property (weak, nonatomic) IBOutlet UIView *resultView;
-@property (weak, nonatomic) IBOutlet UILabel *urlLabel;
 
 
 @property (nonatomic, copy) void(^zhuTuiBlock)();

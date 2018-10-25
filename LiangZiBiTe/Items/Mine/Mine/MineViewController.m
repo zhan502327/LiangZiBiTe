@@ -31,6 +31,7 @@
 #import "CLRollLabel.h"
 #import "SystemAdvResponse.h"
 #import "XingJiViewController.h"
+#import "AppVersionResponse.h"
 
 static NSString *headerViewID = @"MineHeaderView";
 static NSString *footerViewID = @"MineFooterView";
@@ -75,9 +76,10 @@ static NSString *itemcellID = @"MineCell";
     //加载数据
     [self loadData];
     
+    //版本更新
+    [self loadAppVersion];
+
 }
-
-
 
 
 - (void)viewDidLoad{
@@ -102,6 +104,79 @@ static NSString *itemcellID = @"MineCell";
     
 }
 
+- (void)loadAppVersion{
+    
+    [App_HttpsRequestTool updateAppVersionWithSuccess:^(id responseObject) {
+        AppVersionResponse *response = [[AppVersionResponse alloc] initWithDictionary:responseObject error:nil];
+        if ([response isSuccess]) {
+            
+            
+            [self uodateAppVersionWithModel:response.data];
+            
+        }else{
+            
+            
+        }
+        
+        
+        
+    } failure:^(NSError *error) {
+        PopError(netError);
+    }];
+    
+
+}
+
+- (void)uodateAppVersionWithModel:(AppVersionModel *)model{
+
+    
+    NSDictionary *appInfo = [[NSBundle mainBundle] infoDictionary];
+    
+    NSString *app_Version = [appInfo objectForKey:@"CFBundleShortVersionString"];
+    
+    BOOL update = [self judgeNewVersion:model.iversion withOldVersion:app_Version];
+    
+    if (update == YES) {
+
+
+        UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"版本更新" message:model.content preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"暂不更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+          
+            exit(0);
+
+
+        }];
+        [alertVc addAction:action1];
+        UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"去更新" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            //跳转到AppStore，该App下载界面
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://en39.com/app.php/4459"]];
+        }];
+        [alertVc addAction:action2];
+        [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:alertVc animated:YES completion:nil];
+
+    }
+}
+
+
+
+
+// --------版本号必须为三位数
+//判断当前app版本和AppStore最新app版本大小//
+- (BOOL)judgeNewVersion:(NSString *)newVersion withOldVersion:(NSString *)oldVersion {
+    NSArray *newArray = [newVersion componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+    NSArray *oldArray = [oldVersion componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"."]];
+
+    NSUInteger count = (newArray.count > oldArray.count) ? (oldArray.count) : (newArray.count);
+
+    for (NSUInteger i = 0; i < count; i++) {
+        if ([newArray[i] intValue] > [oldArray[i] intValue]) {
+            return YES;
+        } else {
+
+        }
+    }
+    return NO;
+}
 
 
 #pragma mark -- 加载系统公告

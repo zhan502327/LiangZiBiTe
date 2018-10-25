@@ -220,6 +220,9 @@ typedef void (^getFailBlock)(NSError *error);
 - (void)systemAdvSuccess:(getBackBlock)success failure:(getFailBlock)failure;
 
 
+// ---- 版本更新
+- (void)updateAppVersionWithSuccess:(getBackBlock)success failure:(getFailBlock)failure;
+
 // ----- 推广人员
 - (void)tuiguangPersonWithtype:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure;
 

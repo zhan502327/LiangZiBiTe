@@ -995,6 +995,23 @@ static HttpsRequestTool *shareHttpsRequestTool = nil;
     
 }
 
+// ---- 版本更新
+- (void)updateAppVersionWithSuccess:(getBackBlock)success failure:(getFailBlock)failure{
+    
+    NSString *url = App_Api_Base_Url(@"/index.php/api/banben/banben");
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    
+    [App_HttpsRequestManager POST_HttpsRequestUrl:url andParameterDictionary:dic withSuccess:^(id responseObject) {
+        success(responseObject);
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
+}
+
+
+
+
 // ----- 推广人员
 - (void)tuiguangPersonWithtype:(NSString *)type Success:(getBackBlock)success failure:(getFailBlock)failure{
     

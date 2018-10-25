@@ -46,6 +46,8 @@
 		4D258FB22137E22800943AD1 /* AddressListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FAC2137E22800943AD1 /* AddressListResponse.m */; };
 		4D258FB92137E2AF00943AD1 /* HttpsRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FB72137E2AF00943AD1 /* HttpsRequestTool.m */; };
 		4D258FBA2137E2AF00943AD1 /* HttpsRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D258FB82137E2AF00943AD1 /* HttpsRequestManager.m */; };
+		4D2D85B021814BC300E2EDAF /* AppVersionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D85AF21814BC300E2EDAF /* AppVersionResponse.m */; };
+		4D2D85B321814BCF00E2EDAF /* AppVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2D85B221814BCF00E2EDAF /* AppVersionModel.m */; };
 		4D2E8157214BAB0A003D67B5 /* TuiGuangCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E8155214BAB0A003D67B5 /* TuiGuangCell.m */; };
 		4D2E8158214BAB0A003D67B5 /* TuiGuangCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E8156214BAB0A003D67B5 /* TuiGuangCell.xib */; };
 		4D2E815C214BBDBB003D67B5 /* CreateQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E815B214BBDBB003D67B5 /* CreateQRCode.m */; };
@@ -366,6 +368,10 @@
 		4D258FB62137E2AF00943AD1 /* HttpsRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpsRequestManager.h; sourceTree = "<group>"; };
 		4D258FB72137E2AF00943AD1 /* HttpsRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsRequestTool.m; sourceTree = "<group>"; };
 		4D258FB82137E2AF00943AD1 /* HttpsRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpsRequestManager.m; sourceTree = "<group>"; };
+		4D2D85AE21814BC300E2EDAF /* AppVersionResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppVersionResponse.h; sourceTree = "<group>"; };
+		4D2D85AF21814BC300E2EDAF /* AppVersionResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppVersionResponse.m; sourceTree = "<group>"; };
+		4D2D85B121814BCF00E2EDAF /* AppVersionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppVersionModel.h; sourceTree = "<group>"; };
+		4D2D85B221814BCF00E2EDAF /* AppVersionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppVersionModel.m; sourceTree = "<group>"; };
 		4D2E8154214BAB0A003D67B5 /* TuiGuangCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TuiGuangCell.h; sourceTree = "<group>"; };
 		4D2E8155214BAB0A003D67B5 /* TuiGuangCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuiGuangCell.m; sourceTree = "<group>"; };
 		4D2E8156214BAB0A003D67B5 /* TuiGuangCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TuiGuangCell.xib; sourceTree = "<group>"; };
@@ -2002,6 +2008,10 @@
 				4DE105DA2155D8A9001135FF /* SystemAdvResponse.m */,
 				4DE105DC2155D8B9001135FF /* SystemAdvModel.h */,
 				4DE105DD2155D8B9001135FF /* SystemAdvModel.m */,
+				4D2D85AE21814BC300E2EDAF /* AppVersionResponse.h */,
+				4D2D85AF21814BC300E2EDAF /* AppVersionResponse.m */,
+				4D2D85B121814BCF00E2EDAF /* AppVersionModel.h */,
+				4D2D85B221814BCF00E2EDAF /* AppVersionModel.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -2545,6 +2555,7 @@
 				4D5C0AAC213A67B600E8B5D5 /* LiangZiBiTeViewController.m in Sources */,
 				4D89356121302A03004B7518 /* CQScrollMenuView.m in Sources */,
 				4D893492213026E4004B7518 /* AppDelegate.m in Sources */,
+				4D2D85B021814BC300E2EDAF /* AppVersionResponse.m in Sources */,
 				4D8B6C962151F516006F5B57 /* MaiRuSureOrderViewController.m in Sources */,
 				4DE105BE21550EC3001135FF /* ShouKuanInfoResponse.m in Sources */,
 				4D89355421302A03004B7518 /* UIAlertView+LBXAlertAction.m in Sources */,
@@ -2578,6 +2589,7 @@
 				4DE105A52154CFCE001135FF /* MaiRuGoPayNormallCell.m in Sources */,
 				4D89355E21302A03004B7518 /* LBXPermissionContacts.m in Sources */,
 				4D5C0BC12146422100E8B5D5 /* KuangChiViewController.m in Sources */,
+				4D2D85B321814BCF00E2EDAF /* AppVersionModel.m in Sources */,
 				4D2E81D7214F5CE7003D67B5 /* MaiChuVipInfoResponse.m in Sources */,
 				4D5C0AEF213A7E9F00E8B5D5 /* MaiRuUnSelectedCell.m in Sources */,
 				4D2E8213214F8CCE003D67B5 /* MaiChuSureOrderCell.m in Sources */,
@@ -2728,8 +2740,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liangzibite.new;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f92d524-e0fd-4aee-9891-d28196e50af0";
-				PROVISIONING_PROFILE_SPECIFIER = NewQKD_dis;
+				PROVISIONING_PROFILE = "f7764faa-e3da-40c1-9cde-c97beaa0e882";
+				PROVISIONING_PROFILE_SPECIFIER = new_QKD_AdHoc;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2753,8 +2765,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liangzibite.new;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f92d524-e0fd-4aee-9891-d28196e50af0";
-				PROVISIONING_PROFILE_SPECIFIER = NewQKD_dis;
+				PROVISIONING_PROFILE = "f7764faa-e3da-40c1-9cde-c97beaa0e882";
+				PROVISIONING_PROFILE_SPECIFIER = new_QKD_AdHoc;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

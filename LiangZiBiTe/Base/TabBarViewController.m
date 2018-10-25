@@ -37,26 +37,26 @@
 
     self.delegate = self;
     
-    //审核 0
-    if ([App_UserManager.status isEqualToString:@"0"]) {
-        DBOrderViewController *five = [[DBOrderViewController alloc] init];
-        [self setRootNavBarViewController:five withBarTitle:@"订单" unselectImage:@"App_Tabbar_LiangZiTaoLi_unselected" andSelectImage:@"App_Tabbar_LiangZiTaoLi_selected"];
-
-        DBProductViewController *six = [[DBProductViewController alloc] init];
-        [self setRootNavBarViewController:six withBarTitle:@"商品" unselectImage:@"App_Tabbar_KuangChi_unselected" andSelectImage:@"App_Tabbar_KuangChi_selected"];
-        
-   
-        
-        SHMindeViewController *four = [[SHMindeViewController alloc] init];
-        [self setRootNavBarViewController:four withBarTitle:@"我的" unselectImage:@"App_Tabbar_Mine_unselected" andSelectImage:@"App_Tabbar_Mine_selected"];
-        
-        
-    }
+//    //审核 0
+//    if ([App_UserManager.status isEqualToString:@"0"]) {
+//        DBOrderViewController *five = [[DBOrderViewController alloc] init];
+//        [self setRootNavBarViewController:five withBarTitle:@"订单" unselectImage:@"App_Tabbar_LiangZiTaoLi_unselected" andSelectImage:@"App_Tabbar_LiangZiTaoLi_selected"];
+//
+//        DBProductViewController *six = [[DBProductViewController alloc] init];
+//        [self setRootNavBarViewController:six withBarTitle:@"商品" unselectImage:@"App_Tabbar_KuangChi_unselected" andSelectImage:@"App_Tabbar_KuangChi_selected"];
+//
+//
+//
+//        SHMindeViewController *four = [[SHMindeViewController alloc] init];
+//        [self setRootNavBarViewController:four withBarTitle:@"我的" unselectImage:@"App_Tabbar_Mine_unselected" andSelectImage:@"App_Tabbar_Mine_selected"];
+//
+//
+//    }
     
  
     //正式 1
-    if ([App_UserManager.status isEqualToString:@"1"]) {
-        
+//    if ([App_UserManager.status isEqualToString:@"1"]) {
+    
         
         //    LiangZiTaoLiViewController *one = [[LiangZiTaoLiViewController alloc] init];
         //    [self setRootNavBarViewController:one withBarTitle:@"量子套利" unselectImage:@"App_Tabbar_LiangZiTaoLi_unselected" andSelectImage:@"App_Tabbar_LiangZiTaoLi_selected"];
@@ -64,20 +64,30 @@
         //    JiaoYiSuoViewController *two = [[JiaoYiSuoViewController alloc] init];
         //    [self setRootNavBarViewController:two withBarTitle:@"交易所" unselectImage:@"App_Tabbar_JiaoYiSuo_unselected" andSelectImage:@"App_Tabbar_JiaoYiSuo_selected"];
         
-        KuangChiViewController *three = [[KuangChiViewController alloc] init];
-        [self setRootNavBarViewController:three withBarTitle:@"矿池" unselectImage:@"App_Tabbar_KuangChi_unselected" andSelectImage:@"App_Tabbar_KuangChi_selected"];
+//        KuangChiViewController *three = [[KuangChiViewController alloc] init];
+//        [self setRootNavBarViewController:three withBarTitle:@"矿池" unselectImage:@"App_Tabbar_KuangChi_unselected" andSelectImage:@"App_Tabbar_KuangChi_selected"];
+//
+//
+//        MineViewController *four = [[MineViewController alloc] init];
+//        [self setRootNavBarViewController:four withBarTitle:@"我的" unselectImage:@"App_Tabbar_Mine_unselected" andSelectImage:@"App_Tabbar_Mine_selected"];
+//
+//        self.selectedIndex = 1;
+//        _currentIndex = self.selectedIndex;
         
         
-        MineViewController *four = [[MineViewController alloc] init];
-        [self setRootNavBarViewController:four withBarTitle:@"我的" unselectImage:@"App_Tabbar_Mine_unselected" andSelectImage:@"App_Tabbar_Mine_selected"];
-        
-        self.selectedIndex = 1;
-        _currentIndex = self.selectedIndex;
-        
-        
-    }
+//    }
 
 
+    KuangChiViewController *three = [[KuangChiViewController alloc] init];
+    [self setRootNavBarViewController:three withBarTitle:@"矿池" unselectImage:@"App_Tabbar_KuangChi_unselected" andSelectImage:@"App_Tabbar_KuangChi_selected"];
+    
+    
+    MineViewController *four = [[MineViewController alloc] init];
+    [self setRootNavBarViewController:four withBarTitle:@"我的" unselectImage:@"App_Tabbar_Mine_unselected" andSelectImage:@"App_Tabbar_Mine_selected"];
+    
+    self.selectedIndex = 1;
+    _currentIndex = self.selectedIndex;
+    
     
 
 

@@ -34,12 +34,6 @@ static NSString *cellID = @"TuiGuangCell";
     [self configTableView];
     
     
-    [self createQRCode];
-    
-}
-
-- (void)createQRCode{
-    
     
 }
 
@@ -64,33 +58,43 @@ static NSString *cellID = @"TuiGuangCell";
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 830;
+    return 590;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TuiGuangCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
-    cell.zhuTuiLabel.text = [App_UserManager zltg];
-    cell.ceTuiLabel.text = [App_UserManager cltg];
     
-    cell.codeImageView.image = [CreateQRCode createQRCodeWithString:@"https://fir.im/8t51" withLength:200];
+    [cell.zhulianButton setTitle:[NSString stringWithFormat:@"主链推广：%@",[App_UserManager zltg]] forState:UIControlStateNormal];
+    [cell.celianButton setTitle:[NSString stringWithFormat:@"侧链推广：%@",[App_UserManager cltg]] forState:UIControlStateNormal];
+
+    NSString *zhulianCodeStr = [NSString stringWithFormat:@"http://114.202.245.34/index.php?yqm=%@",[App_UserManager zltg]];
+    
+    NSString *celianCodeStr = [NSString stringWithFormat:@"http://114.202.245.34/index.php?yqm=%@",[App_UserManager cltg]];
+
+    
+    cell.codeImageView.image = [CreateQRCode createQRCodeWithString:zhulianCodeStr withLength:200];
     
     __weak typeof(cell) weakcell = cell;
     
     [cell setZhuTuiBlock:^{
-       
-        weakcell.yaoQingCodeLabel.text = [NSString stringWithFormat:@"邀请码：%@",[App_UserManager zltg]];
         
-        [self savePhotoWithView:weakcell.resultView];
-        PopSuccess(@"成功保存主链推广码\n请在相册中查看");
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = zhulianCodeStr;
         
+        weakcell.codeImageView.image = [CreateQRCode createQRCodeWithString:zhulianCodeStr withLength:200];
+        
+        PopSuccess(@"主链推广已复制剪切板");
     }];
     
     [cell setCeTuiBlock:^{
-        weakcell.yaoQingCodeLabel.text = [NSString stringWithFormat:@"邀请码：%@",[App_UserManager cltg]];
+        
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = celianCodeStr;
 
-        [self savePhotoWithView:weakcell.resultView];
-        PopSuccess(@"成功保存侧链推广码\n请在相册中查看");
+        weakcell.codeImageView.image = [CreateQRCode createQRCodeWithString:celianCodeStr withLength:200];
+
+        PopSuccess(@"侧链推广已复制剪切板");
 
     }];
     
